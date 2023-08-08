@@ -11,6 +11,11 @@ Chocott-backstageはGitHubを利用してユーザーの認証を行います。
 BackstageのBackend Serverが各外部サービスに連携するための設定が Integration です。
 Chocott-backstageはGitHubの連携がありますので、[Integration](./integration/index.md) に沿って登録を進めてください。
 
+## TechDocs
+
+TechDocsはGitHubリポジトリ上で記載されたMarkdownファイルをHTMLに変換し、Backstage上で表示する機能です。
+本機能はHTML作成に mkdocs というツールを利用しています。ローカルPC上でBackstageを実行する場合、あらかじめ [TechDocs](./techdocs/index.md) に沿ってツール等をインストールする必要があります。
+
 # サインイン
 
 ## パーミッションの確認
