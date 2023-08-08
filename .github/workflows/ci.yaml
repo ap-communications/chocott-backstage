@@ -1,0 +1,48 @@
+name: CI
+on:
+  pull_request_target:
+  workflow_dispatch:
+
+jobs:
+  build:
+    name: Continuous Test
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+        with:
+          ref: "refs/pull/${{ github.event.number }}/merge"
+
+      - name: Set Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: 18.x
+
+      # Get the yarn cache path.
+      - name: Get yarn cache directory path
+        id: yarn-cache-dir-path
+        run: echo "::set-output name=dir::$(yarn config get cacheFolder)"
+      - name: Restore yarn cache
+        uses: actions/cache@v2
+        id: yarn-cache # use this to check for `cache-hit` (`steps.yarn-cache.outputs.cache-hit != 'true'`)
+        with:
+          path: ${{ steps.yarn-cache-dir-path.outputs.dir }}
+          key: yarn-cache-folder-${{ hashFiles('**/yarn.lock', '.yarnrc.yml') }}
+          restore-keys: |
+            yarn-cache-folder-
+
+      - name: Run install
+        uses: borales/actions-yarn@v4
+        with:
+          cmd: install # will run `yarn install` command
+      - name: Lint all
+        uses: borales/actions-yarn@v4
+        with:
+          cmd: lint:all
+      - name: Compile the app
+        uses: borales/actions-yarn@v4
+        with:
+          cmd: tsc
+      - name: Test the app
+        uses: borales/actions-yarn@v4
+        with:
+          cmd: test:all
