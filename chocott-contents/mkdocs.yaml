@@ -4,6 +4,7 @@ nav:
   - Home: index.md
   - "ユーザー認証": authentication/index.md
   - "Integration": integration/index.md
+  - "Tech Docs": techdocs/index.md
 
 docs_dir: 'docs'
 
