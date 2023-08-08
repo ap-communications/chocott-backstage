@@ -3,6 +3,7 @@ site_name: chocott-backstage
 nav:
   - Home: index.md
   - "ユーザー認証": authentication/index.md
+  - "Integration": integration/index.md
 
 docs_dir: 'docs'
 
