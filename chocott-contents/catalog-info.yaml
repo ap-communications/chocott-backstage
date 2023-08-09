@@ -3,12 +3,15 @@ kind: Component
 metadata:
   name: chocott-backstage
   annotations:
-    # backstage.io/source-location: url:https://github.com/ap-communications/chocott-backstage
     github.com/project-slug: ap-communications/chocott-backstage
     backstage.io/techdocs-ref: dir:.
   tags:
   - typescript
   - backstage
+  links:
+  - url: https://github.com/ap-communications/chocott-backstage
+    title: project repository
+    icon: github
 spec:
   type: service
   owner: guests
