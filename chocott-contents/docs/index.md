@@ -20,6 +20,10 @@ Chocott-backstageはGitHubの連携がありますので、[Integration](./integ
 TechDocsはGitHubリポジトリ上で記載されたMarkdownファイルをHTMLに変換し、Backstage上で表示する機能です。
 本機能はHTML作成に mkdocs というツールを利用しています。ローカルPC上でBackstageを実行する場合、あらかじめ [TechDocs](./techdocs/index.md) に沿ってツール等をインストールする必要があります。
 
+## Plugin導入による機能拡張
+
+Backstageでは様々なPluginが公開されており、それらを用いて機能を拡張することができます。[ここ](./plugins/index.md) では GitHub Pull requests plugin を例にその導入方法について見ていきます。
+
 # サインイン
 
 ## パーミッションの確認

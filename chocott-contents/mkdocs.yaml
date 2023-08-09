@@ -6,6 +6,7 @@ nav:
   - "アクセス承認": authorization/index.md
   - "Integration": integration/index.md
   - "Tech Docs": techdocs/index.md
+  - "Plugin導入による機能拡張": plugins/index.md
 
 docs_dir: 'docs'
 
