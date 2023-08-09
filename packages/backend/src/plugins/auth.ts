@@ -2,9 +2,26 @@ import {
   createRouter,
   providers,
   defaultAuthProviderFactories,
+  SignInResolver,
+  GithubOAuthResult,
 } from '@backstage/plugin-auth-backend';
 import { Router } from 'express';
 import { PluginEnvironment } from '../types';
+
+function githubResolver(env: PluginEnvironment): SignInResolver<GithubOAuthResult> {
+  if (env.config.getOptionalConfig('catalog.providers.githubOrg')) {
+    return providers.github.resolvers.usernameMatchingUserEntityName();
+  }
+  return (_, ctx) => {
+    const userRef = 'user:default/guest'; // Must be a full entity reference
+    return ctx.issueToken({
+      claims: {
+        sub: userRef, // The user's own identity
+        ent: [userRef], // A list of identities that the user claims ownership through
+      },
+    });
+  }
+}
 
 export default async function createPlugin(
   env: PluginEnvironment,
@@ -37,16 +54,17 @@ export default async function createPlugin(
       //   https://backstage.io/docs/auth/identity-resolver
       github: providers.github.create({
         signIn: {
-          resolver(_, ctx) {
-            const userRef = 'user:default/guest'; // Must be a full entity reference
-            return ctx.issueToken({
-              claims: {
-                sub: userRef, // The user's own identity
-                ent: [userRef], // A list of identities that the user claims ownership through
-              },
-            });
-          },
+          // resolver(_, ctx) {
+          //   const userRef = 'user:default/guest'; // Must be a full entity reference
+          //   return ctx.issueToken({
+          //     claims: {
+          //       sub: userRef, // The user's own identity
+          //       ent: [userRef], // A list of identities that the user claims ownership through
+          //     },
+          //   });
+          // },
           // resolver: providers.github.resolvers.usernameMatchingUserEntityName(),
+          resolver: githubResolver(env),
         },
       }),
     },
