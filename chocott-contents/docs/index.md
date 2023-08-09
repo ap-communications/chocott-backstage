@@ -5,6 +5,10 @@
 Chocott-backstageはGitHubを利用してユーザーの認証を行います。GitHubで認証を行うにはGitHub Appの登録が必要になります。GitHub Appの登録にはそのアカウントのオーナー権限が必要です。
 [authentication](./authentication/index.md) のページにそって、個人アカウントまたは組織アカウントにGitHub Appを登録してください。
 
+## アクセス承認
+
+アクセスの承認はBackstage内で管理するユーザー情報・グループ情報を用いて行います。このユーザー・グループ情報はGitHubのユーザー・チームの情報と同期することができます。
+[authorizatoin](./authorization/index.md) に沿って、同期機能を有効にしてください。
 
 ## Integration
 
