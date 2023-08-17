@@ -1,26 +1,29 @@
 version: '3'
 
 services:
-  # backstage:
-  #   image: xxx
-  #   volumes:
-  #     - "../app-config.chocott.yaml:/app/config/app-config.yaml"
-  #     - "../github-credentials.yaml:/app/config/github-credentials.yaml"
-  #   command: 
-  #     - "--config"
-  #     - "/app/config/app-config.yaml"
-  #   environments:
-  #     AUTH_GITHUB_CLIENT_ID: ${AUTH_GITHUB_CLIENT_ID}
-  #     AUTH_GITHUB_CLIENT_SECRET: ${AUTH_GITHUB_CLIENT_SECRET}
-  #     GITHUB_CREDENTIAL_FILE: /app/config/github-credentials.yaml
-  #     POSTGRES_HOST: db
-  #     POSTGRES_PORT: 5432
-  #     POSTGRES_USER: ${POSTGRES_USER:-postgres}
-  #     POSTGRES_PASSWORD: ${POSTGRES_PASSWORD:-postgres}
-  #   networks:
-  #     - backend
-  #   depends_on:
-  #     - db
+  backstage:
+    image: ghcr.io/ap-communications/chocott-backstage:0.1.0-next.2
+    volumes:
+      - "../app-config.chocott.yaml:/app/config/app-config.yaml"
+      - "../github-credentials.yaml:/app/config/github-credentials.yaml"
+    command: 
+      - "--config"
+      - "/app/config/app-config.yaml"
+    ports:
+      - 7007:7007
+    environment:
+      AUTH_GITHUB_CLIENT_ID: ${AUTH_GITHUB_CLIENT_ID}
+      AUTH_GITHUB_CLIENT_SECRET: ${AUTH_GITHUB_CLIENT_SECRET}
+      GITHUB_CREDENTIAL_FILE: /app/config/github-credentials.yaml
+      POSTGRES_HOST: db
+      POSTGRES_PORT: 5432
+      POSTGRES_USER: ${POSTGRES_USER:-postgres}
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD:-postgres}
+      GITHUB_ORG: ${GITHUB_ORG}
+    networks:
+      - backend
+    depends_on:
+      - db
 
   db:
     image: postgres:14
