@@ -5,17 +5,18 @@ import {
   LunrSearchEngine,
 } from '@backstage/plugin-search-backend-node';
 import { PluginEnvironment } from '../types';
-import { DefaultCatalogCollatorFactory } from '@backstage/plugin-catalog-backend';
-import { DefaultTechDocsCollatorFactory } from '@backstage/plugin-techdocs-backend';
+import { DefaultCatalogCollatorFactory } from '@backstage/plugin-search-backend-module-catalog';
+import { DefaultTechDocsCollatorFactory } from '@backstage/plugin-search-backend-module-techdocs';
 import { Router } from 'express';
+import { PgSearchEngine } from '@backstage/plugin-search-backend-module-pg';
 
 export default async function createPlugin(
   env: PluginEnvironment,
 ): Promise<Router> {
   // Initialize a connection to a search engine.
-  const searchEngine = new LunrSearchEngine({
-    logger: env.logger,
-  });
+  const searchEngine = (await PgSearchEngine.supported(env.database))
+    ? await PgSearchEngine.fromConfig(env.config, { database: env.database })
+    : new LunrSearchEngine({ logger: env.logger });
   const indexBuilder = new IndexBuilder({
     logger: env.logger,
     searchEngine,

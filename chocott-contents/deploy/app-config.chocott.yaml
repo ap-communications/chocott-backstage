@@ -1,0 +1,28 @@
+auth:
+  environment: development
+  providers:
+    github:
+      development:
+        clientId: ${AUTH_GITHUB_CLIENT_ID}
+        clientSecret: ${AUTH_GITHUB_CLIENT_SECRET}
+
+backend:
+  database:
+    client: pg
+    connection:
+      host: ${POSTGRES_HOST}
+      port: ${POSTGRES_PORT}
+      user: ${POSTGRES_USER}
+      password: ${POSTGRES_PASSWORD}
+
+catalog:
+  providers:
+    githubOrg:
+      id: 'github-local'
+      orgs: [ 'put your GitHub organization name' ]
+
+integrations:
+  github:
+    - host: github.com
+      apps:
+        - $include: ${GITHUB_CREDENTIAL_FILE}
