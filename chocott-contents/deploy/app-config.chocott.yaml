@@ -19,7 +19,9 @@ catalog:
   providers:
     githubOrg:
       id: 'github-local'
-      orgs: [ 'put your GitHub organization name' ]
+      orgs:
+      - ${GITHUB_ORG}
+      # orgs: [ 'put your GitHub organization name' ]
 
 integrations:
   github:
