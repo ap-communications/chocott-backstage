@@ -40,6 +40,8 @@ RUN --mount=type=cache,target=/home/node/.cache/yarn,sharing=locked,uid=1000,gid
     yarn install --frozen-lockfile --network-timeout 600000
 
 COPY --chown=node:node . .
+RUN cp ./app-config.chocott-production.yaml ./app-config.production.yaml && \
+    rm ./app-config.chocott-production.yaml
 
 RUN yarn tsc
 RUN yarn --cwd packages/backend build
@@ -86,8 +88,15 @@ COPY --from=build --chown=node:node /app/packages/backend/dist/bundle/ ./
 
 # Copy any other files that we need at runtime
 COPY --chown=node:node app-config.yaml ./
+COPY --chown=node:node app-config.chocott-production.yaml ./app-config.production.yaml
+
+# Copy sample catalog files
+COPY --chown=node:node examples/ ./examples/
+
 
 # This switches many Node.js dependencies to production mode.
 ENV NODE_ENV production
 
-CMD ["node", "packages/backend", "--config", "app-config.yaml"]
+ENTRYPOINT [ "node", "packages/backend", "--config", "app-config.yaml", "--config", "app-config.production.yaml" ]
+
+# CMD ["node", "packages/backend", "--config", "app-config.yaml"]
