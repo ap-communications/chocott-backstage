@@ -21,6 +21,10 @@ chocott-backstageの利用方法は [Quick start](./quick-start/index.md) をご
 - [Plugins](./plugins/index.md)
 - [Database](./database/index.md)
 
+## カタログ情報
+
+- [ソフトウェアカタログ](./catalogs/index.md)
+
 ## 独自コンテンツ
 
 本リポジトリは基本的に backstageのアプリケーション生成コマンドの出力結果をベースとし、いくつかコードに修正を加えたものとなっています。
