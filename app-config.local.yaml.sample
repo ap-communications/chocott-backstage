@@ -1,0 +1,64 @@
+# Backstage override configuration for your local development environment
+auth:
+  environment: development
+  providers:
+    github:
+      development:
+        clientId: ${AUTH_GITHUB_CLIENT_ID}
+        clientSecret: ${AUTH_GITHUB_CLIENT_SECRET}
+        ## uncomment if using GitHub Enterprise
+        # enterpriseInstanceUrl: ${AUTH_GITHUB_ENTERPRISE_INSTANCE_URL}
+        # see https://backstage.io/docs/auth/github/provider
+
+# backend:
+#   database:
+#     client: pg
+#     connection:
+#       host: ${POSTGRES_HOST}
+#       port: ${POSTGRES_PORT}
+#       user: ${POSTGRES_USER}
+#       password: ${POSTGRES_PASSWORD}
+
+integrations:
+  github:
+    - host: github.com
+      apps:
+        - $include: ${GITHUB_CREDENTIAL_FILE}
+
+catalog:
+  providers:
+    githubOrg:
+      id: 'github-local'
+      orgs:
+      - ${GITHUB_ORG}
+
+  rules:
+    - allow: [System, Component, Resource, Domain, API, Template]
+  locations:
+  # Local example data, file locations are relative to the backend process, typically `packages/backend`
+  - type: file
+    target: ../../examples/entities.yaml
+
+  # Local example template
+  - type: file
+    target: ../../examples/template/template.yaml
+    rules:
+    - allow: [Template]
+
+  # Local example organizational data
+  - type: file
+    target: ../../examples/org.yaml
+    rules:
+    - allow: [User, Group]
+
+  - type: file
+    target: ../../chocott-contents/catalog-info.yaml
+
+techdocs:
+  builder: 'local'
+  publisher:
+    type: 'local'
+    local:
+      publishDirectory: ../../site
+  generator:
+    runIn: local

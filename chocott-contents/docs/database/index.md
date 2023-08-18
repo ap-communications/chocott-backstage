@@ -35,3 +35,12 @@ backend:
     #     acquireTimeoutMillis: 60000
     #     idleTimeoutMillis: 60000      
 ```
+
+以下の項目はPostgreSQLの接続先情報です。
+
+- POSTGRES_HOST
+- POSTGRES_PORT
+- POSTGRES_USER
+- POSTGRES_PASSWORD
+
+実行時に環境変数で定義いただくか、直接コンフィグレーションファイルの該当部分を実際の接続先情報に書き換えてください。
