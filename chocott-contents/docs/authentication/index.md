@@ -1,4 +1,6 @@
-# GitHub Appのコンフィグレーション
+# GitHub Appの登録
+
+chocott-backstageはGitHubを利用してユーザーの認証を行います。GitHubで認証を行うにはGitHub Appの登録が必要になります。GitHub Appの登録にはそのアカウントのオーナー権限が必要です。
 
 以下の手順にそってGitHub Appを作成してください。
 GitHub App作成の詳細については[GitHub Docs](https://docs.github.com/ja/apps/creating-github-apps/registering-a-github-app/registering-a-github-app) をご参照願います。
@@ -96,14 +98,21 @@ TBD
 
 シークレットが作成されますので、表示されている Client IDとシークレット文字列をメモします。
 
-# Backstate向けコンフィグレーション
 
 ## 環境変数に登録
 
-登録したGitHub Appの情報を環境変数に登録します。
+Backstage Appで利用するため、登録したGitHub Appの情報を環境変数に登録します。
 
 ```bash
 export AUTH_GITHUB_CLIENT_ID="<Client IDの文字列>"
 export AUTH_GITHUB_CLIENT_SECRET="<Secretの文字列>"
 
 ```
+
+## サインイン
+
+### パーミッションの確認
+
+GitHubアカウントで最初にサインインする際、以下のようなダイアログが表示されます。表示されましたら「Authorize ... 」のボタンをクリックしてください。2回目のサインイン時には表示されません。
+
+![signin approve permission](./signin-approve-permission.png)

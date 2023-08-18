@@ -2,11 +2,14 @@ site_name: chocott-backstage
 
 nav:
   - Home: index.md
-  - "ユーザー認証": authentication/index.md
-  - "アクセス承認": authorization/index.md
-  - "Integration": integration/index.md
-  - "Tech Docs": techdocs/index.md
-  - "Plugin導入による機能拡張": plugins/index.md
+  - "Quick Start": quick-start/index.md
+  - "機能詳細":
+    - "ユーザー認証": authentication/index.md
+    - "アクセス承認": authorization/index.md
+    - "Integration": integration/index.md
+    - "TechDocs": techdocs/index.md
+    - "Plugin導入による機能拡張": plugins/index.md
+    - "Database": database/index.md
 
 docs_dir: 'docs'
 

@@ -1,5 +1,7 @@
 # Backend向けGitHubのインテグレーション
 
+BackstageのBackend Serverが各外部サービスに連携するための設定が Integration です。
+
 Backstageでは、TechDocsの作成等の目的のため、Backstage Serverが直接・定期的にGitHub等のシステムにアクセスします。
 ここではBackend Server向けのGitHub連携方法について記載します。
 
@@ -50,7 +52,7 @@ privateKeyの欄はさきほど作成したGitHubのprivate key PEMファイル�
 作成が完了したら、GITHUB_CREDENTIAL_FILE 環境変数にgithub-credentails.yamlのパス名を指定してください。
 
 ```shell
-export GITHUB_CREDENTIAL_FILE="/<put your folder name>/chocott-backstage/github-credentials.yaml"
+export GITHUB_CREDENTIAL_FILE="/<put your folder name>/github-credentials.yaml"
 
 ```
 

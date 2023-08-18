@@ -1,33 +1,31 @@
 # Chocott-Backstageの使い方
 
-## ユーザー認証
+## システム構成
 
-chocott-backstageはGitHubを利用してユーザーの認証を行います。GitHubで認証を行うにはGitHub Appの登録が必要になります。GitHub Appの登録にはそのアカウントのオーナー権限が必要です。
-[authentication](./authentication/index.md) のページにそって、個人アカウントまたは組織アカウントにGitHub Appを登録してください。
+[Backstage](https://backstage.io/) は [Plugin](https://backstage.io/plugins) を組み込むことで様々な外部システムと連携することができます。 chocott-backstageでは GitHubと連携するPluginをいくつか組み込んであります。
 
-## アクセス承認
+chocott-backstageのシステム構成を以下に示します。
 
-アクセスの承認はBackstage内で管理するユーザー情報・グループ情報を用いて行います。このユーザー・グループ情報はGitHubのユーザー・チームの情報と同期することができます。
-[authorizatoin](./authorization/index.md) に沿って、同期機能を有効にしてください。
+![sytem-overview](./system-overview.drawio.png)
 
-## Integration
+## 始め方
 
-BackstageのBackend Serverが各外部サービスに連携するための設定が Integration です。
-chocott-backstageはGitHubの連携がありますので、[Integration](./integration/index.md) に沿って登録を進めてください。
+chocott-backstageの利用方法は [Quick start](./quick-start/index.md) をご確認ください。
 
-## TechDocs
+## 機能詳細
 
-TechDocsはGitHubリポジトリ上で記載されたMarkdownファイルをHTMLに変換し、Backstage上で表示する機能です。
-本機能はHTML作成に mkdocs というツールを利用しています。ローカルPC上でBackstageを実行する場合、あらかじめ [TechDocs](./techdocs/index.md) に沿ってツール等をインストールする必要があります。
+- [ユーザー認証](./authentication/index.md)
+- [アクセス認可](./authorization/index.md)
+- [Integration](./integration/index.md)
+- [TechDocs](./techdocs/index.md)
+- [Plugins](./plugins/index.md)
+- [Database](./database/index.md)
 
-## Plugin導入による機能拡張
+## 独自コンテンツ
 
-Backstageでは様々なPluginが公開されており、それらを用いて機能を拡張することができます。[ここ](./plugins/index.md) では GitHub Pull requests plugin を例にその導入方法について見ていきます。
+本リポジトリは基本的に backstageのアプリケーション生成コマンドの出力結果をベースとし、いくつかコードに修正を加えたものとなっています。
+以下の部分は独自に追加しております。
 
-# サインイン
-
-## パーミッションの確認
-
-GitHubアカウントで最初にサインインする際、以下のようなダイアログが表示されます。表示されましたら「Authorize ... 」のボタンをクリックしてください。2回目のサインイン時には表示されません。
-
-![signin approve permission](./signin-approve-permission.png)
+- ${TOP}/LICENSE
+- $(TOP)/.github
+- $(TOP)/chocott-contenets
