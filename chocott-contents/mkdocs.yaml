@@ -10,6 +10,8 @@ nav:
     - "TechDocs": techdocs/index.md
     - "Plugin導入による機能拡張": plugins/index.md
     - "Database": database/index.md
+  - "カタログ情報":
+    - "ソフトウェアカタログ": "catalogs/index.md"
 
 docs_dir: 'docs'
 
