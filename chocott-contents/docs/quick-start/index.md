@@ -20,11 +20,29 @@ export GITHUB_CREDENTIAL_FILE="/<put your folder name>/github-credentials.yaml"
 
 ```
 
-最後に連携するGitHub組織名を環境変数に設定してください。
+組織アカウントにGitHub Appを登録した場合には、その組織のユーザー・チーム情報をBackstageに取り込むことができます。
+以下のようにGitHub組織名を環境変数に設定してください。
 
 ```shell
 export GITHUB_ORG="<organization名>"
 ```
+
+パーソナルアカウントにGitHub Appを登録した場合には、ユーザー・チーム情報をBackstageに取り込むことができませんので上記の環境変数の設定は不要です。コンフィグレーション(`$TOP/app-config.local.yaml` や `chocott-contents/deploy/app-config.chocott.yaml`)のcatalog.providers.gitHubOrgの項目をコメントアウトしてください。
+
+```yaml
+catalog:
+  # 個人アカウントにGitHub Appを作成した場合はproviders.githubOrgの項目をコメントアウトしてください
+  providers:
+    # 下記をコメントアウト
+    # githubOrg:
+    #   id: 'github-local'
+    #   orgs:
+    #   - ${GITHUB_ORG}
+
+```
+
+この場合は、GitHubアカウントを持っているすべての方がBackstageにサインイン可能となりますのでご利用の際はご注意ください。
+
 
 ## すぐに動かしたい方
 
@@ -69,6 +87,8 @@ docker compose up -d
 ### 事前準備
 
 nodeやyarnなどいくつかのコマンドが必要です。詳しくは [Backstage公式ドキュメントのGetting Started](https://backstage.io/docs/getting-started/#prerequisites)をご確認ください。
+
+なお、chocott-backstageでは Node 18を利用して実装しています。
 
 また、TechDocsを表示するために mkdocs というツールも必要になります。[TechDocsのドキュメント](../techdocs/index.md) をご確認いただき、インストールしてください。
 
