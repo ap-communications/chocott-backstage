@@ -26,7 +26,7 @@ export GITHUB_CREDENTIAL_FILE="/<put your folder name>/github-credentials.yaml"
 export GITHUB_ORG="<organization名>"
 ```
 
-## とにかくすぐに動かしたい方
+## すぐに動かしたい方
 
 必要なこと
 
@@ -54,6 +54,8 @@ docker compose up -d
 
 上記でアプリケーションが起動します。GitHubのほうからユーザー情報等を取得する時間が必要となるため、起動後少し（10秒程度）お待ちください。
 その後、 http://localhost:7007/ でアクセスできます。GitHubアカウントでサインインできます。
+
+アクセスしましたら、[ソフトウェアカタログのページ](../catalogs/index.md) をご参考にしていただき、既存のソフトウェアカタログを登録したり新規に作成するなどして、実際に機能をお試しください。
 
 
 ## ご自身でソースコードも修正してみたい方
@@ -91,3 +93,5 @@ cp app-config.local.yaml.sample app-config.local.yaml
 yarn install
 yarn dev
 ```
+
+アクセスしましたら、[ソフトウェアカタログのページ](../catalogs/index.md) をご参考にしていただき、既存のソフトウェアカタログを登録したり新規に作成するなどして、実際に機能をお試しください。
