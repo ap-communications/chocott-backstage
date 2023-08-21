@@ -26,6 +26,7 @@ integrations:
         - $include: ${GITHUB_CREDENTIAL_FILE}
 
 catalog:
+  # 個人アカウントにGitHub Appを作成した場合はproviders.githubOrgの項目をコメントアウトしてください
   providers:
     githubOrg:
       id: 'github-local'

@@ -15,16 +15,16 @@ backend:
       user: ${POSTGRES_USER}
       password: ${POSTGRES_PASSWORD}
 
-catalog:
-  providers:
-    githubOrg:
-      id: 'github-local'
-      orgs:
-      - ${GITHUB_ORG}
-      # orgs: [ 'put your GitHub organization name' ]
-
 integrations:
   github:
     - host: github.com
       apps:
         - $include: ${GITHUB_CREDENTIAL_FILE}
+
+catalog:
+  # 個人アカウントにGitHubAppを作成した場合は以下の部分をコメントアウトしてください
+  providers:
+    githubOrg:
+      id: 'github-local'
+      orgs:
+      - ${GITHUB_ORG}

@@ -1,6 +1,7 @@
 # Authorization
 
-アクセスの承認はBackstage内で管理するユーザー情報・グループ情報を用いて行います。このユーザー・グループ情報はGitHubのユーザー・チームの情報と同期することができます。以下にに沿って、同期機能を有効にしてください。
+アクセスの承認はBackstage内で管理するユーザー情報・グループ情報を用いて行います。
+GitHub Appを組織アカウントに登録した場合、ユーザー・グループ情報はGitHubのユーザー・チームの情報と同期することができます。以下にに沿って、同期機能を有効にしてください。
 
 ## 承認処理の有効化
 
@@ -136,3 +137,21 @@ catalog:
 あらためてサインインをしてみると、今度は正常にアクセスできると思います。
 
 最新のコードは [こちら](https://github.com/ap-communications/chocott-backstage/blob/main/packages/backend/src/plugins/catalog.ts) です。
+
+## パーソナルアカウントにGitHub Appを登録した場合
+
+パーソナルアカウントにGitHub Appを登録した場合には、ユーザー・チーム情報をBackstageに取り込むことができませんコンフィグレーション(`$TOP/app-config.local.yaml` や `chocott-contents/deploy/app-config.chocott.yaml`)のcatalog.providers.gitHubOrgの項目をコメントアウトしてください。
+
+```yaml
+catalog:
+  # 個人アカウントにGitHub Appを作成した場合はproviders.githubOrgの項目をコメントアウトしてください
+  providers:
+    # 下記をコメントアウト
+    # githubOrg:
+    #   id: 'github-local'
+    #   orgs:
+    #   - ${GITHUB_ORG}
+
+```
+
+この場合は、GitHubアカウントを持っているすべての方がBackstageにサインイン可能となりますのでご利用の際はご注意ください。
