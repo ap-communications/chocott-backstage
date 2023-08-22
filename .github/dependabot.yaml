@@ -11,18 +11,38 @@ updates:
       interval: "daily"
       time: "04:00"
       timezone: "Asia/Tokyo"
+    versioning-strategy: "lockfile-only"
+    ignore:
+      - dependency-name: "typescript"
+      - dependency-name: "@backstage/*"
+      - dependency-name: "*"
+        update-types: ["version-update:semver-major", "version-update:semver-minor"]
+
   - package-ecosystem: "npm"
     directory: "/packages/app"
     schedule:
       interval: "daily"
       time: "04:00"
       timezone: "Asia/Tokyo"
+    versioning-strategy: "lockfile-only"
+    ignore:
+      - dependency-name: "typescript"
+      - dependency-name: "@backstage/*"
+      - dependency-name: "*"
+        update-types: ["version-update:semver-major", "version-update:semver-minor"]
+
   - package-ecosystem: "npm"
     directory: "/packages/backend" # Location of package manifests
     schedule:
       interval: "daily"
       time: "04:00"
       timezone: "Asia/Tokyo"
+    versioning-strategy: "lockfile-only"
+    ignore:
+      - dependency-name: "typescript"
+      - dependency-name: "@backstage/*"
+      - dependency-name: "*"
+        update-types: ["version-update:semver-major", "version-update:semver-minor"]
 
   - package-ecosystem: "github-actions"
     directory: "/"
