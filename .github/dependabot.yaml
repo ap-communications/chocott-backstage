@@ -5,7 +5,28 @@
 
 version: 2
 updates:
-  - package-ecosystem: "yarn" # See documentation for possible values
-    directory: "/" # Location of package manifests
+  - package-ecosystem: "npm"
+    directory: "/"
     schedule:
-      interval: "weekly"
+      interval: "daily"
+      time: "04:00"
+      timezone: "Asia/Tokyo"
+  - package-ecosystem: "npm"
+    directory: "/packages/app"
+    schedule:
+      interval: "daily"
+      time: "04:00"
+      timezone: "Asia/Tokyo"
+  - package-ecosystem: "npm"
+    directory: "/packages/backend" # Location of package manifests
+    schedule:
+      interval: "daily"
+      time: "04:00"
+      timezone: "Asia/Tokyo"
+
+  - package-ecosystem: "github-actions"
+    directory: "/"
+    schedule:
+      interval: "daily"
+      time: "04:00"
+      timezone: "Asia/Tokyo"
