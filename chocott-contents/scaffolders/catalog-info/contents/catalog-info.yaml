@@ -1,0 +1,17 @@
+# 定義内容の詳細は以下のページを参照
+# https://backstage.io/docs/features/software-catalog/descriptor-format
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: ${{ values.name | dump }}
+{% if values.hasDocs %}
+  annotations:
+    backstage.io/techdocs-ref: dir:.  
+{% else %}
+  # annotations:
+  #   backstage.io/techdocs-ref: dir:.  
+{% endif %}
+spec:
+  type: service
+  owner: ${{ values.owner | dump }}
+  lifecycle: production

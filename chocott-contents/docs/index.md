@@ -24,6 +24,7 @@ chocott-backstageの利用方法は [Quick start](./quick-start/index.md) をご
 ## カタログ情報
 
 - [ソフトウェアカタログ](./catalogs/index.md)
+- [ソフトウェアテンプレート](./templates/index.md)
 
 ## 独自コンテンツ
 

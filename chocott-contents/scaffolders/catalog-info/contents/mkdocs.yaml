@@ -1,0 +1,9 @@
+site_name: ${{ values.name | dump }}
+
+nav:
+  - Home: README.md
+
+docs_dir: 'docs'
+
+plugins:
+  - techdocs-core
