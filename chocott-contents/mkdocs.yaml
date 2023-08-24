@@ -12,6 +12,7 @@ nav:
     - "Database": database/index.md
   - "カタログ情報":
     - "ソフトウェアカタログ": "catalogs/index.md"
+    - "ソフトウェアテンプレート": "templates/index.md"
 
 docs_dir: 'docs'
 

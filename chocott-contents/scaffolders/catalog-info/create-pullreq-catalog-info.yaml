@@ -1,0 +1,89 @@
+apiVersion: scaffolder.backstage.io/v1beta3
+# https://backstage.io/docs/features/software-catalog/descriptor-format#kind-template
+kind: Template
+metadata:
+  name: create-pullreq-catalog-info
+  title: catalog-infoの追加
+  description: catalog-info.yamlとmkdocs.yamlを作成し、GitHubにPullRequestを作成します。
+spec:
+  owner: group:guests
+  type: service
+
+  # These parameters are used to generate the input form in the frontend, and are
+  # used to gather input data for the execution of the template.
+  parameters:
+    - title: GitHubリポジトリ情報の入力
+      required:
+        - repoUrl
+        - branch
+      properties:
+        repoUrl:
+          title: Repository Location
+          type: string
+          ui:field: RepoUrlPicker
+          ui:options:
+            allowedHosts:
+              - github.com
+        branch:
+          title: Branch name
+          description: PullRequest作成先のブランチ名を入力してください。
+          type: string
+          ui:autofocus: true
+    - title: catalog情報の入力
+      required:
+        - name
+        - owner
+      properties:
+        name:
+          title: Name
+          description: catalog-infoに記載するコンポーネントのユニークな名称を入力してください。
+          type: string
+          ui:autofocus: true
+        owner:
+          title: Owner
+          type: string
+          description: catalog-infoに記載するownerを入力してください。
+          ui:field: OwnerPicker
+          ui:options:
+            catalogFilter:
+              kind: [Group]
+        hasDocs:
+          title: ドキュメントフォルダ有
+          type: boolean
+          default: false
+        draft:
+          title: Pull Requestをdraftとマークする
+          type: boolean
+          default: true
+
+  # These steps are executed in the scaffolder backend, using data that we gathered
+  # via the parameters above.
+  steps:
+    # Each step executes an action, in this case one templates files into the working directory.
+    - id: fetch-base
+      name: Fetch Base
+      action: fetch:template
+      input:
+        url: ./contents
+        values:
+          name: ${{ parameters.name }}
+          owner: ${{ parameters.owner }}
+          hasDocs: ${{ parameters.hasDocs }}
+
+    # This step publishes the contents of the working directory to GitHub.
+    - id: publish
+      name: Publish2GitHub
+      action: publish:github:pull-request
+      input:
+        allowedHosts: ['github.com']
+        title: adding catalog-info.yaml
+        description: pull it from default template
+        repoUrl: ${{ parameters.repoUrl }}
+        branchName: ${{ parameters.branch }}
+        draft: ${{ parameters.draft }}
+
+  # Outputs are displayed to the user after a successful execution of the template.
+  output:
+    links:
+      - title: Repository
+        url: ${{ steps['publish'].output.remoteUrl }}
