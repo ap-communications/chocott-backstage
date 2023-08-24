@@ -49,21 +49,13 @@ apiVersion: backstage.io/v1alpha1
 kind: Component
 metadata:
   name: ${{ values.name | dump }}
-{% if values.hasDocs %}
-  annotations:
-    backstage.io/techdocs-ref: dir:.  
-{% else %}
-  # annotations:
-  #   backstage.io/techdocs-ref: dir:.  
-{% endif %}
 spec:
   type: service
   owner: ${{ values.owner | dump }}
   lifecycle: production
 ```
 
-`${{ values.name | dump }}` はnameで指定した文字列に置換されます。また簡単な条件分岐なども記述でき
-`{% if values.hasDocs %}` はhasDocsの内容がtrueであるかどうかをチェックしています。
+`${{ values.name | dump }}` はnameで指定した文字列に置換されます。また簡単な条件分岐なども記述できます。
 
 このように一部の文字列を置換しながら、新しいリポジトリを作成したり、Pull Requestとして登録したりできるのが Backstageのソフトウェアテンプレートの特長になります。
 
