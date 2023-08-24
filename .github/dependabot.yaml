@@ -8,7 +8,7 @@ updates:
   - package-ecosystem: "npm"
     directory: "/"
     schedule:
-      interval: "daily"
+      interval: "weekly"
       time: "04:00"
       timezone: "Asia/Tokyo"
     versioning-strategy: "lockfile-only"
@@ -21,7 +21,7 @@ updates:
   - package-ecosystem: "npm"
     directory: "/packages/app"
     schedule:
-      interval: "daily"
+      interval: "weekly"
       time: "04:00"
       timezone: "Asia/Tokyo"
     versioning-strategy: "lockfile-only"
@@ -34,7 +34,7 @@ updates:
   - package-ecosystem: "npm"
     directory: "/packages/backend" # Location of package manifests
     schedule:
-      interval: "daily"
+      interval: "weekly"
       time: "04:00"
       timezone: "Asia/Tokyo"
     versioning-strategy: "lockfile-only"
@@ -47,6 +47,6 @@ updates:
   - package-ecosystem: "github-actions"
     directory: "/"
     schedule:
-      interval: "daily"
+      interval: "weekly"
       time: "04:00"
       timezone: "Asia/Tokyo"
