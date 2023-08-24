@@ -11,8 +11,8 @@ nav:
     - "Plugin導入による機能拡張": plugins/index.md
     - "Database": database/index.md
   - "カタログ情報":
-    - "ソフトウェアカタログ": "catalogs/index.md"
-    - "ソフトウェアテンプレート": "templates/index.md"
+    - "ソフトウェアカタログ": catalogs/index.md
+    - "ソフトウェアテンプレート": software-templates/index.md
 
 docs_dir: 'docs'
 
