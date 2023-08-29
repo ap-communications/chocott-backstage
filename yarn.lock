@@ -2320,7 +2320,7 @@
     zen-observable "^0.10.0"
     zod "^3.21.4"
 
-"@backstage/core-components@^0.13.3", "@backstage/core-components@^0.13.4":
+"@backstage/core-components@^0.13.4":
   version "0.13.4"
   resolved "https://registry.yarnpkg.com/@backstage/core-components/-/core-components-0.13.4.tgz#0275bf4c1e2495c4357db560eec33f15f941f90b"
   integrity sha512-rkiGtAm9JAHHmSEAOzafFfTbBzlOb6Ecu/Ng78fn4H1qig7Vdm7zJ6FwXcnfREMgiSV+xnoOioN7XMyZAfjMgg==
@@ -2702,7 +2702,7 @@
     "@backstage/plugin-catalog-common" "^1.0.15"
     "@backstage/types" "^1.1.0"
 
-"@backstage/plugin-catalog-react@^1.8.0", "@backstage/plugin-catalog-react@^1.8.3":
+"@backstage/plugin-catalog-react@^1.8.3":
   version "1.8.3"
   resolved "https://registry.yarnpkg.com/@backstage/plugin-catalog-react/-/plugin-catalog-react-1.8.3.tgz#06103b2707de6d2f2c6e2d1514c3237eb98d1f3e"
   integrity sha512-rY01QsZvVt87K+pVv1moP1cGUXyYV/1d/XLYb+mAvd5wX81nqZ3WWfn6jQQm4mgLMm/spfl/lt1D3lUgHDvQiQ==
@@ -2800,7 +2800,7 @@
     "@material-ui/icons" "^4.9.1"
     "@rjsf/utils" "5.7.3"
 
-"@backstage/plugin-home@^0.5.4":
+"@backstage/plugin-home@^0.5.7":
   version "0.5.7"
   resolved "https://registry.yarnpkg.com/@backstage/plugin-home/-/plugin-home-0.5.7.tgz#7c5758705bfc2108429714eabaf33e4afe9c0d71"
   integrity sha512-0CFmmVnM9aT4MsNCqO2YZQKqNUk5QEaooZSNbg96JiJEkoImJ3hBnWHZ5EZeFJwo9NdbyVdeR4ptDiIuggvrBA==
@@ -5380,16 +5380,16 @@
     lodash "^4.17.21"
     lodash-es "^4.17.21"
 
-"@roadiehq/backstage-plugin-github-pull-requests@^2.5.14":
-  version "2.5.14"
-  resolved "https://registry.yarnpkg.com/@roadiehq/backstage-plugin-github-pull-requests/-/backstage-plugin-github-pull-requests-2.5.14.tgz#df87e55d34d65155025da1955d576630a961f584"
-  integrity sha512-YdbU0rM5kZlT/vJBijDtLN6HMnVSjhsENN1EiTLVBkKypIVKNZuoe9ttejv3c1NN9JIPw5TMqVxcyLiJidJzYg==
+"@roadiehq/backstage-plugin-github-pull-requests@^2.5.15":
+  version "2.5.15"
+  resolved "https://registry.yarnpkg.com/@roadiehq/backstage-plugin-github-pull-requests/-/backstage-plugin-github-pull-requests-2.5.15.tgz#c4c67aa222d3a2d247d4559a298d06e1f08f954f"
+  integrity sha512-9NP/fP8DngNS1nfND/O0QhEMeUz5Ji3pWyTUBi6ywXDCPUQRnyVmd1rjDIFJtGoiIC/2pRqbnMOuaIaQfc/FJQ==
   dependencies:
     "@backstage/catalog-model" "^1.4.1"
-    "@backstage/core-components" "^0.13.3"
+    "@backstage/core-components" "^0.13.4"
     "@backstage/core-plugin-api" "^1.5.3"
-    "@backstage/plugin-catalog-react" "^1.8.0"
-    "@backstage/plugin-home" "^0.5.4"
+    "@backstage/plugin-catalog-react" "^1.8.3"
+    "@backstage/plugin-home" "^0.5.7"
     "@material-ui/core" "^4.11.0"
     "@material-ui/icons" "^4.9.1"
     "@material-ui/lab" "^4.0.0-alpha.60"
@@ -7858,7 +7858,7 @@ anymatch@^3.0.3, anymatch@~3.1.2:
     "@backstage/theme" "^0.4.1"
     "@material-ui/core" "^4.12.2"
     "@material-ui/icons" "^4.9.1"
-    "@roadiehq/backstage-plugin-github-pull-requests" "^2.5.14"
+    "@roadiehq/backstage-plugin-github-pull-requests" "^2.5.15"
     history "^5.0.0"
     react "^17.0.2"
     react-dom "^17.0.2"
