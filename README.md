@@ -2,7 +2,7 @@
 
 このリポジトリは [Backstage](https://backstage.io) Appのテンプレートです。
 
-## なぜ
+## なぜchocott-backstageを作ったのか
 
 [Backstage](https://backstage.io) はオープンソースプロジェクトです。
 Backstageの利用を開始するには [公式ドキュメント(Getting Started)](https://backstage.io/docs/getting-started/) にしたがってアプリケーションを生成し、データベースを用意し、各種連携システムの設定を行い、利用するBackstage pluginを導入するなど、いくつかのステップを踏まなければなりません。もちろん開発環境なども準備する必要があります。
