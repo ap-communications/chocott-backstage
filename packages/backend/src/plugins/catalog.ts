@@ -1,5 +1,5 @@
 import { CatalogBuilder } from '@backstage/plugin-catalog-backend';
-import { ScaffolderEntitiesProcessor } from '@backstage/plugin-scaffolder-backend';
+import { ScaffolderEntitiesProcessor } from '@backstage/plugin-catalog-backend-module-scaffolder-entity-model';
 import { GithubMultiOrgEntityProvider } from '@backstage/plugin-catalog-backend-module-github';
 import { Config } from '@backstage/config';
 import { PluginTaskScheduler } from '@backstage/backend-tasks';
