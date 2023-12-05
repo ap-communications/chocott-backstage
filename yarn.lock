@@ -2395,7 +2395,7 @@
     zen-observable "^0.10.0"
     zod "^3.21.4"
 
-"@backstage/core-components@^0.13.7", "@backstage/core-components@^0.13.8":
+"@backstage/core-components@^0.13.8":
   version "0.13.8"
   resolved "https://registry.yarnpkg.com/@backstage/core-components/-/core-components-0.13.8.tgz#4b45fec4b03601677d9b1d6279f2d8874ada176a"
   integrity sha512-isQB7WXrw1QsDZ2njSwah7L4L8aGQsu/GZCHEtXkV/0A54ZWOuYXzW4ME4Vcjh7UPXOdhejeBi+B3gHlWURRXA==
@@ -2442,7 +2442,7 @@
     zen-observable "^0.10.0"
     zod "^3.21.4"
 
-"@backstage/core-plugin-api@^1.7.0", "@backstage/core-plugin-api@^1.8.0":
+"@backstage/core-plugin-api@^1.8.0":
   version "1.8.0"
   resolved "https://registry.yarnpkg.com/@backstage/core-plugin-api/-/core-plugin-api-1.8.0.tgz#97e87e13dcc5a65cb65e883d67d4387c7a42db32"
   integrity sha512-yZ52w8Msf6cwLAf97bQKDqEWHA0N3ikRejYHFSn6hb3IVTgxV738m4ybFdgULVEAZFLrATs7nzu+UI3rqoVeZg==
@@ -2874,10 +2874,10 @@
     "@backstage/plugin-catalog-common" "^1.0.18"
     "@backstage/types" "^1.1.1"
 
-"@backstage/plugin-catalog-react@^1.8.5", "@backstage/plugin-catalog-react@^1.9.0":
-  version "1.9.0"
-  resolved "https://registry.yarnpkg.com/@backstage/plugin-catalog-react/-/plugin-catalog-react-1.9.0.tgz#9077d78d7c382b9017840c896c44678a1f2960ed"
-  integrity sha512-/hGRgnaHNpyZkt062v1xJbLSdh6fx0WTipafWIP++sVaoU6xE3zZdzbyMZxfgC8KIxIij6tRB+fWx1gNYg+RUg==
+"@backstage/plugin-catalog-react@^1.9.0", "@backstage/plugin-catalog-react@^1.9.1":
+  version "1.9.1"
+  resolved "https://registry.yarnpkg.com/@backstage/plugin-catalog-react/-/plugin-catalog-react-1.9.1.tgz#80d3ba027499c704bffbb11d877b3e871f557499"
+  integrity sha512-ucuJCVfHEdEsRLv3nv9Ds1eybkKzaDYKqt7KUb2rc/WfNiSZpsaf0/fWYfR/hNIAmxlE3o9PRuLN6wv5v8Ah9w==
   dependencies:
     "@backstage/catalog-client" "^1.4.6"
     "@backstage/catalog-model" "^1.4.3"
@@ -2965,7 +2965,7 @@
     luxon "^3.0.0"
     react-use "^17.2.4"
 
-"@backstage/plugin-home-react@^0.1.4":
+"@backstage/plugin-home-react@^0.1.5":
   version "0.1.5"
   resolved "https://registry.yarnpkg.com/@backstage/plugin-home-react/-/plugin-home-react-0.1.5.tgz#e2c9e8e33ab33b9755e04174ab740515ac37e094"
   integrity sha512-GInQBteTbsptpyhwpav2MebXx5zZgl63yQYMUJWDniAH0mzn0gn901tCKsKAnd9jeuS6d2qsBzMJNoz6xUrPEg==
@@ -6131,15 +6131,15 @@
     lodash-es "^4.17.21"
 
 "@roadiehq/backstage-plugin-github-pull-requests@^2.5.19":
-  version "2.5.19"
-  resolved "https://registry.yarnpkg.com/@roadiehq/backstage-plugin-github-pull-requests/-/backstage-plugin-github-pull-requests-2.5.19.tgz#fb4d4c45fa069326307b7da796cae76d6f0d6c40"
-  integrity sha512-0axtr4IJ8LkcJdfwGTzlUNHUeK6yEaDoyYiA8eILp91gTrZmygHRdQ/6ASN01APgzvIyJqOgfngxndX0xyILRg==
+  version "2.5.20"
+  resolved "https://registry.yarnpkg.com/@roadiehq/backstage-plugin-github-pull-requests/-/backstage-plugin-github-pull-requests-2.5.20.tgz#067ea00b2757307ef31ab6155fc02df60687d987"
+  integrity sha512-47iesSqLqf4CXEWGDHhagVexn21h4SWGBXSFURw4iahw8R84RZ7ere3kWGSgFELHSih1JamEheh2yEeuM5JT7A==
   dependencies:
     "@backstage/catalog-model" "^1.4.3"
-    "@backstage/core-components" "^0.13.7"
-    "@backstage/core-plugin-api" "^1.7.0"
-    "@backstage/plugin-catalog-react" "^1.8.5"
-    "@backstage/plugin-home-react" "^0.1.4"
+    "@backstage/core-components" "^0.13.8"
+    "@backstage/core-plugin-api" "^1.8.0"
+    "@backstage/plugin-catalog-react" "^1.9.1"
+    "@backstage/plugin-home-react" "^0.1.5"
     "@material-ui/core" "^4.11.0"
     "@material-ui/icons" "^4.9.1"
     "@material-ui/lab" "^4.0.0-alpha.60"
@@ -15910,12 +15910,7 @@ lunr@^2.3.9:
   resolved "https://registry.yarnpkg.com/lunr/-/lunr-2.3.9.tgz#18b123142832337dd6e964df1a5a7707b25d35e1"
   integrity sha512-zTU3DaZaF3Rt9rhN3uBMGQD3dD2/vFQqnvZCDv4dl5iOzq2IZQqTxu90r4E5J+nP70J3ilqVCrbho2eWaeW8Ow==
 
-luxon@^3.0.0, luxon@^3.2.1:
-  version "3.3.0"
-  resolved "https://registry.yarnpkg.com/luxon/-/luxon-3.3.0.tgz#d73ab5b5d2b49a461c47cedbc7e73309b4805b48"
-  integrity sha512-An0UCfG/rSiqtAIiBPO0Y9/zAnHUZxAMiCpTd5h2smgsj7GGmcenvrvww2cqNA8/4A5ZrD1gJpHN2mIHZQF+Mg==
-
-luxon@^3.3.0:
+luxon@^3.0.0, luxon@^3.2.1, luxon@^3.3.0:
   version "3.4.0"
   resolved "https://registry.yarnpkg.com/luxon/-/luxon-3.4.0.tgz#17cb754efecbf76994f05b2a3f1f91fad7ddfde7"
   integrity sha512-7eDo4Pt7aGhoCheGFIuq4Xa2fJm4ZpmldpGhjTYBNUYNCN6TIEP6v7chwwwt3KRp7YR+rghbfvjyo3V5y9hgBw==
