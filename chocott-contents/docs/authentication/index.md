@@ -100,9 +100,18 @@ TBD
 シークレットが作成されますので、表示されている Client IDとシークレット文字列をメモします。
 
 
+## App Install
+
+シークレットキーの作成まで完了したら、GitHub Appをインストールします。  
+GitHub Appの設定画面のサイドメニューで「Install App」を選択し、インストール対象とする組織を選択し「Install」ボタンを実行してください。
+
+![Install App](intall-github-app.png)
+
+
 ## 環境変数に登録
 
-Backstage Appで利用するため、登録したGitHub Appの情報を環境変数に登録します。
+Backstage Appで利用するため、登録したGitHub Appの情報を環境変数に登録し、
+Backstageを起動します。
 
 ```bash
 export AUTH_GITHUB_CLIENT_ID="<Client IDの文字列>"
