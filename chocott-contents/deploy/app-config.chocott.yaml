@@ -5,6 +5,9 @@ auth:
       development:
         clientId: ${AUTH_GITHUB_CLIENT_ID}
         clientSecret: ${AUTH_GITHUB_CLIENT_SECRET}
+        signIn:
+          resolvers:
+            - resolver: usernameMatchingUserEntityName
 
 backend:
   database:
@@ -14,6 +17,9 @@ backend:
       port: ${POSTGRES_PORT}
       user: ${POSTGRES_USER}
       password: ${POSTGRES_PASSWORD}
+  auth:
+    keys:
+    - secret: ${BACKSTAGE_BACKEND_SECRET}
 
 integrations:
   github:
@@ -26,5 +32,13 @@ catalog:
   providers:
     githubOrg:
       id: 'github-local'
+      githubUrl: 'https://github.com'
+      schedule:
+        frequency:
+          minutes: 60
+        timeout:
+          minutes: 5
+        initialDelay:
+          seconds: 10
       orgs:
       - ${GITHUB_ORG}

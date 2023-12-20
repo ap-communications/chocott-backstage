@@ -9,6 +9,9 @@ auth:
         ## uncomment if using GitHub Enterprise
         # enterpriseInstanceUrl: ${AUTH_GITHUB_ENTERPRISE_INSTANCE_URL}
         # see https://backstage.io/docs/auth/github/provider
+        signIn:
+          resolvers:
+          - resolver: usernameMatchingUserEntityName
 
 # backend:
 #   database:
@@ -32,6 +35,13 @@ catalog:
       id: 'github-local'
       orgs:
       - ${GITHUB_ORG}
+      schedule:
+        frequency:
+          minutes: 60
+        timeout:
+          minutes: 5
+        initialDelay:
+          seconds: 10
 
   rules:
     - allow: [System, Component, Resource, Domain, API, Template]
