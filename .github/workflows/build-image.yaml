@@ -50,7 +50,7 @@ jobs:
     # see: https://docs.github.com/ja/actions/using-workflows/caching-dependencies-to-speed-up-workflows
     # see also: https://zenn.dev/74th/articles/c966c3bf389247
     - name: Cache docker layers
-      uses: actions/cache@v3
+      uses: actions/cache@v4
       with:
         path: /tmp/.buildx-cache
         key: ${{ github.ref }}-${{ github.sha }}
