@@ -14,6 +14,7 @@ services:
     environment:
       AUTH_GITHUB_CLIENT_ID: ${AUTH_GITHUB_CLIENT_ID}
       AUTH_GITHUB_CLIENT_SECRET: ${AUTH_GITHUB_CLIENT_SECRET}
+      BACKSTAGE_BACKEND_SECRET: ${BACKSTAGE_BACKEND_SECRET:-YouShouldNotUseDefaultValue}
       GITHUB_CREDENTIAL_FILE: /app/config/github-credentials.yaml
       POSTGRES_HOST: db
       POSTGRES_PORT: 5432
