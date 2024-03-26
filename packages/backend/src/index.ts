@@ -33,13 +33,22 @@ ConfigSources.toConfig(source).then(config => {
 
   backend.add(import('@backstage/plugin-app-backend/alpha'));
   
+  // auth plugin
   backend.add(import('@backstage/plugin-auth-backend'));
-  backend.add(import('@backstage/plugin-auth-backend-module-github-provider'))
-  
+  // See https://backstage.io/docs/backend-system/building-backends/migrating#the-auth-plugin
+  backend.add(import('@backstage/plugin-auth-backend-module-github-provider'));
+
+  // catalog plugin
   backend.add(import('@backstage/plugin-catalog-backend/alpha'));
   backend.add(import('@backstage/plugin-catalog-backend-module-github/alpha'));
   backend.add(import('@backstage/plugin-catalog-backend-module-github-org'));
   backend.add(import('@backstage/plugin-catalog-backend-module-scaffolder-entity-model'));
+
+  // permissions plugin
+  backend.add(import('@backstage/plugin-permission-backend/alpha'));
+  backend.add(
+  import('@backstage/plugin-permission-backend-module-allow-all-policy'),
+);
   
   backend.add(import('@backstage/plugin-proxy-backend/alpha'));
   
