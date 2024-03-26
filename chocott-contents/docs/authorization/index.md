@@ -1,7 +1,16 @@
 # Authorization
 
 アクセスの承認はBackstage内で管理するユーザー情報・グループ情報を用いて行います。
+2024年3月にBackstage v1.24がリリースされました。このバージョンから[新バックエンドシステム](https://backstage.io/docs/backend-system/)が採用され、
+さまざまなコードによる指定が不要となりました。Chocott-backstageもv1.24対応バージョン(v1.8以降)から
+新バックエンドシステム対応となっています。
+
+以下のコードは従来型のバックエンドシステムシステムをご利用の
+場合に必要となるものです。新バックエンドシステムをご利用の場合はコードを除いたコンフィグレーションのみ
+実施してください。
+
 GitHub Appを組織アカウントに登録した場合、ユーザー・グループ情報はGitHubのユーザー・チームの情報と同期することができます。以下にに沿って、同期機能を有効にしてください。
+
 
 ## 承認処理の有効化
 
@@ -70,7 +79,7 @@ GitHub AuthenticationはGitHubに登録されたユーザーかどうかを確�
 
 最新のコードは [こちら](https://github.com/ap-communications/chocott-backstage/blob/main/packages/backend/src/plugins/auth.ts) です。
 
-## ユーザー情報の登録
+### ユーザー情報の登録
 
 上記の修正を行いサインインを実行すると以下のように、「User not found」になります。これはユーザーがBackstage側に登録されていないからです。
 
