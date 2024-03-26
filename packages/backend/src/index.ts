@@ -47,8 +47,8 @@ ConfigSources.toConfig(source).then(config => {
   // permissions plugin
   backend.add(import('@backstage/plugin-permission-backend/alpha'));
   backend.add(
-  import('@backstage/plugin-permission-backend-module-allow-all-policy'),
-);
+    import('@backstage/plugin-permission-backend-module-allow-all-policy')
+  );
   
   backend.add(import('@backstage/plugin-proxy-backend/alpha'));
   
