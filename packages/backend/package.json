@@ -50,7 +50,7 @@
     "better-sqlite3": "^8.0.0",
     "dockerode": "^3.3.1",
     "node-gyp": "^9.0.0",
-    "pg": "^8.11.3",
+    "pg": "^8.11.4",
     "winston": "^3.2.1"
   },
   "devDependencies": {
