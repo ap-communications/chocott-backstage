@@ -2244,7 +2244,7 @@
     cross-fetch "^4.0.0"
     uri-template "^2.0.0"
 
-"@backstage/catalog-model@^1.4.4", "@backstage/catalog-model@^1.4.5":
+"@backstage/catalog-model@^1.4.5":
   version "1.4.5"
   resolved "https://registry.yarnpkg.com/@backstage/catalog-model/-/catalog-model-1.4.5.tgz#b8f6309ff12b72dffdfe852d615c553ae13452c0"
   integrity sha512-I4QOCy0pSXJikQWgC8MWj2zDRCgQnnmvnNOOnPFcg7hIIIzeV0sGp6d3Qi7bc2tvzXt3fT3biSOCgGOWi1IJKA==
@@ -2449,7 +2449,7 @@
     "@backstage/version-bridge" "^1.0.7"
     "@types/react" "^16.13.1 || ^17.0.0"
 
-"@backstage/core-components@^0.14.0", "@backstage/core-components@^0.14.3":
+"@backstage/core-components@^0.14.3":
   version "0.14.3"
   resolved "https://registry.yarnpkg.com/@backstage/core-components/-/core-components-0.14.3.tgz#3de6ebe04d31ef6dc53b127b12d76490c7bba749"
   integrity sha512-2NmGRkvyxJtzPnosfus1gIhP6mqFi9UxeBbjsdpKQTemnSDs6mt52MuGrCgKPvxLAzoLIQz0R4ontQWV045nIA==
@@ -2494,7 +2494,7 @@
     zen-observable "^0.10.0"
     zod "^3.22.4"
 
-"@backstage/core-plugin-api@^1.9.0", "@backstage/core-plugin-api@^1.9.1":
+"@backstage/core-plugin-api@^1.9.1":
   version "1.9.1"
   resolved "https://registry.yarnpkg.com/@backstage/core-plugin-api/-/core-plugin-api-1.9.1.tgz#3ad8b7ee247198bb59fcd3b146092e4f9512a5de"
   integrity sha512-hV/U08XkgcEgE8YmwfK/onF2V/BlXaq0GxsalNJ5UarQde1XtRLydCg3NJ6oHTqrmzgcLPBAiOzSs+v5Z/SV5A==
@@ -3043,7 +3043,7 @@
     "@backstage/plugin-permission-node" "^0.7.27"
     "@backstage/types" "^1.1.1"
 
-"@backstage/plugin-catalog-react@^1.10.0", "@backstage/plugin-catalog-react@^1.11.2":
+"@backstage/plugin-catalog-react@^1.11.2":
   version "1.11.2"
   resolved "https://registry.yarnpkg.com/@backstage/plugin-catalog-react/-/plugin-catalog-react-1.11.2.tgz#93191f382e47d3a415419e73b579327c3628148f"
   integrity sha512-8n4/UrAhXoQol8rje/vaHAnYQrtlSxF2QVNenxWYLXZRr65wbWj5aa45UddkrcfaBOef7CNEDBoqRH+osHHCZQ==
@@ -3133,7 +3133,7 @@
     luxon "^3.0.0"
     react-use "^17.2.4"
 
-"@backstage/plugin-home-react@^0.1.8":
+"@backstage/plugin-home-react@^0.1.11":
   version "0.1.11"
   resolved "https://registry.yarnpkg.com/@backstage/plugin-home-react/-/plugin-home-react-0.1.11.tgz#b37c313ba8456c7c200902042fb4242d744f6485"
   integrity sha512-MxVXP4YxqtV9TKId+R9bg1G24kkrhr+RuOsSB4LT62Dxp1clGoaDyvGSKJH6YdL3UpSJ8IjBBhxkGM1rI4xMnA==
@@ -6746,15 +6746,15 @@
     lodash-es "^4.17.21"
 
 "@roadiehq/backstage-plugin-github-pull-requests@^2.5.24":
-  version "2.5.24"
-  resolved "https://registry.yarnpkg.com/@roadiehq/backstage-plugin-github-pull-requests/-/backstage-plugin-github-pull-requests-2.5.24.tgz#a6044d0a6f98e7d9749f5ebc012178b83c69d1ff"
-  integrity sha512-OPE8B+a83QCYXkOuojLhefkZaFcb4mgFDoaVtx936ZQq6BFsphWYe43gGaX8aSQd4/v82j/JW6htpaIH1v1Oyw==
+  version "2.5.25"
+  resolved "https://registry.yarnpkg.com/@roadiehq/backstage-plugin-github-pull-requests/-/backstage-plugin-github-pull-requests-2.5.25.tgz#7fcc802167bdc2e208680db2e750f0c5dbe07d64"
+  integrity sha512-KgNhd9fJkjsNIhaLiWwn5yML+dBPSZmXXS0Iwvn/UqwpYGwPQk/qCEW/eQZnuB6RigrbH8F9y6ZyD1sy+73n+g==
   dependencies:
-    "@backstage/catalog-model" "^1.4.4"
-    "@backstage/core-components" "^0.14.0"
-    "@backstage/core-plugin-api" "^1.9.0"
-    "@backstage/plugin-catalog-react" "^1.10.0"
-    "@backstage/plugin-home-react" "^0.1.8"
+    "@backstage/catalog-model" "^1.4.5"
+    "@backstage/core-components" "^0.14.3"
+    "@backstage/core-plugin-api" "^1.9.1"
+    "@backstage/plugin-catalog-react" "^1.11.2"
+    "@backstage/plugin-home-react" "^0.1.11"
     "@material-ui/core" "^4.12.2"
     "@material-ui/icons" "^4.9.1"
     "@material-ui/lab" "^4.0.0-alpha.60"
@@ -8823,9 +8823,9 @@
   integrity sha512-hKormJbkJqzQGhziax5PItDUTMAM9uE2XXQmM37dyd4hVM+5aVl7oVxMVUiVQn2oCQFN/LKCZdvSM0pFRqbSmQ==
 
 "@types/react-dom@*", "@types/react-dom@^18", "@types/react-dom@^18.0.0":
-  version "18.2.23"
-  resolved "https://registry.yarnpkg.com/@types/react-dom/-/react-dom-18.2.23.tgz#112338760f622a16d64271b408355f2f27f6302c"
-  integrity sha512-ZQ71wgGOTmDYpnav2knkjr3qXdAFu0vsk8Ci5w3pGAIdj7/kKAyn+VsQDhXsmzzzepAiI9leWMmubXz690AI/A==
+  version "18.2.24"
+  resolved "https://registry.yarnpkg.com/@types/react-dom/-/react-dom-18.2.24.tgz#8dda8f449ae436a7a6e91efed8035d4ab03ff759"
+  integrity sha512-cN6upcKd8zkGy4HU9F1+/s98Hrp6D4MOcippK4PoE8OZRngohHZpbJn1GsaDLz87MqvHNoT13nHvNqM9ocRHZg==
   dependencies:
     "@types/react" "*"
 
@@ -8861,9 +8861,9 @@
     "@types/react" "*"
 
 "@types/react@*", "@types/react@^16.13.1 || ^17.0.0", "@types/react@^16.13.1 || ^17.0.0 || ^18.0.0", "@types/react@^18":
-  version "18.2.73"
-  resolved "https://registry.yarnpkg.com/@types/react/-/react-18.2.73.tgz#0579548ad122660d99e00499d22e33b81e73ed94"
-  integrity sha512-XcGdod0Jjv84HOC7N5ziY3x+qL0AfmubvKOZ9hJjJ2yd5EE+KYjWhdOjt387e9HPheHkdggF9atTifMRtyAaRA==
+  version "18.2.74"
+  resolved "https://registry.yarnpkg.com/@types/react/-/react-18.2.74.tgz#2d52eb80e4e7c4ea8812c89181d6d590b53f958c"
+  integrity sha512-9AEqNZZyBx8OdZpxzQlaFEVCSFUM2YXJH46yPOiOpm078k6ZLOCcuAzGum/zK8YBwY+dbahVNbHrbgrAwIRlqw==
   dependencies:
     "@types/prop-types" "*"
     csstype "^3.0.2"
