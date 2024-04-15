@@ -46,6 +46,7 @@
     "@backstage/plugin-search-backend-module-techdocs": "^0.1.21",
     "@backstage/plugin-search-backend-node": "^1.2.20",
     "@backstage/plugin-techdocs-backend": "^1.10.3",
+    "@internal/backstage-plugin-auth-backend-module-github-as-guest-provider": "^0.1.0",
     "app": "link:../app",
     "better-sqlite3": "^8.0.0",
     "dockerode": "^3.3.1",

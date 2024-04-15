@@ -36,12 +36,15 @@ ConfigSources.toConfig(source).then(config => {
   // auth plugin
   backend.add(import('@backstage/plugin-auth-backend'));
   // See https://backstage.io/docs/backend-system/building-backends/migrating#the-auth-plugin
-  backend.add(import('@backstage/plugin-auth-backend-module-github-provider'));
+  // backend.add(import('@backstage/plugin-auth-backend-module-github-provider'));
+  backend.add(import('@internal/backstage-plugin-auth-backend-module-github-as-guest-provider'))
 
   // catalog plugin
   backend.add(import('@backstage/plugin-catalog-backend/alpha'));
   backend.add(import('@backstage/plugin-catalog-backend-module-github/alpha'));
-  backend.add(import('@backstage/plugin-catalog-backend-module-github-org'));
+  if (config.getOptionalConfig('catalog.providers.githubOrg')) {
+    backend.add(import('@backstage/plugin-catalog-backend-module-github-org'));
+  }
   backend.add(import('@backstage/plugin-catalog-backend-module-scaffolder-entity-model'));
 
   // permissions plugin
