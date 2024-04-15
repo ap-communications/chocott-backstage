@@ -8,6 +8,8 @@ auth:
         signIn:
           resolvers:
             - resolver: usernameMatchingUserEntityName
+            # 個人アカウントにGitHubAppを作成した場合は以下の部分を有効にしてください
+            # - resolver: allMatchersAsGuest
 
 backend:
   database:
@@ -28,7 +30,7 @@ integrations:
         - $include: ${GITHUB_CREDENTIAL_FILE}
 
 catalog:
-  # 個人アカウントにGitHubAppを作成した場合は以下の部分をコメントアウトしてください
+  個人アカウントにGitHubAppを作成した場合は以下の部分をコメントアウトしてください
   providers:
     githubOrg:
       id: 'github-local'

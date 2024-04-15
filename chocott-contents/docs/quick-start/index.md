@@ -27,9 +27,23 @@ export GITHUB_CREDENTIAL_FILE="/<put your folder name>/github-credentials.yaml"
 export GITHUB_ORG="<organization名>"
 ```
 
-パーソナルアカウントにGitHub Appを登録した場合には、ユーザー・チーム情報をBackstageに取り込むことができませんので上記の環境変数の設定は不要です。コンフィグレーション(`$TOP/app-config.local.yaml` や `chocott-contents/deploy/app-config.chocott.yaml`)のcatalog.providers.gitHubOrgの項目をコメントアウトしてください。
+パーソナルアカウントにGitHub Appを登録した場合には、ユーザー・チーム情報をBackstageに取り込むことができませんので上記の環境変数の設定は不要です。コンフィグレーション(`$TOP/app-config.local.yaml` や `chocott-contents/deploy/app-config.chocott.yaml`)のcatalog.providers.gitHubOrgの項目をコメントアウトし、また`auth.providers.github.development.signIn.resolvers`の`allMatchersAsGuest`を有効にしてください。
 
 ```yaml
+auth:
+  environment: development
+  providers:
+    github:
+      development:
+        clientId: ${AUTH_GITHUB_CLIENT_ID}
+        clientSecret: ${AUTH_GITHUB_CLIENT_SECRET}
+        signIn:
+          resolvers:
+            - resolver: usernameMatchingUserEntityName
+            # 個人アカウントにGitHubAppを作成した場合は以下の部分を有効にしてください
+            - resolver: allMatchersAsGuest # ここを有効にする
+
+
 catalog:
   # 個人アカウントにGitHub Appを作成した場合はproviders.githubOrgの項目をコメントアウトしてください
   providers:
