@@ -36,8 +36,10 @@ ConfigSources.toConfig(source).then(config => {
   // auth plugin
   backend.add(import('@backstage/plugin-auth-backend'));
   // See https://backstage.io/docs/backend-system/building-backends/migrating#the-auth-plugin
-  // backend.add(import('@backstage/plugin-auth-backend-module-github-provider'));
+  // 個人アカウントでGitHub Appを作成した場合、user/group情報が取得できないため、resolverを独自に拡張しています。
   backend.add(import('@internal/backstage-plugin-auth-backend-module-github-as-guest-provider'))
+  // 複数名で利用する場合は 上記はコメントアウトし、以下の`@backstage/plugin-auth-backend-module-github-provider` を利用してください。 
+  // backend.add(import('@backstage/plugin-auth-backend-module-github-provider'));
 
   // catalog plugin
   backend.add(import('@backstage/plugin-catalog-backend/alpha'));
