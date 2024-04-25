@@ -12,8 +12,19 @@ auth:
         signIn:
           resolvers:
           - resolver: usernameMatchingUserEntityName
+          # 個人アカウントにGitHubAppを作成した場合は以下の部分を有効にしてください
+          # - resolver: allMatchersAsGuest
 
-# backend:
+backend:
+  auth:
+    externalAccess:
+      # In local development, there is no need to configure anything for this auth method. 
+      # But in production, you must configure at least one legacy type external access method:
+      - type: legacy
+        options:
+          secret: 'put-your-secret-value-here'
+          subject: legacy-catalog
+
 #   database:
 #     client: pg
 #     connection:

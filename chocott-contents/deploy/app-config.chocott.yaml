@@ -20,8 +20,13 @@ backend:
       user: ${POSTGRES_USER}
       password: ${POSTGRES_PASSWORD}
   auth:
-    keys:
-    - secret: ${BACKSTAGE_BACKEND_SECRET}
+    externalAccess:
+      # In local development, there is no need to configure anything for this auth method. 
+      # But in production, you must configure at least one legacy type external access method:
+      - type: legacy
+        options:
+          secret: ${BACKSTAGE_BACKEND_SECRET}
+          subject: legacy-catalog
 
 integrations:
   github:
