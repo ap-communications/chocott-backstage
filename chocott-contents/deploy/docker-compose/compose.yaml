@@ -20,7 +20,7 @@ services:
       POSTGRES_PORT: 5432
       POSTGRES_USER: ${POSTGRES_USER:-postgres}
       POSTGRES_PASSWORD: ${POSTGRES_PASSWORD:-postgres}
-      GITHUB_ORG: ${GITHUB_ORG}
+      GITHUB_ORG: ${GITHUB_ORG:-SpecifildYourOrganizationName}
     networks:
       - backend
     depends_on:
