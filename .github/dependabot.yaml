@@ -24,3 +24,9 @@ updates:
       interval: "weekly"
       time: "04:00"
       timezone: "Asia/Tokyo"
+  - package-ecosystem: "docker"
+    directory: "/packages/backend"
+    schedule:
+      interval: "weekly"
+      time: "04:00"
+      timezone: "Asia/Tokyo"
