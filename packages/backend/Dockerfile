@@ -1,4 +1,15 @@
-FROM node:18-bullseye-slim as base
+FROM node:20-bookworm-slim as base
+
+# Set up a virtual environment for mkdocs-techdocs-core.
+RUN --mount=type=cache,target=/var/cache/apt,sharing=locked \
+    --mount=type=cache,target=/var/lib/apt,sharing=locked \
+    apt-get update && \
+    apt-get install -y --no-install-recommends python3 python3-venv python3-pip  g++ build-essential
+ENV VIRTUAL_ENV=/opt/venv
+RUN python3 -m venv $VIRTUAL_ENV
+ENV PATH="$VIRTUAL_ENV/bin:$PATH"
+RUN pip3 install mkdocs mkdocs-techdocs-core
+RUN yarn config set python /usr/bin/python3
 
 # Stage 1 - Create yarn install skeleton layer
 FROM base AS packages
@@ -13,15 +24,9 @@ COPY plugins plugins
 
 RUN find packages \! -name "package.json" -mindepth 2 -maxdepth 2 -exec rm -rf {} \+
 
-# Stage 2 - Install dependencies and build packages
+# Stage 2 - Install de`endencies and build packages
 FROM base AS build
 
-# Install isolate-vm dependencies, these are needed by the @backstage/plugin-scaffolder-backend.
-RUN --mount=type=cache,target=/var/cache/apt,sharing=locked \
-    --mount=type=cache,target=/var/lib/apt,sharing=locked \
-    apt-get update && \
-    apt-get install -y --no-install-recommends python3 g++ build-essential && \
-    yarn config set python /usr/bin/python3
 
 # Install sqlite3 dependencies. You can skip this if you don't use sqlite3 in the image,
 # in which case you should also move better-sqlite3 to "devDependencies" in package.json.
@@ -56,13 +61,6 @@ RUN mkdir packages/backend/dist/skeleton packages/backend/dist/bundle \
 # Stage 3 - Build the actual backend image and install production dependencies
 FROM base
 
-# Install isolate-vm dependencies, these are needed by the @backstage/plugin-scaffolder-backend.
-RUN --mount=type=cache,target=/var/cache/apt,sharing=locked \
-    --mount=type=cache,target=/var/lib/apt,sharing=locked \
-    apt-get update && \
-    apt-get install -y --no-install-recommends python3 g++ build-essential python3-pip && \
-    pip3 install mkdocs mkdocs-techdocs-core && \
-    yarn config set python /usr/bin/python3
 
 # Install sqlite3 dependencies. You can skip this if you don't use sqlite3 in the image,
 # in which case you should also move better-sqlite3 to "devDependencies" in package.json.
