@@ -12349,12 +12349,21 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/node@npm:^18.11.18, @types/node@npm:^18.17.0":
+"@types/node@npm:^18.11.18":
   version: 18.19.31
   resolution: "@types/node@npm:18.19.31"
   dependencies:
     undici-types: "npm:~5.26.4"
   checksum: 949bddfd7071bd47300d1f33d380ee34695ccd5f046f1a03e4d2be0d953ace896905144d44a6f483f241b5ef34b86f0e40a0e312201117782eecf89e81a4ff13
+  languageName: node
+  linkType: hard
+
+"@types/node@npm:^20.0.0":
+  version: 20.12.11
+  resolution: "@types/node@npm:20.12.11"
+  dependencies:
+    undici-types: ~5.26.4
+  checksum: 0cc06bb69cd8150e96fcf65fa3d7f2eeebedf110a99e1834a7fa55bd6c04e7b6d73f74321a2acfc569ca300c0b88d8e1b702ce245b3802f6e5f6a8987fef451a
   languageName: node
   linkType: hard
 
@@ -13731,7 +13740,7 @@ __metadata:
     "@testing-library/jest-dom": ^6.0.0
     "@testing-library/react": ^14.0.0
     "@testing-library/user-event": ^14.0.0
-    "@types/node": ^18.17.0
+    "@types/node": ^20.0.0
     "@types/react-dom": "*"
     cross-env: ^7.0.0
     history: ^5.0.0
