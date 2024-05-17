@@ -15,6 +15,8 @@ updates:
     ignore:
       - dependency-name: "typescript"
       - dependency-name: "@backstage/*"
+      - dependency-name: "@backstage-community/*"
+        update-types: ["version-update:semver-major"]      
       - dependency-name: "*"
         update-types: ["version-update:semver-major", "version-update:semver-minor"]
 
