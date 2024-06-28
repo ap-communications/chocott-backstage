@@ -4,7 +4,8 @@ FROM node:20-bookworm-slim as base
 RUN --mount=type=cache,target=/var/cache/apt,sharing=locked \
     --mount=type=cache,target=/var/lib/apt,sharing=locked \
     apt-get update && \
-    apt-get install -y --no-install-recommends python3 python3-venv python3-pip  g++ build-essential
+    apt-get install -y --no-install-recommends python3 python3-venv python3-pip  g++ build-essential && \
+    rm -rf /var/lib/apt/lists/*
 ENV VIRTUAL_ENV=/opt/venv
 RUN python3 -m venv $VIRTUAL_ENV
 ENV PATH="$VIRTUAL_ENV/bin:$PATH"
@@ -23,6 +24,10 @@ COPY packages packages
 COPY plugins plugins
 
 RUN find packages \! -name "package.json" -mindepth 2 -maxdepth 2 -exec rm -rf {} \+
+
+# for yarn3
+COPY .yarn ./.yarn
+COPY .yarnrc.yml ./
 
 # Stage 2 - Install de`endencies and build packages
 FROM base AS build
@@ -79,8 +84,12 @@ WORKDIR /app
 # Copy the install dependencies from the build stage and context
 COPY --from=build --chown=node:node /app/yarn.lock /app/package.json /app/packages/backend/dist/skeleton/ ./
 
+# Copy the yarn dependencies from the build stage and context
+COPY --from=build --chown=node:node /app/.yarn ./.yarn
+COPY --from=build --chown=node:node /app/.yarnrc.yml  ./
+
 RUN --mount=type=cache,target=/home/node/.cache/yarn,sharing=locked,uid=1000,gid=1000 \
-    yarn install --immutable --production --network-timeout 600000
+    yarn workspaces focus --all --production && rm -rf "$(yarn cache clean)"
 
 # Copy the built packages from the build stage
 COPY --from=build --chown=node:node /app/packages/backend/dist/bundle/ ./
