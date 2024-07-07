@@ -3058,24 +3058,24 @@ __metadata:
   linkType: hard
 
 "@backstage-community/plugin-tech-radar@npm:^0.7.4":
-  version: 0.7.4
-  resolution: "@backstage-community/plugin-tech-radar@npm:0.7.4"
+  version: 0.7.5
+  resolution: "@backstage-community/plugin-tech-radar@npm:0.7.5"
   dependencies:
-    "@backstage/core-compat-api": "npm:^0.2.4"
-    "@backstage/core-components": "npm:^0.14.4"
-    "@backstage/core-plugin-api": "npm:^1.9.2"
-    "@backstage/frontend-plugin-api": "npm:^0.6.4"
-    "@material-ui/core": "npm:^4.12.2"
-    "@material-ui/icons": "npm:^4.9.1"
-    "@types/react": "npm:^16.13.1 || ^17.0.0 || ^18.0.0"
-    color: "npm:^4.0.1"
-    d3-force: "npm:^3.0.0"
-    react-use: "npm:^17.2.4"
+    "@backstage/core-compat-api": ^0.2.4
+    "@backstage/core-components": ^0.14.4
+    "@backstage/core-plugin-api": ^1.9.2
+    "@backstage/frontend-plugin-api": ^0.6.4
+    "@material-ui/core": ^4.12.2
+    "@material-ui/icons": ^4.9.1
+    "@types/react": ^16.13.1 || ^17.0.0 || ^18.0.0
+    color: ^4.0.1
+    d3-force: ^3.0.0
+    react-use: ^17.2.4
   peerDependencies:
     react: ^16.13.1 || ^17.0.0 || ^18.0.0
     react-dom: ^16.13.1 || ^17.0.0 || ^18.0.0
     react-router-dom: 6.0.0-beta.0 || ^6.3.0
-  checksum: d0ee331ab40d19f535bcf53b51a689973c9cd1beb4518d0ae691cc5b457c84c072214fe3ac8b4461c514cbcf718816dba06cc97658efdfeee364cad32c08c28f
+  checksum: 82dd62ba88ea480b6de55b5359502ded0165e8783d6cde9a82bf3fe26e3df1a974a0aeaa230238cd118bf59dc369d7e4ba8fd8e73b229ac28950dd6337ea3761
   languageName: node
   linkType: hard
 
