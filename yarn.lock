@@ -3032,28 +3032,28 @@ __metadata:
   linkType: hard
 
 "@backstage-community/plugin-github-actions@npm:^0.6.16":
-  version: 0.6.16
-  resolution: "@backstage-community/plugin-github-actions@npm:0.6.16"
+  version: 0.6.17
+  resolution: "@backstage-community/plugin-github-actions@npm:0.6.17"
   dependencies:
-    "@backstage/catalog-model": "npm:^1.4.5"
-    "@backstage/core-components": "npm:^0.14.4"
-    "@backstage/core-plugin-api": "npm:^1.9.2"
-    "@backstage/integration": "npm:^1.10.0"
-    "@backstage/integration-react": "npm:^1.1.26"
-    "@backstage/plugin-catalog-react": "npm:^1.11.3"
-    "@material-ui/core": "npm:^4.12.2"
-    "@material-ui/icons": "npm:^4.9.1"
-    "@material-ui/lab": "npm:4.0.0-alpha.61"
-    "@octokit/rest": "npm:^19.0.3"
-    "@types/react": "npm:^16.13.1 || ^17.0.0 || ^18.0.0"
-    git-url-parse: "npm:^14.0.0"
-    luxon: "npm:^3.0.0"
-    react-use: "npm:^17.2.4"
+    "@backstage/catalog-model": ^1.5.0
+    "@backstage/core-components": ^0.14.9
+    "@backstage/core-plugin-api": ^1.9.3
+    "@backstage/integration": ^1.13.0
+    "@backstage/integration-react": ^1.1.29
+    "@backstage/plugin-catalog-react": ^1.12.2
+    "@material-ui/core": ^4.12.2
+    "@material-ui/icons": ^4.9.1
+    "@material-ui/lab": 4.0.0-alpha.61
+    "@octokit/rest": ^19.0.3
+    "@types/react": ^16.13.1 || ^17.0.0 || ^18.0.0
+    git-url-parse: ^14.0.0
+    luxon: ^3.0.0
+    react-use: ^17.2.4
   peerDependencies:
     react: ^16.13.1 || ^17.0.0 || ^18.0.0
     react-dom: ^16.13.1 || ^17.0.0 || ^18.0.0
     react-router-dom: 6.0.0-beta.0 || ^6.3.0
-  checksum: 8166bafad993e381da6fc17d244f36d3f509af9e0c91d06769f99717ba3cbc34a77f99a3760c2aa1b891ff0ff3dd7b3965bc8b024d46e7c1b570d83ef833e0b3
+  checksum: 0b045abf879051aa2e1bf5c621facdf66d688aeac2d283d0a8f508ba220df048a1314859aed2a3be1d4e2df630ff9f10221cadb8a987b3ed07a58933762302d8
   languageName: node
   linkType: hard
 
@@ -3791,7 +3791,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@backstage/integration-react@npm:^1.1.26, @backstage/integration-react@npm:^1.1.29":
+"@backstage/integration-react@npm:^1.1.29":
   version: 1.1.29
   resolution: "@backstage/integration-react@npm:1.1.29"
   dependencies:
@@ -3809,7 +3809,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@backstage/integration@npm:^1.10.0, @backstage/integration@npm:^1.13.0":
+"@backstage/integration@npm:^1.13.0":
   version: 1.13.0
   resolution: "@backstage/integration@npm:1.13.0"
   dependencies:
