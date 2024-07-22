@@ -49,6 +49,9 @@ ConfigSources.toConfig(source).then(config => {
   }
   backend.add(import('@backstage/plugin-catalog-backend-module-scaffolder-entity-model'));
 
+  // See https://backstage.io/docs/features/software-catalog/configuration#subscribing-to-catalog-errors
+  backend.add(import('@backstage/plugin-catalog-backend-module-logs'));
+
   // permissions plugin
   backend.add(import('@backstage/plugin-permission-backend/alpha'));
   backend.add(
