@@ -3058,13 +3058,13 @@ __metadata:
   linkType: hard
 
 "@backstage-community/plugin-tech-radar@npm:^0.7.5":
-  version: 0.7.5
-  resolution: "@backstage-community/plugin-tech-radar@npm:0.7.5"
+  version: 0.7.6
+  resolution: "@backstage-community/plugin-tech-radar@npm:0.7.6"
   dependencies:
-    "@backstage/core-compat-api": ^0.2.4
-    "@backstage/core-components": ^0.14.4
-    "@backstage/core-plugin-api": ^1.9.2
-    "@backstage/frontend-plugin-api": ^0.6.4
+    "@backstage/core-compat-api": ^0.2.7
+    "@backstage/core-components": ^0.14.9
+    "@backstage/core-plugin-api": ^1.9.3
+    "@backstage/frontend-plugin-api": ^0.6.7
     "@material-ui/core": ^4.12.2
     "@material-ui/icons": ^4.9.1
     "@types/react": ^16.13.1 || ^17.0.0 || ^18.0.0
@@ -3075,7 +3075,7 @@ __metadata:
     react: ^16.13.1 || ^17.0.0 || ^18.0.0
     react-dom: ^16.13.1 || ^17.0.0 || ^18.0.0
     react-router-dom: 6.0.0-beta.0 || ^6.3.0
-  checksum: 82dd62ba88ea480b6de55b5359502ded0165e8783d6cde9a82bf3fe26e3df1a974a0aeaa230238cd118bf59dc369d7e4ba8fd8e73b229ac28950dd6337ea3761
+  checksum: 933642f7322261fa5c7d7df5939c242fc1e02a97a76d6f8d251091a4c59910ffa361135916034d55762ecc90678047160e7204be4b5e77eaff5aa3562100f55e
   languageName: node
   linkType: hard
 
@@ -3639,7 +3639,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@backstage/core-compat-api@npm:^0.2.4, @backstage/core-compat-api@npm:^0.2.7":
+"@backstage/core-compat-api@npm:^0.2.7":
   version: 0.2.7
   resolution: "@backstage/core-compat-api@npm:0.2.7"
   dependencies:
@@ -3756,7 +3756,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@backstage/frontend-plugin-api@npm:^0.6.4, @backstage/frontend-plugin-api@npm:^0.6.7":
+"@backstage/frontend-plugin-api@npm:^0.6.7":
   version: 0.6.7
   resolution: "@backstage/frontend-plugin-api@npm:0.6.7"
   dependencies:
