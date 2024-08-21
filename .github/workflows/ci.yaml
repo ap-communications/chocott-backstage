@@ -38,6 +38,10 @@ jobs:
         uses: borales/actions-yarn@v5
         with:
           cmd: lint:all
+      - name: check for missing repo fixies
+        uses: borales/actions-yarn@v5
+        with:
+          cmd: fix --check
       - name: Compile the app
         uses: borales/actions-yarn@v5
         with:
