@@ -1,4 +1,4 @@
-FROM node:20-bookworm-slim as base
+FROM node:20-bookworm-slim AS base
 
 # Set up a virtual environment for mkdocs-techdocs-core.
 RUN --mount=type=cache,target=/var/cache/apt,sharing=locked \
@@ -103,10 +103,10 @@ COPY --chown=node:node examples/ ./examples/
 
 
 # This switches many Node.js dependencies to production mode.
-ENV NODE_ENV production
+ENV NODE_ENV=production
 # When using Node.js version 20 or newer, the scaffolder backend plugin requires that it be started with the --no-node-snapshot option. 
 # Make sure that you have NODE_OPTIONS=--no-node-snapshot in your environment
-ENV NODE_OPTIONS --no-node-snapshot
+ENV NODE_OPTIONS=--no-node-snapshot
 
 ENTRYPOINT [ "node", "packages/backend", "--config", "app-config.yaml", "--config", "app-config.production.yaml" ]
 
