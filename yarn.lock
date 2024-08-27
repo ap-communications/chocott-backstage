@@ -3932,19 +3932,19 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@backstage/plugin-auth-backend-module-aws-alb-provider@npm:^0.1.15":
-  version: 0.1.15
-  resolution: "@backstage/plugin-auth-backend-module-aws-alb-provider@npm:0.1.15"
+"@backstage/plugin-auth-backend-module-aws-alb-provider@npm:^0.1.16":
+  version: 0.1.16
+  resolution: "@backstage/plugin-auth-backend-module-aws-alb-provider@npm:0.1.16"
   dependencies:
     "@backstage/backend-common": ^0.24.0
     "@backstage/backend-plugin-api": ^0.8.0
     "@backstage/errors": ^1.2.4
-    "@backstage/plugin-auth-backend": ^0.22.10
+    "@backstage/plugin-auth-backend": ^0.22.11
     "@backstage/plugin-auth-node": ^0.5.0
     jose: ^5.0.0
     node-cache: ^5.1.2
     node-fetch: ^2.7.0
-  checksum: de08c24531dff0cdb3221a19735ed1e06b2337fb5b49165e8be4d8d62d471a9e515514a8d7b198ea55c76c7ce1eda69c825fe58462016e16baff6556bfef2959
+  checksum: f2a93fb3031f06bd18ef329fc93bbe13d5c9925161535d3cc84fb3248ac47115fbe11f821311730dcfb3f30a186b411a3d1b9315e2df303d35624802f04751ea
   languageName: node
   linkType: hard
 
@@ -4093,18 +4093,18 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@backstage/plugin-auth-backend-module-oidc-provider@npm:^0.2.4":
-  version: 0.2.4
-  resolution: "@backstage/plugin-auth-backend-module-oidc-provider@npm:0.2.4"
+"@backstage/plugin-auth-backend-module-oidc-provider@npm:^0.2.5":
+  version: 0.2.5
+  resolution: "@backstage/plugin-auth-backend-module-oidc-provider@npm:0.2.5"
   dependencies:
     "@backstage/backend-common": ^0.24.0
     "@backstage/backend-plugin-api": ^0.8.0
-    "@backstage/plugin-auth-backend": ^0.22.10
+    "@backstage/plugin-auth-backend": ^0.22.11
     "@backstage/plugin-auth-node": ^0.5.0
     express: ^4.18.2
     openid-client: ^5.5.0
     passport: ^0.7.0
-  checksum: 194011dd9622e588c35e35dc48c954ff3106d70410710dcd0865bce4310a906b4cc9c370e82c80883e612d33d241211c7324e243f5a352c4c3a654f21a1b9f07
+  checksum: 643f1b78f742c2e586a4297c73fbfc68e4528a0e7155c4fb02d24a2ad6d511665b0d4f32ff66f27965cd4e6c7e6f4ad5380c1cb6e37bad6dffc7a2ad5cedeb2f
   languageName: node
   linkType: hard
 
@@ -4134,9 +4134,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@backstage/plugin-auth-backend@npm:^0.22.10":
-  version: 0.22.10
-  resolution: "@backstage/plugin-auth-backend@npm:0.22.10"
+"@backstage/plugin-auth-backend@npm:^0.22.11":
+  version: 0.22.11
+  resolution: "@backstage/plugin-auth-backend@npm:0.22.11"
   dependencies:
     "@backstage/backend-common": ^0.24.0
     "@backstage/backend-plugin-api": ^0.8.0
@@ -4145,7 +4145,7 @@ __metadata:
     "@backstage/config": ^1.2.0
     "@backstage/errors": ^1.2.4
     "@backstage/plugin-auth-backend-module-atlassian-provider": ^0.2.4
-    "@backstage/plugin-auth-backend-module-aws-alb-provider": ^0.1.15
+    "@backstage/plugin-auth-backend-module-aws-alb-provider": ^0.1.16
     "@backstage/plugin-auth-backend-module-azure-easyauth-provider": ^0.1.6
     "@backstage/plugin-auth-backend-module-bitbucket-provider": ^0.1.6
     "@backstage/plugin-auth-backend-module-cloudflare-access-provider": ^0.2.0
@@ -4156,7 +4156,7 @@ __metadata:
     "@backstage/plugin-auth-backend-module-microsoft-provider": ^0.1.18
     "@backstage/plugin-auth-backend-module-oauth2-provider": ^0.2.4
     "@backstage/plugin-auth-backend-module-oauth2-proxy-provider": ^0.1.16
-    "@backstage/plugin-auth-backend-module-oidc-provider": ^0.2.4
+    "@backstage/plugin-auth-backend-module-oidc-provider": ^0.2.5
     "@backstage/plugin-auth-backend-module-okta-provider": ^0.0.16
     "@backstage/plugin-auth-backend-module-onelogin-provider": ^0.1.4
     "@backstage/plugin-auth-node": ^0.5.0
@@ -4194,7 +4194,7 @@ __metadata:
     uuid: ^9.0.0
     winston: ^3.2.1
     yn: ^4.0.0
-  checksum: b3a0271457f7832b24dbcbdd66424e395c15410d30a387a675cdda457a336b18117d2c0494d5634d599d53b9092ecddf9c14157c681fa90693874622886b4d0b
+  checksum: 55b33f4baf569686a3d18e3f011a0895389ce0fd2a3831556db8d7297b277f16500b940550ca072e4f734ff3a30abf6388d0dc53016e6abf506ba81fbc296ca0
   languageName: node
   linkType: hard
 
@@ -4249,22 +4249,22 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@backstage/plugin-catalog-backend-module-github-org@npm:^0.2.0":
-  version: 0.2.0
-  resolution: "@backstage/plugin-catalog-backend-module-github-org@npm:0.2.0"
+"@backstage/plugin-catalog-backend-module-github-org@npm:^0.2.1":
+  version: 0.2.1
+  resolution: "@backstage/plugin-catalog-backend-module-github-org@npm:0.2.1"
   dependencies:
     "@backstage/backend-plugin-api": ^0.8.0
     "@backstage/config": ^1.2.0
-    "@backstage/plugin-catalog-backend-module-github": ^0.7.0
+    "@backstage/plugin-catalog-backend-module-github": ^0.7.1
     "@backstage/plugin-catalog-node": ^1.12.5
     "@backstage/plugin-events-node": ^0.3.9
-  checksum: 7b4d30a9ee13a1d473e7da48620c8a98955f67dca8781752fbe5086e97bd012ba72e0ec1a82b47a6e88e15d5f370d4dc7cb07ad16189a0870609edf3b9ac83ea
+  checksum: 5b45fdb5317605384f0d3d8708610eedc16b3e66791c4569517639cc137766f252ddc9f5fa4e38e7a55f19c84e5b3f1cc278d4de5ac0179fc536c58996dab3c1
   languageName: node
   linkType: hard
 
-"@backstage/plugin-catalog-backend-module-github@npm:^0.7.0":
-  version: 0.7.0
-  resolution: "@backstage/plugin-catalog-backend-module-github@npm:0.7.0"
+"@backstage/plugin-catalog-backend-module-github@npm:^0.7.1":
+  version: 0.7.1
+  resolution: "@backstage/plugin-catalog-backend-module-github@npm:0.7.1"
   dependencies:
     "@backstage/backend-common": ^0.24.0
     "@backstage/backend-plugin-api": ^0.8.0
@@ -4272,7 +4272,7 @@ __metadata:
     "@backstage/catalog-model": ^1.6.0
     "@backstage/config": ^1.2.0
     "@backstage/integration": ^1.14.0
-    "@backstage/plugin-catalog-backend": ^1.25.0
+    "@backstage/plugin-catalog-backend": ^1.25.1
     "@backstage/plugin-catalog-common": ^1.0.26
     "@backstage/plugin-catalog-node": ^1.12.5
     "@backstage/plugin-events-node": ^0.3.9
@@ -4283,18 +4283,18 @@ __metadata:
     minimatch: ^9.0.0
     node-fetch: ^2.7.0
     uuid: ^9.0.0
-  checksum: b3d32e28248a713863a4f60432eaa53d8bd654288ef9f6d7e60e897dceb611b7b300bc7ba7551ab39159fc82fdf7c535757e0f86f05189be565a340b8a1ebfe2
+  checksum: f5ca544c9ae4c5cd2b40fa4bc3bd530df2f3e123a17cc5048561e84ea35d18443d2c5188612d615231cca3fafaaf47acaa471a9c58856a5c44f74302ca3804a3
   languageName: node
   linkType: hard
 
-"@backstage/plugin-catalog-backend-module-logs@npm:^0.0.2":
-  version: 0.0.2
-  resolution: "@backstage/plugin-catalog-backend-module-logs@npm:0.0.2"
+"@backstage/plugin-catalog-backend-module-logs@npm:^0.0.3":
+  version: 0.0.3
+  resolution: "@backstage/plugin-catalog-backend-module-logs@npm:0.0.3"
   dependencies:
     "@backstage/backend-plugin-api": ^0.8.0
-    "@backstage/plugin-catalog-backend": ^1.25.0
+    "@backstage/plugin-catalog-backend": ^1.25.1
     "@backstage/plugin-events-node": ^0.3.9
-  checksum: 58cf2a24345b649537722dabbd54a70ff71567f01f060dc4680f062eaa2b995160b9e91c5529ad0a40bb495fa2ff85f64c0abf1f7fe17b23f7240fb7ffb2f52c
+  checksum: b7f9b2840abb4f908486c6a9e857944053c64ebe8d0609e8540719f3496ce12179d7df0ad7314ccbb502a8bf6a53e271a648ddd9000f21612eaaf6cfbeb727af
   languageName: node
   linkType: hard
 
@@ -4311,9 +4311,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@backstage/plugin-catalog-backend@npm:^1.25.0":
-  version: 1.25.0
-  resolution: "@backstage/plugin-catalog-backend@npm:1.25.0"
+"@backstage/plugin-catalog-backend@npm:^1.25.1":
+  version: 1.25.1
+  resolution: "@backstage/plugin-catalog-backend@npm:1.25.1"
   dependencies:
     "@backstage/backend-common": ^0.24.0
     "@backstage/backend-openapi-utils": ^0.1.16
@@ -4350,7 +4350,7 @@ __metadata:
     yaml: ^2.0.0
     yn: ^4.0.0
     zod: ^3.22.4
-  checksum: c3c21b249fa3abbdd3abfe86d9c61768f05c5abe2caac94fd7a175f20c1157a532b876682b9aa11e0a38d846407d92d28af7a8ad49add147e70d3612fb660b0f
+  checksum: c0cfe33bf36c4624bc204b2901e4320fd45b18b2dd1dda0eca249ebb43adb05b0550bf2148be9a6ef4be801dcc0489ba7823e188f6b597dff4e9eef275d16f2a
   languageName: node
   linkType: hard
 
@@ -14356,14 +14356,14 @@ __metadata:
     "@backstage/config": ^1.2.0
     "@backstage/config-loader": ^1.9.0
     "@backstage/plugin-app-backend": ^0.3.72
-    "@backstage/plugin-auth-backend": ^0.22.10
+    "@backstage/plugin-auth-backend": ^0.22.11
     "@backstage/plugin-auth-backend-module-github-provider": ^0.1.20
     "@backstage/plugin-auth-backend-module-guest-provider": ^0.1.9
     "@backstage/plugin-auth-node": ^0.5.0
-    "@backstage/plugin-catalog-backend": ^1.25.0
-    "@backstage/plugin-catalog-backend-module-github": ^0.7.0
-    "@backstage/plugin-catalog-backend-module-github-org": ^0.2.0
-    "@backstage/plugin-catalog-backend-module-logs": ^0.0.2
+    "@backstage/plugin-catalog-backend": ^1.25.1
+    "@backstage/plugin-catalog-backend-module-github": ^0.7.1
+    "@backstage/plugin-catalog-backend-module-github-org": ^0.2.1
+    "@backstage/plugin-catalog-backend-module-logs": ^0.0.3
     "@backstage/plugin-catalog-backend-module-scaffolder-entity-model": ^0.1.21
     "@backstage/plugin-permission-backend": ^0.5.47
     "@backstage/plugin-permission-backend-module-allow-all-policy": ^0.1.20
