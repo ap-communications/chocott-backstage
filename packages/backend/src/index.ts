@@ -26,14 +26,14 @@ const conditionalFeatureLoader = createBackendFeatureLoader({
       yield import('@backstage/plugin-catalog-backend-module-github-org');
     }
     if (config.getOptionalConfig('search.pg')) {
-      yield import('@backstage/plugin-search-backend-module-pg/alpha');
+      yield import('@backstage/plugin-search-backend-module-pg');
     }
   },
 });
 
 const backend = createBackend();
 
-backend.add(import('@backstage/plugin-app-backend/alpha'));
+backend.add(import('@backstage/plugin-app-backend'));
 
 // auth plugin
 backend.add(import('@backstage/plugin-auth-backend'));
@@ -44,29 +44,29 @@ backend.add(import('@internal/backstage-plugin-auth-backend-module-github-as-gue
 // backend.add(import('@backstage/plugin-auth-backend-module-github-provider'));
 
 // catalog plugin
-backend.add(import('@backstage/plugin-catalog-backend/alpha'));
-backend.add(import('@backstage/plugin-catalog-backend-module-github/alpha'));
+backend.add(import('@backstage/plugin-catalog-backend'));
+backend.add(import('@backstage/plugin-catalog-backend-module-github'));
 backend.add(import('@backstage/plugin-catalog-backend-module-scaffolder-entity-model'));
 
 // See https://backstage.io/docs/features/software-catalog/configuration#subscribing-to-catalog-errors
 backend.add(import('@backstage/plugin-catalog-backend-module-logs'));
 
 // permissions plugin
-backend.add(import('@backstage/plugin-permission-backend/alpha'));
+backend.add(import('@backstage/plugin-permission-backend'));
 backend.add(
   import('@backstage/plugin-permission-backend-module-allow-all-policy')
 );
 
-backend.add(import('@backstage/plugin-proxy-backend/alpha'));
+backend.add(import('@backstage/plugin-proxy-backend'));
 
-backend.add(import('@backstage/plugin-scaffolder-backend/alpha'));
+backend.add(import('@backstage/plugin-scaffolder-backend'));
 backend.add(import('@backstage/plugin-scaffolder-backend-module-github'));
 
-backend.add(import('@backstage/plugin-search-backend/alpha'));
-backend.add(import('@backstage/plugin-search-backend-module-catalog/alpha'));
-backend.add(import('@backstage/plugin-search-backend-module-techdocs/alpha'));
+backend.add(import('@backstage/plugin-search-backend'));
+backend.add(import('@backstage/plugin-search-backend-module-catalog'));
+backend.add(import('@backstage/plugin-search-backend-module-techdocs'));
 
-backend.add(import('@backstage/plugin-techdocs-backend/alpha'));
+backend.add(import('@backstage/plugin-techdocs-backend'));
 // conditional loading
 backend.add(conditionalFeatureLoader);
 
