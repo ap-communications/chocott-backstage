@@ -14,7 +14,7 @@
     "lint": "backstage-cli package lint"
   },
   "dependencies": {
-    "@backstage-community/plugin-github-actions": "^0.6.23",
+    "@backstage-community/plugin-github-actions": "^0.6.26",
     "@backstage-community/plugin-tech-radar": "^0.7.11",
     "@backstage/app-defaults": "^1.5.14",
     "@backstage/catalog-model": "^1.7.1",
