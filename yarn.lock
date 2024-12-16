@@ -3094,9 +3094,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@backstage/cli@npm:^0.29.2":
-  version: 0.29.2
-  resolution: "@backstage/cli@npm:0.29.2"
+"@backstage/cli@npm:^0.29.3":
+  version: 0.29.3
+  resolution: "@backstage/cli@npm:0.29.3"
   dependencies:
     "@backstage/catalog-model": "npm:^1.7.1"
     "@backstage/cli-common": "npm:^0.1.15"
@@ -3144,7 +3144,7 @@ __metadata:
     commander: "npm:^12.0.0"
     cross-fetch: "npm:^4.0.0"
     cross-spawn: "npm:^7.0.3"
-    css-loader: "npm:^7.0.0"
+    css-loader: "npm:^6.5.1"
     ctrlc-windows: "npm:^2.1.0"
     esbuild: "npm:^0.24.0"
     esbuild-loader: "npm:^4.0.0"
@@ -3240,7 +3240,7 @@ __metadata:
       optional: true
   bin:
     backstage-cli: bin/backstage-cli
-  checksum: 10/65622bca53949ef37ea6b50d026543687f6c10f8c8c15068f7737169dd093e7666049f27a3514e522cdc620899433d5adb3181026e4c8635016e623f0ea16c56
+  checksum: 10/93c633a4a734878cfcd14e519a890600a24cc0c18e60f92a35894c6801e2f3072b8717a1ea34ba17109e878d3f733e27a4641187f301db8deb99f61bf74ec1d3
   languageName: node
   linkType: hard
 
@@ -6810,7 +6810,7 @@ __metadata:
   dependencies:
     "@backstage/backend-plugin-api": "npm:^1.0.2"
     "@backstage/backend-test-utils": "npm:^1.1.0"
-    "@backstage/cli": "npm:^0.29.2"
+    "@backstage/cli": "npm:^0.29.3"
     "@backstage/plugin-auth-backend-module-github-provider": "npm:^0.2.2"
     "@backstage/plugin-auth-node": "npm:^0.5.4"
   languageName: unknown
@@ -13414,7 +13414,7 @@ __metadata:
     "@backstage-community/plugin-tech-radar": "npm:^0.7.11"
     "@backstage/app-defaults": "npm:^1.5.14"
     "@backstage/catalog-model": "npm:^1.7.1"
-    "@backstage/cli": "npm:^0.29.2"
+    "@backstage/cli": "npm:^0.29.3"
     "@backstage/core-app-api": "npm:^1.15.2"
     "@backstage/core-components": "npm:^0.16.1"
     "@backstage/core-plugin-api": "npm:^1.10.1"
@@ -14115,7 +14115,7 @@ __metadata:
     "@backstage/backend-plugin-api": "npm:^1.0.2"
     "@backstage/catalog-client": "npm:^1.8.0"
     "@backstage/catalog-model": "npm:^1.7.1"
-    "@backstage/cli": "npm:^0.29.2"
+    "@backstage/cli": "npm:^0.29.3"
     "@backstage/config": "npm:^1.3.0"
     "@backstage/plugin-app-backend": "npm:^0.4.2"
     "@backstage/plugin-auth-backend": "npm:^0.24.0"
@@ -15980,9 +15980,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"css-loader@npm:^7.0.0":
-  version: 7.1.2
-  resolution: "css-loader@npm:7.1.2"
+"css-loader@npm:^6.5.1":
+  version: 6.11.0
+  resolution: "css-loader@npm:6.11.0"
   dependencies:
     icss-utils: "npm:^5.1.0"
     postcss: "npm:^8.4.33"
@@ -15994,13 +15994,13 @@ __metadata:
     semver: "npm:^7.5.4"
   peerDependencies:
     "@rspack/core": 0.x || 1.x
-    webpack: ^5.27.0
+    webpack: ^5.0.0
   peerDependenciesMeta:
     "@rspack/core":
       optional: true
     webpack:
       optional: true
-  checksum: 10/ddde22fb103888320f60a1414a6a04638d2e9760a532a52d03c45e6e2830b32dd76c734aeef426f78dd95b2d15f77eeec3854ac53061aff02569732dc6e6801c
+  checksum: 10/9e3665509f6786d46683de5c5f5c4bdd4aa62396b4017b41dbbb41ea5ada4012c80ee1e3302b79b504bc24da7fa69e3552d99006cecc953e0d9eef4a3053b929
   languageName: node
   linkType: hard
 
@@ -28133,7 +28133,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "root@workspace:."
   dependencies:
-    "@backstage/cli": "npm:^0.29.2"
+    "@backstage/cli": "npm:^0.29.3"
     "@backstage/e2e-test-utils": "npm:^0.1.1"
     "@playwright/test": "npm:^1.32.3"
     "@spotify/prettier-config": "npm:^15.0.0"
