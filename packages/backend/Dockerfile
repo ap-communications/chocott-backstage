@@ -28,6 +28,7 @@ RUN find packages \! -name "package.json" -mindepth 2 -maxdepth 2 -exec rm -rf {
 # for yarn3
 COPY .yarn ./.yarn
 COPY .yarnrc.yml ./
+COPY backstage.json ./
 
 # Stage 2 - Install de`endencies and build packages
 FROM base AS build
@@ -87,6 +88,7 @@ COPY --from=build --chown=node:node /app/yarn.lock /app/package.json /app/packag
 # Copy the yarn dependencies from the build stage and context
 COPY --from=build --chown=node:node /app/.yarn ./.yarn
 COPY --from=build --chown=node:node /app/.yarnrc.yml  ./
+COPY --from=build --chown=node:node /app/backstage.json  ./
 
 RUN --mount=type=cache,target=/home/node/.cache/yarn,sharing=locked,uid=1000,gid=1000 \
     yarn workspaces focus --all --production && rm -rf "$(yarn cache clean)"
