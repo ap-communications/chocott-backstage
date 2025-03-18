@@ -47,6 +47,9 @@ jobs:
           org.opencontainers.image.vendor="AP Communications Co.,Ltd."
           org.opencontainers.image.licenses=Apache-2.0
 
+    - name: Set up QEMU
+      uses: docker/setup-qemu-action@v3
+
     # see: https://docs.github.com/ja/actions/using-workflows/caching-dependencies-to-speed-up-workflows
     # see also: https://zenn.dev/74th/articles/c966c3bf389247
     - name: Cache docker layers
@@ -75,6 +78,7 @@ jobs:
         context: ./
         file: ./packages/backend/Dockerfile
         builder: ${{ steps.buildx.outputs.name }}
+        platforms: linux/amd64,linux/arm64        
         push: ${{ github.event_name != 'pull_request' }}
         tags: ${{ steps.meta.outputs.tags }}
         labels: ${{ steps.meta.outputs.labels }}
