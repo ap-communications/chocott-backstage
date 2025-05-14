@@ -125,7 +125,7 @@ cp app-config.local.yaml.sample app-config.local.yaml
 
 ```sh
 yarn install
-yarn dev
+yarn start
 ```
 
 アクセスしましたら、[ソフトウェアカタログのページ](../catalogs/index.md) をご参考にしていただき、既存のソフトウェアカタログを登録したり新規に作成するなどして、実際に機能をお試しください。
