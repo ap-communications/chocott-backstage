@@ -6,9 +6,7 @@
     "node": "20 || 22"
   },
   "scripts": {
-    "dev": "yarn workspaces foreach -A --include backend --include app --parallel --jobs unlimited -v -i run start",
-    "start": "yarn workspace app start",
-    "start-backend": "yarn workspace backend start",
+    "start": "backstage-cli repo start",
     "build:backend": "yarn workspace backend build",
     "build:all": "backstage-cli repo build --all",
     "build-image": "yarn workspace backend build-image",
@@ -33,7 +31,7 @@
     "node-gyp": "^10.0.0"
   },
   "devDependencies": {
-    "@backstage/cli": "^0.31.0",
+    "@backstage/cli": "^0.32.0",
     "@backstage/e2e-test-utils": "^0.1.1",
     "@playwright/test": "^1.32.3",
     "node-gyp": "^10.0.0",
