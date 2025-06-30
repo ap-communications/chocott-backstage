@@ -46,7 +46,7 @@
     "@backstage/plugin-techdocs-backend": "^2.0.3",
     "@internal/backstage-plugin-auth-backend-module-github-as-guest-provider": "^0.1.0",
     "app": "link:../app",
-    "better-sqlite3": "^8.0.0",
+    "better-sqlite3": "^9.0.0",
     "node-gyp": "^10.0.0",
     "pg": "^8.12.0"
   },
