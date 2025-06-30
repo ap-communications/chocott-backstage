@@ -42,7 +42,7 @@
     "@backstage/theme": "^0.6.6",
     "@material-ui/core": "^4.12.2",
     "@material-ui/icons": "^4.9.1",
-    "@roadiehq/backstage-plugin-github-pull-requests": "^2.6.0",
+    "@roadiehq/backstage-plugin-github-pull-requests": "^3.4.2",
     "history": "^5.0.0",
     "react": "^18.0.2",
     "react-dom": "^18.0.2",
