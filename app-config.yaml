@@ -100,7 +100,4 @@ catalog:
     #   target: https://github.com/backstage/backstage/blob/master/packages/catalog-model/examples/acme-corp.yaml
     #   rules:
     #     - allow: [User, Group]
-  # Experimental: Always use the search method in UrlReaderProcessor.
-  # New adopters are encouraged to enable it as this behavior will be the default in a future release.
-  useUrlReadersSearch: true
   
