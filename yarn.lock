@@ -4070,9 +4070,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@backstage/plugin-catalog-import@npm:^0.13.1":
-  version: 0.13.1
-  resolution: "@backstage/plugin-catalog-import@npm:0.13.1"
+"@backstage/plugin-catalog-import@npm:^0.13.2":
+  version: 0.13.2
+  resolution: "@backstage/plugin-catalog-import@npm:0.13.2"
   dependencies:
     "@backstage/catalog-client": "npm:^1.10.1"
     "@backstage/catalog-model": "npm:^1.7.4"
@@ -4104,7 +4104,7 @@ __metadata:
   peerDependenciesMeta:
     "@types/react":
       optional: true
-  checksum: 10/5121eeb68e68b20e9942542e5a3fe842f0df729c6bfa9b464ba8b0b310fba680dbb7b1e5dedc9fabd79f6f8070cded773e39ef24eb38cd0e91587d18e92e83cb
+  checksum: 10/58fb45b859bab1d27c8c677d856cad7f45dda6818bf6fe759b779e3194a4bbfd0d41b239f549d3cbc60fe11e19884036fedc030aadf9b604e6af62bbe218f344
   languageName: node
   linkType: hard
 
@@ -14941,7 +14941,7 @@ __metadata:
     "@backstage/plugin-catalog": "npm:^1.31.0"
     "@backstage/plugin-catalog-common": "npm:^1.1.4"
     "@backstage/plugin-catalog-graph": "npm:^0.4.20"
-    "@backstage/plugin-catalog-import": "npm:^0.13.1"
+    "@backstage/plugin-catalog-import": "npm:^0.13.2"
     "@backstage/plugin-catalog-react": "npm:^1.19.0"
     "@backstage/plugin-org": "npm:^0.6.40"
     "@backstage/plugin-permission-react": "npm:^0.4.35"

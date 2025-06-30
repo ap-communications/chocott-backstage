@@ -28,7 +28,7 @@
     "@backstage/plugin-catalog": "^1.31.0",
     "@backstage/plugin-catalog-common": "^1.1.4",
     "@backstage/plugin-catalog-graph": "^0.4.20",
-    "@backstage/plugin-catalog-import": "^0.13.1",
+    "@backstage/plugin-catalog-import": "^0.13.2",
     "@backstage/plugin-catalog-react": "^1.19.0",
     "@backstage/plugin-org": "^0.6.40",
     "@backstage/plugin-permission-react": "^0.4.35",
