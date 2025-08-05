@@ -75,7 +75,6 @@ spec:
       name: Publish2GitHub
       action: publish:github:pull-request
       input:
-        allowedHosts: ['github.com']
         title: adding catalog-info.yaml
         description: pull it from default template
         repoUrl: ${{ parameters.repoUrl }}
