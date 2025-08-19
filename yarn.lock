@@ -4402,9 +4402,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@backstage/plugin-scaffolder-backend@npm:^2.1.0":
-  version: 2.1.0
-  resolution: "@backstage/plugin-scaffolder-backend@npm:2.1.0"
+"@backstage/plugin-scaffolder-backend@npm:^2.1.1":
+  version: 2.1.1
+  resolution: "@backstage/plugin-scaffolder-backend@npm:2.1.1"
   dependencies:
     "@backstage/backend-defaults": "npm:^0.11.1"
     "@backstage/backend-plugin-api": "npm:^1.4.1"
@@ -4457,7 +4457,7 @@ __metadata:
     zen-observable: "npm:^0.10.0"
     zod: "npm:^3.22.4"
     zod-to-json-schema: "npm:^3.20.4"
-  checksum: 10/b591977ba1a199765b6539dd5090b0cab4b55a5e07d27a579436d44af1dd77cd27e62da6fe823920395b45bdbc5a5c361590b2790a798c49b65d2adee85b2260
+  checksum: 10/d4bb837233c32be52b4aa60a190a98f337394c2b319e203c25f01df8230dd9f0c4d33758c21cd012c16591949589291d2b92c45d2e919b43d9e193779ad40ab3
   languageName: node
   linkType: hard
 
@@ -5072,7 +5072,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@backstage/ui@npm:^0.6.0":
+"@backstage/ui@npm:^0.6.1":
   version: 0.6.1
   resolution: "@backstage/ui@npm:0.6.1"
   dependencies:
@@ -14793,7 +14793,7 @@ __metadata:
     "@backstage/plugin-user-settings": "npm:^0.8.24"
     "@backstage/test-utils": "npm:^1.7.10"
     "@backstage/theme": "npm:^0.6.7"
-    "@backstage/ui": "npm:^0.6.0"
+    "@backstage/ui": "npm:^0.6.1"
     "@material-ui/core": "npm:^4.12.2"
     "@material-ui/icons": "npm:^4.9.1"
     "@playwright/test": "npm:^1.32.3"
@@ -15429,7 +15429,7 @@ __metadata:
     "@backstage/plugin-permission-common": "npm:^0.9.1"
     "@backstage/plugin-permission-node": "npm:^0.10.2"
     "@backstage/plugin-proxy-backend": "npm:^0.6.4"
-    "@backstage/plugin-scaffolder-backend": "npm:^2.1.0"
+    "@backstage/plugin-scaffolder-backend": "npm:^2.1.1"
     "@backstage/plugin-scaffolder-backend-module-github": "npm:^0.8.1"
     "@backstage/plugin-search-backend": "npm:^2.0.4"
     "@backstage/plugin-search-backend-module-catalog": "npm:^0.3.6"
