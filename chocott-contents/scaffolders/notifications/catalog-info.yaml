@@ -1,0 +1,106 @@
+apiVersion: scaffolder.backstage.io/v1beta3
+kind: Template
+metadata:
+  name: notify-template
+  title: Send message
+  description: メッセージを送信します。
+spec:
+  owner: group:guests
+  type: service
+
+  parameters:
+    - title: Choose notification type
+      properties:
+        notificationType:
+          title: Notification Type
+          description: '送信する通知の種類を選択してください。'
+          type: string
+          enum:
+            - broadcast
+            - entity
+          enumNames:
+            - '全利用者宛'
+            - '指定ユーザー／グループ宛'
+      dependencies:
+        notificationType:
+          allOf:
+            - if:
+                properties:
+                  notificationType:
+                    const: entity
+              then:
+                properties:
+                  entities:
+                    title: Entities
+                    description: 'メッセージの送信先となるユーザー／グループ'
+                    type: array
+                    items:
+                      type: string
+                    ui:field: MultiEntityPicker
+                    ui:options:
+                      catalogFilter:
+                        kind:
+                          - User
+                          - Group
+                      allowArbitraryValues: false
+                required:
+                  - entities
+
+    - title: Message
+      description: 送信するメッセージの内容を指定してください。
+      required:
+        - messageTitle
+        - messageBody
+        - topic
+        - severity
+      properties:
+        messageTitle:
+          title: Message title
+          description: 'メッセージのタイトル'
+          type: string
+          ui:autofocus: true
+        messageBody:
+          title: Message body
+          description: 'メッセージ本文'
+          type: string
+        # link:
+        #   title: Message link
+        #   description: 'メッセージに関連するリンク'
+        #   type: string
+        topic:
+          title: Topic
+          description: 'メッセージのトピック'
+          type: string
+          enum:
+            - 'general'
+            - 'notification'
+            - 'maintenance'
+            - 'information'
+        severity:
+          title: Severity
+          description: 'メッセージの重要度'
+          type: string
+          default: normal
+          enum:
+            - low
+            - normal
+            - high
+            - critical
+          enumNames: 
+            - '低'
+            - '通常'
+            - '高'
+            - '重大'
+
+  steps:
+    - id: send-notification
+      name: Send notification
+      action: notification:send
+      input:
+        recipients: ${{ parameters.notificationType }}
+        entityRefs: ${{ parameters.entities if parameters.notificationType == 'entity' else undefined }}
+        title: ${{ parameters.messageTitle }}
+        info: ${{ parameters.messageBody }}
+        topic: ${{ parameters.topic }}
+        severity: ${{ parameters.severity }}
+        optional: true
