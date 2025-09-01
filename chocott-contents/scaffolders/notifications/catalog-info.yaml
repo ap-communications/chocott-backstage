@@ -63,10 +63,10 @@ spec:
           title: Message body
           description: 'メッセージ本文'
           type: string
-        # link:
-        #   title: Message link
-        #   description: 'メッセージに関連するリンク'
-        #   type: string
+        link:
+          title: Message link
+          description: 'メッセージに関連するリンク'
+          type: string
         topic:
           title: Topic
           description: 'メッセージのトピック'
@@ -101,6 +101,7 @@ spec:
         entityRefs: ${{ parameters.entities if parameters.notificationType == 'entity' else undefined }}
         title: ${{ parameters.messageTitle }}
         info: ${{ parameters.messageBody }}
+        link: ${{ parameters.link }}
         topic: ${{ parameters.topic }}
         severity: ${{ parameters.severity }}
         optional: true
