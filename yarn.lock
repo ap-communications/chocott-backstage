@@ -7332,13 +7332,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@octokit/openapi-types@npm:^19.1.0":
-  version: 19.1.0
-  resolution: "@octokit/openapi-types@npm:19.1.0"
-  checksum: 10/3abedc09baa91bb4de00a2b82bf519401c2b6388913b7caa98541002c9e9612eba8256926323b1e40782ac700309a3373bb8c13520af325cef1accc40cb4566b
-  languageName: node
-  linkType: hard
-
 "@octokit/openapi-types@npm:^20.0.0":
   version: 20.0.0
   resolution: "@octokit/openapi-types@npm:20.0.0"
@@ -7517,16 +7510,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@octokit/types@npm:^12.0.0, @octokit/types@npm:^12.2.0, @octokit/types@npm:^12.3.0":
-  version: 12.4.0
-  resolution: "@octokit/types@npm:12.4.0"
-  dependencies:
-    "@octokit/openapi-types": "npm:^19.1.0"
-  checksum: 10/b0a893e31fed59a919c2072ae67b671aa5f21e00ee3dee689af325f09f12ddd9175ce07c590b835d183bcb1cd2a2da908e02391b2fc33071881561366b2a35e7
-  languageName: node
-  linkType: hard
-
-"@octokit/types@npm:^12.6.0":
+"@octokit/types@npm:^12.0.0, @octokit/types@npm:^12.2.0, @octokit/types@npm:^12.3.0, @octokit/types@npm:^12.6.0":
   version: 12.6.0
   resolution: "@octokit/types@npm:12.6.0"
   dependencies:
@@ -29866,8 +29850,8 @@ __metadata:
   linkType: hard
 
 "tar-fs@npm:^3.0.7":
-  version: 3.0.9
-  resolution: "tar-fs@npm:3.0.9"
+  version: 3.1.1
+  resolution: "tar-fs@npm:3.1.1"
   dependencies:
     bare-fs: "npm:^4.0.1"
     bare-path: "npm:^3.0.0"
@@ -29878,7 +29862,7 @@ __metadata:
       optional: true
     bare-path:
       optional: true
-  checksum: 10/00e194ef36ced339000099c3cb5205fcd9636a531158d73e0fc1ca056fbcf8dcf39a398cbc71f030bbf938d4f477f47e2913c6e37e9c007bad31e0768a120590
+  checksum: 10/f7f7540b563e10541dc0b95f710c68fc1fccde0c1177b4d3bab2023c6d18da19d941a8697fdc1abff54914b71b6e5f2dfb0455572b5c8993b2ab76571cbbc923
   languageName: node
   linkType: hard
 
