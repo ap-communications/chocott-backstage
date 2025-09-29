@@ -10209,8 +10209,8 @@ __metadata:
   linkType: hard
 
 "@roadiehq/backstage-plugin-github-pull-requests@npm:^3.5.0":
-  version: 3.5.0
-  resolution: "@roadiehq/backstage-plugin-github-pull-requests@npm:3.5.0"
+  version: 3.5.1
+  resolution: "@roadiehq/backstage-plugin-github-pull-requests@npm:3.5.1"
   dependencies:
     "@backstage/catalog-model": "npm:^1.7.4"
     "@backstage/core-components": "npm:^0.17.3"
@@ -10234,7 +10234,7 @@ __metadata:
     react: ^16.13.1 || ^17.0.0 || ^18.0.0
     react-dom: ^16.13.1 || ^17.0.0 || ^18.0.0
     react-router: 6.0.0-beta.0 || ^6.3.0
-  checksum: 10/33f068f07635881004b4f88e748d5baa5ad48fcd007b3531de17e125f882e751dadc6553ca528ae840eb01ba46b302686cda7b7262f30dede225ce9fc50b4de9
+  checksum: 10/5ed8fc66633027a46a98050356a6d6bf1492d9bda7a832d42ff9187496c0f5655319f219f2f28ba8fc0b859d262fa96e801e79397a40367de31c486b73396438
   languageName: node
   linkType: hard
 
