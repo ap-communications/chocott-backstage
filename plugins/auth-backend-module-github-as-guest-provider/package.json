@@ -26,13 +26,13 @@
     "postpack": "backstage-cli package postpack"
   },
   "dependencies": {
-    "@backstage/backend-plugin-api": "^1.5.0",
-    "@backstage/plugin-auth-backend-module-github-provider": "^0.3.9",
-    "@backstage/plugin-auth-node": "^0.6.9"
+    "@backstage/backend-plugin-api": "^1.6.0",
+    "@backstage/plugin-auth-backend-module-github-provider": "^0.4.0",
+    "@backstage/plugin-auth-node": "^0.6.10"
   },
   "devDependencies": {
-    "@backstage/backend-test-utils": "^1.10.0",
-    "@backstage/cli": "^0.34.5"
+    "@backstage/backend-test-utils": "^1.10.2",
+    "@backstage/cli": "^0.35.0"
   },
   "files": [
     "dist"
