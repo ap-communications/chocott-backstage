@@ -1,6 +1,6 @@
 services:
   backstage:
-    image: ghcr.io/ap-communications/chocott-backstage:1.25.2
+    image: ghcr.io/ap-communications/chocott-backstage:1.26.0
     platform: linux/x86_64
     volumes:
       - "../app-config.chocott.yaml:/app/config/app-config.yaml"
