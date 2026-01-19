@@ -32,7 +32,7 @@
   },
   "devDependencies": {
     "@backstage/backend-test-utils": "^1.10.2",
-    "@backstage/cli": "^0.35.0"
+    "@backstage/cli": "^0.35.1"
   },
   "files": [
     "dist"
