@@ -1,4 +1,4 @@
-FROM node:22-bookworm-slim AS base
+FROM node:24-trixie-slim AS base
 
 # Set up a virtual environment for mkdocs-techdocs-core.
 RUN --mount=type=cache,target=/var/cache/apt,sharing=locked \
