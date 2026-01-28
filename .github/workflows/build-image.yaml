@@ -26,6 +26,10 @@ jobs:
     - name: checkout
       uses: actions/checkout@v6
 
+    # see: https://github.com/docker/setup-qemu-action
+    - name: Set up QEMU
+      uses: docker/setup-qemu-action@c7c53464625b32c7a7e944ae62b3e17d2b600130 # v3.7.0
+
     # see: https://github.com/docker/setup-buildx-action
     - name: Set up Docker buildx
       id: buildx
@@ -47,17 +51,6 @@ jobs:
           org.opencontainers.image.vendor="AP Communications Co.,Ltd."
           org.opencontainers.image.licenses=Apache-2.0
 
-    # see: https://docs.github.com/ja/actions/using-workflows/caching-dependencies-to-speed-up-workflows
-    # see also: https://zenn.dev/74th/articles/c966c3bf389247
-    - name: Cache docker layers
-      uses: actions/cache@v5
-      with:
-        path: /tmp/.buildx-cache
-        key: ${{ github.ref }}-${{ github.sha }}
-        restore-keys: |
-          ${{ github.ref }}-${{ github.sha }}
-          ${{ github.ref }}
-          refs/head/main
 
     # see: https://github.com/docker/login-action#github-container-registry
     - name: Log in to the Container registry
@@ -66,6 +59,9 @@ jobs:
         registry: ${{ env.REGISTRY }}
         username: ${{ github.actor }}
         password: ${{ secrets.GITHUB_TOKEN }}
+
+    # Note: Using GitHub Actions cache (type=gha) for multi-platform builds
+    # as local cache can lead to cache corruption with multiple architectures    
 
     # see also https://github.com/docker/metadata-action
     - name: Build and push
@@ -78,5 +74,6 @@ jobs:
         push: ${{ github.event_name != 'pull_request' }}
         tags: ${{ steps.meta.outputs.tags }}
         labels: ${{ steps.meta.outputs.labels }}
-        cache-from: type=local,src=/tmp/.buildx-cache
-        cache-to: type=local,dest=/tmp/.buildx-cache
+        platforms: linux/amd64,linux/arm64
+        cache-from: type=gha
+        cache-to: type=gha,mode=max
