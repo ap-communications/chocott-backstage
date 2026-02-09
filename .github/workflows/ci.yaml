@@ -13,7 +13,7 @@ jobs:
       - name: Set Node.js
         uses: actions/setup-node@v6
         with:
-          node-version: 22.x
+          node-version: 24.x
 
       # Get the yarn cache path.
       - name: Get yarn cache directory path
