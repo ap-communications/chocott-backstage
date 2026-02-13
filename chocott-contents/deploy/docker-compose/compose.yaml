@@ -1,7 +1,6 @@
 services:
   backstage:
-    image: ghcr.io/ap-communications/chocott-backstage:1.27.2
-    platform: linux/x86_64
+    image: ghcr.io/ap-communications/chocott-backstage:1.27.3
     volumes:
       - "../app-config.chocott.yaml:/app/config/app-config.yaml"
       - "${GITHUB_CREDENTIAL_FILE}:/app/config/github-credentials.yaml"
