@@ -8,6 +8,11 @@ on:
     - 'main'
   workflow_dispatch:
 
+# Sets the permissions granted to the GITHUB_TOKEN for the actions in this job.
+permissions:
+  contents: read
+  packages: write
+
 env:
   REGISTRY: ghcr.io
   IMAGE_NAME: ${{ github.repository }}
@@ -15,49 +20,21 @@ env:
 jobs:
   build:
     name: build image
-    runs-on: ubuntu-latest
-
-    # Sets the permissions granted to the GITHUB_TOKEN for the actions in this job.
-    permissions:
-      contents: read
-      packages: write
+    strategy:
+      fail-fast: false
+      matrix:
+        include:
+          - platform: linux/amd64
+            runner: ubuntu-latest
+            arch: amd64
+          - platform: linux/arm64
+            runner: ubuntu-24.04-arm
+            arch: arm64
+    runs-on: ${{ matrix.runner }}
 
     steps:
     - name: checkout
       uses: actions/checkout@v6
-
-    # see: https://github.com/docker/setup-buildx-action
-    - name: Set up Docker buildx
-      id: buildx
-      uses: docker/setup-buildx-action@v3
-
-    # see: https://github.com/docker/metadata-action
-    - name: Extract metadata (tags, labels) for Docker
-      id: meta
-      uses: docker/metadata-action@v5
-      with:
-        images: ${{ env.REGISTRY }}/${{ env.IMAGE_NAME }}
-        tags: |
-          type=ref,event=branch
-          type=semver,pattern={{version}}
-          type=sha
-        labels: |
-          org.opencontainers.image.title=chocott-backstage
-          org.opencontainers.image.source="https://github.com/ap-communications/chocott-backstage"
-          org.opencontainers.image.vendor="AP Communications Co.,Ltd."
-          org.opencontainers.image.licenses=Apache-2.0
-
-    # see: https://docs.github.com/ja/actions/using-workflows/caching-dependencies-to-speed-up-workflows
-    # see also: https://zenn.dev/74th/articles/c966c3bf389247
-    - name: Cache docker layers
-      uses: actions/cache@v5
-      with:
-        path: /tmp/.buildx-cache
-        key: ${{ github.ref }}-${{ github.sha }}
-        restore-keys: |
-          ${{ github.ref }}-${{ github.sha }}
-          ${{ github.ref }}
-          refs/head/main
 
     # see: https://github.com/docker/login-action#github-container-registry
     - name: Log in to the Container registry
@@ -67,16 +44,103 @@ jobs:
         username: ${{ github.actor }}
         password: ${{ secrets.GITHUB_TOKEN }}
 
+    # see: https://github.com/docker/setup-buildx-action
+    - name: Set up Docker buildx
+      id: buildx
+      uses: docker/setup-buildx-action@v3
+
+    # see: https://docs.github.com/ja/actions/using-workflows/caching-dependencies-to-speed-up-workflows
+    # see also: https://zenn.dev/74th/articles/c966c3bf389247
+    - name: Cache docker layers
+      uses: actions/cache@v5
+      with:
+        path: /tmp/.buildx-cache
+        key: ${{ matrix.arch }}-${{ github.ref }}-${{ github.sha }}
+        restore-keys: |
+          ${{ matrix.arch }}-${{ github.ref }}
+          ${{ matrix.arch }}-refs/heads/main
+
     # see also https://github.com/docker/metadata-action
-    - name: Build and push
-      id: build-and-push
+    - name: Build and push by digest
+      id: build
       uses: docker/build-push-action@v6
       with:
         context: ./
         file: ./packages/backend/Dockerfile
         builder: ${{ steps.buildx.outputs.name }}
+        platforms: ${{ matrix.platform }}
         push: ${{ github.event_name != 'pull_request' }}
-        tags: ${{ steps.meta.outputs.tags }}
-        labels: ${{ steps.meta.outputs.labels }}
+        labels: |
+          org.opencontainers.image.title=chocott-backstage
+          org.opencontainers.image.source="https://github.com/ap-communications/chocott-backstage"
+          org.opencontainers.image.vendor="AP Communications Co.,Ltd."
+          org.opencontainers.image.licenses=Apache-2.0
         cache-from: type=local,src=/tmp/.buildx-cache
         cache-to: type=local,dest=/tmp/.buildx-cache
+        outputs: type=image,name=${{ env.REGISTRY }}/${{ env.IMAGE_NAME }},push-by-digest=true,name-canonical=true,push=${{ github.event_name != 'pull_request' }}
+
+    - name: Export digest
+      id: export-digest
+      run: |
+        mkdir -p /tmp/digests
+        digest="${{ steps.build.outputs.digest }}"
+        touch "/tmp/digests/${digest#sha256:}"
+        echo "digest-${{ matrix.arch }}=$digest" >> "$GITHUB_OUTPUT"
+
+    - name: Upload digest
+      uses: actions/upload-artifact@v4
+      with:
+        name: digests-${{ matrix.arch }}
+        path: /tmp/digests/*
+        if-no-files-found: error
+        retention-days: 1
+
+  merge:
+    name: Create multi-platform manifest
+    runs-on: ubuntu-latest
+    needs: build
+    steps:
+      - name: Download digests
+        uses: actions/download-artifact@v4
+        with:
+          path: /tmp/digests
+          pattern: digests-*
+          merge-multiple: true
+
+      - name: Log in to the Container registry
+        uses: docker/login-action@v3
+        with:
+          registry: ${{ env.REGISTRY }}
+          username: ${{ github.actor }}
+          password: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Set up Docker Buildx
+        uses: docker/setup-buildx-action@v3
+
+      # see: https://github.com/docker/metadata-action
+      - name: Extract metadata (tags, labels) for Docker
+        id: meta
+        uses: docker/metadata-action@v5
+        with:
+          images: ${{ env.REGISTRY }}/${{ env.IMAGE_NAME }}
+          tags: |
+            type=ref,event=branch
+            type=semver,pattern={{version}}
+            type=sha
+          labels: |
+            org.opencontainers.image.title=chocott-backstage
+            org.opencontainers.image.source="https://github.com/ap-communications/chocott-backstage"
+            org.opencontainers.image.vendor="AP Communications Co.,Ltd."
+            org.opencontainers.image.licenses=Apache-2.0
+
+      - name: Create manifest list and push
+        if: ${{ github.event_name != 'pull_request' }}
+        working-directory: /tmp/digests
+        run: |
+          docker buildx imagetools create $(jq -cr '.tags | map("-t " + .) | join(" ")' <<< "$DOCKER_METADATA_OUTPUT_JSON") \
+            $(printf '${{ env.REGISTRY }}/${{ env.IMAGE_NAME }}@sha256:%s ' *)
+
+      - name: Inspect image
+        if: ${{ github.event_name != 'pull_request' }}
+        run: |
+          docker buildx imagetools inspect ${{ env.REGISTRY }}/${{ env.IMAGE_NAME }}:${{ steps.meta.outputs.version }}
