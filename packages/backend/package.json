@@ -31,6 +31,7 @@
     "@backstage/plugin-catalog-backend-module-github-org": "^0.3.19",
     "@backstage/plugin-catalog-backend-module-logs": "^0.1.19",
     "@backstage/plugin-catalog-backend-module-scaffolder-entity-model": "^0.2.17",
+    "@backstage/plugin-kubernetes-backend": "^0.21.1",
     "@backstage/plugin-notifications-backend": "^0.6.2",
     "@backstage/plugin-permission-backend": "^0.7.9",
     "@backstage/plugin-permission-backend-module-allow-all-policy": "^0.2.16",
