@@ -129,11 +129,12 @@ docker compose up -d
 
 ## 7. 動作確認
 
-http://localhost:7007/ にアクセスしてください。
+http://localhost:7007/ にアクセスしてください。  
+無事Backstage Portalにアクセスできれば成功です！
 
-アクセスしましたら、[ソフトウェアカタログのページ](../catalogs/index.md)をご参考にしていただき、既存のソフトウェアカタログを登録したり新規に作成するなどして、実際に機能をお試しください。
+![backstage portal home](backstage-portal-home.png)
 
-## 8. クリーンアップ
+### 補足：クリーンアップ
 
 アプリケーションを停止する場合は以下のコマンドを実行してください。
 
@@ -147,3 +148,10 @@ docker compose down
 ```shell
 docker compose down --volumes
 ```
+
+## 次のステップ：ソフトウェアカタログの登録
+
+無事にBackstageが起動したら、続いてBackstage上で実際にソフトウェアカタログを登録してみましょう。  
+以下のページを参考に、既存のカタログを登録してみてください。
+
+- **[ソフトウェアカタログ](../catalogs/index.md)**

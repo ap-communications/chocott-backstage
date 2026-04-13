@@ -21,7 +21,6 @@ Select URLのところに、以下のURLを入力し、「ANALYZE」ボタンを
 
 ```
 https://github.com/ap-communications/chocott-backstage/blob/main/chocott-contents/catalog-info.yaml
-
 ```
 
 次のような画面が表示されますので、「IMPORT」ボタンをクリックします。
