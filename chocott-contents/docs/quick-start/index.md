@@ -2,16 +2,16 @@
 
 chocott-backstageを利用するには、GitHubアカウントにGitHub Appを登録する必要があります。
 
-GitHub Appは組織（Organization）アカウントまたはパーソナルアカウント（個人のGitHubアカウント）のどちらにも登録できます。利用形態に応じて、以下のいずれかの手順を参照してください。
+GitHub AppはOrganization（組織）アカウントまたはパーソナルアカウント（個人のGitHubアカウント）のどちらにも登録できます。利用形態に応じて、以下のいずれかの手順を参照してください。
 
-## 組織アカウントで利用する場合
+## Organizationアカウントで利用する場合
 
-組織のメンバーでBackstageを共有利用する場合は、組織アカウントにGitHub Appを登録します。
+OrganizationのメンバーでBackstageを共有利用する場合は、OrganizationアカウントにGitHub Appを登録します。
 
-- 組織のユーザー・チーム情報をBackstageに取り込むことができます
-- サインインできるのは組織のメンバーのみとなります
+- Organizationのユーザー・チーム情報をBackstageに取り込むことができます
+- サインインできるのはOrganizationのメンバーのみとなります
 
-→ [組織アカウントで利用する場合の手順](./organization.md)
+→ [Organizationアカウントで利用する場合の手順](./organization.md)
 
 ## パーソナルアカウントで利用する場合
 

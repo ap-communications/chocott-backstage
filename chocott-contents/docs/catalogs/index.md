@@ -31,20 +31,30 @@ IMPORTが完了すると以下のような画面が表示されます。
 
 ![register completed](register-completed.png)
 
-ここで「VIEW COMPONENT」をクリックすると、IMPORTしたカタログ情報を表示します。
+ここで「VIEW COMPONENT」をクリックします。
+
+組織利用している場合は、「VIEW COMPONENT」をクリックすると以下のようなダイアログが出ることがあります。  
+これはサインイン時の認証とは別にGitHubへのアクセストークン取得のためのものとなっています。「LOG IN」ボタンをクリックして先に進んでください。
 
 ![catalog view first time](catalog-view-firsttime.png)
 
-初回アクセス時はこのようなダイアログが出てくると思います。
-これはサインイン時の認証とは別にGitHubへのアクセストークン取得のためのものとなっています。「LOG IN」ボタンをクリックして先に進みます。
+「VIEW COMPONENT」をクリックすると、IMPORTしたカタログ情報が表示されます。
+こちらが最新のchocott-backstageリポジトリの情報です。
 
-![Catalog view](catalog-view.png)
+![Catalog view overview](catalog-view-overview.png)
 
-上のような画面が表示されると思います。こちらが最新のchocott-backstageのリポジトリ情報です。
-`CI/CDタブ` ではGitHub Actionsの実行結果が、 `PULL REQUESTSタブ` ではその時点でのPull Requestの一覧が表示されます。
-Pull Request一覧の画面で、「ALL」を選択すると過去にマージ／クローズしたPull request一覧が表示されると思います。
+`CI/CDタブ` ではchocott-backstageリポジトリにおけるGitHub Actionsの実行結果を見ることができます。
+
+![Catalog view cicd](catalog-view-cicd.png)
+
+ `PULL REQUESTSタブ` ではその時点でのPull Requestの一覧が表示されます。  
+Pull Request一覧の画面で、「ALL」を選択すると過去にマージ／クローズしたPull request一覧が表示されます。
 
 ![Catalog view pull requests](catalog-view-pr.png)
+
+`DOCSタブ`ではこのリポジトリ内に登録されているドキュメントを閲覧することができます。
+
+![Catalog view docs](catalog-view-docs.png)
 
 ## 新規カタログの作成
 

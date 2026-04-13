@@ -1,11 +1,11 @@
-# 組織アカウントで利用する場合
+# Organizationアカウントで利用する場合
 
-組織（Organization）にGitHub Appを登録してchocott-backstageを利用する場合の手順です。
+Organization（組織）アカウントにGitHub Appを登録してchocott-backstageを利用する場合の手順です。
 
 ## 前提条件
 
 - macOS、またはWindows（WSL2のUbuntu等）などのLinux環境で作業していること
-- GitHubの組織アカウントのオーナー権限を持っていること
+- GitHubのOrganizationアカウントのオーナー権限を持っていること
 - Dockerがインストールされていること
 
 ## 手順概要
@@ -29,10 +29,10 @@ cd chocott-backstage
 
 ## 2. GitHub Appの登録
 
-[Authenticationのドキュメント](../authentication/index.md)を参照し、組織アカウントにGitHub Appを登録してください。
+[Authenticationのドキュメント](../authentication/index.md)を参照し、OrganizationアカウントにGitHub Appを登録してください。
 
 登録時の注意点：
-- 「組織アカウントに作成する場合」の手順に従ってください
+- 「Organizationアカウントに作成する場合」の手順に従ってください
 - App Install時は「All repositories」を選択することを推奨します
 
 登録後、以下の情報をメモしてください：
@@ -63,12 +63,12 @@ cp github-credentials.yaml.sample github-credentials.yaml
 export AUTH_GITHUB_CLIENT_ID="<Client IDの文字列>"
 export AUTH_GITHUB_CLIENT_SECRET="<Client Secretの文字列>"
 export GITHUB_CREDENTIAL_FILE="$(pwd)/github-credentials.yaml"
-export GITHUB_ORG="<組織名>"
+export GITHUB_ORG="<Organization名>"
 ```
 
 > **注意**: `GITHUB_CREDENTIAL_FILE`は絶対パスで指定する必要があります。
 
-`GITHUB_ORG`には、GitHub Appを登録した組織名を指定してください。この設定により、組織のユーザー・チーム情報がBackstageに取り込まれます。
+`GITHUB_ORG`には、GitHub Appを登録したOrganization名を指定してください。この設定により、Organizationのユーザー・チーム情報がBackstageに取り込まれます。
 
 ## 5. docker composeによる起動
 
@@ -77,7 +77,7 @@ cd chocott-contents/deploy/docker-compose
 docker compose up -d
 ```
 
-アプリケーションが起動します。GitHubから組織のユーザー情報等を取得する時間が必要となるため、起動後少し（10秒程度）お待ちください。
+アプリケーションが起動します。GitHubからOrganizationのユーザー情報等を取得する時間が必要となるため、起動後少し（10秒程度）お待ちください。
 
 ## 6. 動作確認
 
