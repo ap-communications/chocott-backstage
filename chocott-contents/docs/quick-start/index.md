@@ -34,15 +34,15 @@ OrganizationのメンバーでBackstageを共有利用する場合は、Organiza
 
 nodeやyarnなどいくつかのコマンドが必要です。詳しくは [Backstage公式ドキュメントのGetting Started](https://backstage.io/docs/getting-started/#prerequisites)をご確認ください。
 
-なお、chocott-backstageでは Node 18を利用して実装しています。
+なお、chocott-backstageではNode 18を利用して実装しています。
 
-また、TechDocsを表示するために mkdocs というツールも必要になります。[TechDocsのドキュメント](../techdocs/index.md) をご確認いただき、インストールしてください。
+また、TechDocsを表示するためにmkdocsというツールも必要になります。[TechDocsのドキュメント](../techdocs/index.md) をご確認いただき、インストールしてください。
 
 
 ### ローカル向けコンフィグレーションファイルの用意
 
 リポジトリのトップフォルダにある、テンプレートファイルをもとにローカル向けコンフィグレーションを作成します。
-なお、初期状態ではデータベースにsqliteを利用するように設定しています。PostgreSQLを利用する場合は [Databaseのドキュメント](../database/index.md) を参考にして app-config.local.yamlの設定を書き換えてください。
+なお、初期状態ではデータベースにsqliteを利用するように設定しています。PostgreSQLを利用する場合は [Databaseのドキュメント](../database/index.md) を参考にしてapp-config.local.yamlの設定を書き換えてください。
 
 ```shell
 cd <repository top>

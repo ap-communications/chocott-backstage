@@ -2,7 +2,7 @@
 
 ## システム構成
 
-[Backstage](https://backstage.io/) は [Plugin](https://backstage.io/plugins) を組み込むことで様々な外部システムと連携することができます。 chocott-backstageでは GitHubと連携するPluginをいくつか組み込んであります。
+[Backstage](https://backstage.io/) は [Plugin](https://backstage.io/plugins) を組み込むことで様々な外部システムと連携することができます。 chocott-backstageではGitHubと連携するPluginをいくつか組み込んであります。
 
 chocott-backstageのシステム構成を以下に示します。
 
@@ -28,7 +28,7 @@ chocott-backstageの利用方法は [Quick start](./quick-start/index.md) をご
 
 ## 独自コンテンツ
 
-本リポジトリは基本的に backstageのアプリケーション生成コマンドの出力結果をベースとし、いくつかコードに修正を加えたものとなっています。
+本リポジトリは基本的にbackstageのアプリケーション生成コマンドの出力結果をベースとし、いくつかコードに修正を加えたものとなっています。
 以下の部分は独自に追加しております。
 
 - ${TOP}/LICENSE
