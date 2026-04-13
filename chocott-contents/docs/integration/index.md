@@ -39,8 +39,7 @@ privateKey: |
 ```
 
 appId、clientId、clientSecretについてはGitHub Appの情報を登録してください。
-webhookSecretについてはGitHub Webhookを利用する際に指定するものです。Webhookを利用しない場合は適当な文字列
-（例えば `webhook-secret` ）を指定してください。
+webhookSecretはGitHub Webhookを利用しない場合でも記載が必要なフィールドです。利用しない場合は適当な文字列（例えば `webhook-secret` ）を指定してください。
 privateKeyの欄はさきほど作成したGitHubのprivate key PEMファイルの内容を指定します。
 
 

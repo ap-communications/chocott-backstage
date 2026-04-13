@@ -4,6 +4,7 @@
 
 ## 前提条件
 
+- macOS、またはWindows（WSL2のUbuntu等）・Linux環境で作業していること
 - GitHubのパーソナルアカウントを持っていること
 - Dockerがインストールされていること
 
