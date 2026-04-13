@@ -15,6 +15,8 @@
 3. GitHub Credentialファイルの作成
 4. 環境変数の設定
 5. docker composeによる起動
+6. 動作確認
+7. クリーンアップ
 
 ## 1. コードのclone
 
@@ -84,3 +86,18 @@ http://localhost:7007/ にアクセスしてください。GitHubアカウント
 組織アカウントで利用する場合、サインインできるのは組織のメンバーのみとなります。
 
 アクセスしましたら、[ソフトウェアカタログのページ](../catalogs/index.md)をご参考にしていただき、既存のソフトウェアカタログを登録したり新規に作成するなどして、実際に機能をお試しください。
+
+## 7. クリーンアップ
+
+アプリケーションを停止する場合は以下のコマンドを実行してください。
+
+```shell
+cd chocott-contents/deploy/docker-compose
+docker compose down
+```
+
+データベースのデータも含めてすべて削除する場合は、`--volumes` オプションを追加してください。
+
+```shell
+docker compose down --volumes
+```

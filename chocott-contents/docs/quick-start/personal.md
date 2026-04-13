@@ -16,6 +16,8 @@
 4. 設定ファイルの編集
 5. 環境変数の設定
 6. docker composeによる起動
+7. 動作確認
+8. クリーンアップ
 
 ## 1. コードのclone
 
@@ -130,3 +132,18 @@ docker compose up -d
 http://localhost:7007/ にアクセスしてください。GitHubアカウントでサインインできます。
 
 アクセスしましたら、[ソフトウェアカタログのページ](../catalogs/index.md)をご参考にしていただき、既存のソフトウェアカタログを登録したり新規に作成するなどして、実際に機能をお試しください。
+
+## 8. クリーンアップ
+
+アプリケーションを停止する場合は以下のコマンドを実行してください。
+
+```shell
+cd chocott-contents/deploy/docker-compose
+docker compose down
+```
+
+データベースのデータも含めてすべて削除する場合は、`--volumes` オプションを追加してください。
+
+```shell
+docker compose down --volumes
+```
