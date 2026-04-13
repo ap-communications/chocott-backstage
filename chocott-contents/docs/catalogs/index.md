@@ -34,7 +34,6 @@ IMPORTが完了すると以下のような画面が表示されます。
 
 ここで「VIEW COMPONENT」をクリックすると、IMPORTしたカタログ情報を表示します。
 
-
 ![catalog view first time](catalog-view-firsttime.png)
 
 初回アクセス時はこのようなダイアログが出てくると思います。

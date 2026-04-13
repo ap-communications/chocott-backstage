@@ -4,7 +4,7 @@
 
 ## 前提条件
 
-- macOS、またはWindows（WSL2のUbuntu等）・Linux環境で作業していること
+- macOS、またはWindows（WSL2のUbuntu等）などのLinux環境で作業していること
 - GitHubの組織アカウントのオーナー権限を持っていること
 - Dockerがインストールされていること
 
@@ -83,7 +83,11 @@ docker compose up -d
 
 http://localhost:7007/ にアクセスしてください。GitHubアカウントでサインインできます。
 
-組織アカウントで利用する場合、サインインできるのは組織のメンバーのみとなります。
+※サインインできるのはあくまでもGitHub Organizationに所属するメンバーのアカウントのみです
+
+GitHubアカウントでBackstageに最初にサインインする際、以下のようなダイアログが表示されます。表示されましたら「Authorize ... 」のボタンをクリックしてください。2回目のサインイン時には表示されません。
+
+![signin approve permission](./signin-approve-permission.png)
 
 アクセスしましたら、[ソフトウェアカタログのページ](../catalogs/index.md)をご参考にしていただき、既存のソフトウェアカタログを登録したり新規に作成するなどして、実際に機能をお試しください。
 

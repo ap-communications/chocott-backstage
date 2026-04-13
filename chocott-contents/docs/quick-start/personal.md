@@ -4,7 +4,7 @@
 
 ## 前提条件
 
-- macOS、またはWindows（WSL2のUbuntu等）・Linux環境で作業していること
+- macOS、またはWindows（WSL2のUbuntu等）などのLinux環境で作業していること
 - GitHubのパーソナルアカウントを持っていること
 - Dockerがインストールされていること
 
@@ -60,7 +60,7 @@ cp github-credentials.yaml.sample github-credentials.yaml
 
 パーソナルアカウントで利用する場合、設定ファイルの編集が必要です。
 
-`chocott-contents/deploy/app-config.chocott.yaml`を編集してください。
+[chocott-contents/deploy/app-config.chocott.yaml](../../deploy/app-config.chocott.yaml)を編集してください。
 
 ### signIn resolversの設定
 
@@ -129,7 +129,7 @@ docker compose up -d
 
 ## 7. 動作確認
 
-http://localhost:7007/ にアクセスしてください。GitHubアカウントでサインインできます。
+http://localhost:7007/ にアクセスしてください。
 
 アクセスしましたら、[ソフトウェアカタログのページ](../catalogs/index.md)をご参考にしていただき、既存のソフトウェアカタログを登録したり新規に作成するなどして、実際に機能をお試しください。
 
