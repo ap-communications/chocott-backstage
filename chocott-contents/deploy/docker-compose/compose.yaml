@@ -19,6 +19,7 @@ services:
       POSTGRES_USER: ${POSTGRES_USER:-postgres}
       POSTGRES_PASSWORD: ${POSTGRES_PASSWORD:-postgres}
       GITHUB_ORG: ${GITHUB_ORG:-SpecifildYourOrganizationName}
+      GITHUB_TOKEN: ${GITHUB_TOKEN:-}
     networks:
       - backend
     depends_on:

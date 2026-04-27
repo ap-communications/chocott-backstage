@@ -1,6 +1,6 @@
 # パーソナルアカウントで利用する場合
 
-パーソナルアカウント（個人のGitHubアカウント）にGitHub Appを登録してchocott-backstageを利用する場合の手順です。
+パーソナルアカウント（個人のGitHubアカウント）でchocott-backstageを利用する場合の手順です。
 
 ## 前提条件
 
@@ -13,11 +13,11 @@
 1. コードのclone
 2. GitHub Appの登録
 3. GitHub Credentialファイルの作成
-4. 設定ファイルの編集
-5. 環境変数の設定
-6. docker composeによる起動
-7. 動作確認
-8. クリーンアップ
+4. GitHub PATの取得
+5. 設定ファイルの編集
+6. 環境変数の設定
+7. docker composeによる起動
+8. 動作確認
 
 ## 1. コードのclone
 
@@ -30,10 +30,9 @@ cd chocott-backstage
 
 ## 2. GitHub Appの登録
 
-[Authenticationのドキュメント](../authentication/index.md)を参照し、パーソナルアカウントにGitHub Appを登録してください。
+[Authenticationのドキュメント](../authentication/githubapp/index.md)を参照し、パーソナルアカウントにGitHub Appを登録してください。
 
 登録時の注意点：
-- 「パーソナルアカウントに作成する場合」の手順に従ってください
 - App Install時は「All repositories」を選択することを推奨します
 
 登録後、以下の情報をメモしてください：
@@ -56,7 +55,11 @@ cp github-credentials.yaml.sample github-credentials.yaml
 - webhookSecret（Webhookを使用しないため適当な文字列で可）
 - privateKey（GitHub Appで生成したPrivate Key）
 
-## 4. 設定ファイルの編集
+## 4. GitHub PATの取得
+
+[GitHub PATのドキュメント](../authentication/githubpat/index.md)を参照し、Personal Access Token（PAT）を取得し環境変数として設定を行ってください。
+
+## 5. 設定ファイルの編集
 
 パーソナルアカウントで利用する場合、設定ファイルの編集が必要です。
 
@@ -104,7 +107,7 @@ catalog:
 
 > **注意**: この設定により、GitHubアカウントを持っているすべての方がBackstageにサインイン可能となります。ローカル環境での利用を想定しています。
 
-## 5. 環境変数の設定
+## 6. 環境変数の設定
 
 以下の環境変数を設定してください。
 
@@ -112,13 +115,14 @@ catalog:
 export AUTH_GITHUB_CLIENT_ID="<Client IDの文字列>"
 export AUTH_GITHUB_CLIENT_SECRET="<Client Secretの文字列>"
 export GITHUB_CREDENTIAL_FILE="$(pwd)/github-credentials.yaml"
+export GITHUB_TOKEN="<PATの文字列>"
 ```
 
 > **注意**: `GITHUB_CREDENTIAL_FILE`は絶対パスで指定する必要があります。
 
 パーソナルアカウントで利用する場合、`GITHUB_ORG`の設定は不要です。
 
-## 6. docker composeによる起動
+## 7. docker composeによる起動
 
 ```shell
 cd chocott-contents/deploy/docker-compose
@@ -127,12 +131,10 @@ docker compose up -d
 
 アプリケーションが起動します。起動後少し（10秒程度）お待ちください。
 
-## 7. 動作確認
+## 8. 動作確認
 
 http://localhost:7007/ にアクセスしてください。  
 無事Backstage Portalにアクセスできれば成功です！
-
-![backstage portal home](backstage-portal-home.png)
 
 ### 補足：クリーンアップ
 

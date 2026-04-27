@@ -29,10 +29,9 @@ cd chocott-backstage
 
 ## 2. GitHub Appの登録
 
-[Authenticationのドキュメント](../authentication/index.md)を参照し、OrganizationアカウントにGitHub Appを登録してください。
+[Authenticationのドキュメント](../authentication/githubapp/index.md)を参照し、OrganizationアカウントにGitHub Appを登録してください。
 
 登録時の注意点：
-- 「Organizationアカウントに作成する場合」の手順に従ってください
 - App Install時は「All repositories」を選択することを推奨します
 
 登録後、以下の情報をメモしてください：
