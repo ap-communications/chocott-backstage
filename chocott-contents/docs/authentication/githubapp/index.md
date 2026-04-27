@@ -6,7 +6,7 @@ chocott-backstageはGitHubを利用してユーザーの認証を行います。
 作成したGitHub App登録を行った組織／ユーザーが所有するリポジトリにアクセスすることができます（orgAという組織に登録した場合は `orgA/repository` に、userXというパーソナルアカウントに登録した場合は `userX/repository` にアクセス可能となります）。
 GitHub App作成の詳細については[GitHub Docs](https://docs.github.com/ja/apps/creating-github-apps/registering-a-github-app/registering-a-github-app) をご参照願います。
 
-## 1. Settingsからアカウント作成画面に遷移
+## 1. SettingsからGitHub App作成画面に遷移
 
 ### パーソナルアカウントに作成する場合
 
