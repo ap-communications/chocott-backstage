@@ -1,6 +1,6 @@
 # GitHub PATの取得
 
-パーソナルアカウントでchocott-backstageを利用する場合、GitHub Personal Access Token（PAT）を使用してGitHubリポジトリにアクセスします。
+パーソナルアカウントでchocott-backstageを利用する場合、GitHubのFine-grained personal access token（PAT）を使用してGitHubリポジトリにアクセスします。
 
 ## PATの作成手順
 
