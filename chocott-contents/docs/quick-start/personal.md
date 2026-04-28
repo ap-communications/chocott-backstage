@@ -30,7 +30,7 @@ cd chocott-backstage
 
 ## 2. GitHub Appの登録
 
-[Authenticationのドキュメント](../authentication/githubapp/index.md)を参照し、パーソナルアカウントにGitHub Appを登録してください。
+[GitHub Appのドキュメント](../authentication/githubapp/index.md)を参照し、パーソナルアカウントにGitHub Appを登録してください。
 
 登録時の注意点：
 - App Install時は「All repositories」を選択することを推奨します
