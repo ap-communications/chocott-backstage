@@ -7,26 +7,17 @@
 - macOS、またはWindows（WSL2のUbuntu等）などのLinux環境で作業していること
 - GitHubのパーソナルアカウントを持っていること
 - Dockerがインストールされていること
+- [Quick startのリポジトリのコピー手順](./index.md)に従い、ご自身のGitHubリポジトリとしてclone済みであること
 
 ## 手順概要
 
-1. コードのclone
-2. GitHub Appの登録
-3. GitHub PATの取得
-4. 環境変数の設定
-5. docker composeによる起動
-6. 動作確認
+1. GitHub Appの登録
+2. GitHub PATの取得
+3. 環境変数の設定
+4. docker composeによる起動
+5. 動作確認
 
-## 1. コードのclone
-
-[本リポジトリ](https://github.com/ap-communications/chocott-backstage)をcloneしてください。
-
-```shell
-git clone https://github.com/ap-communications/chocott-backstage.git --depth 1
-cd chocott-backstage
-```
-
-## 2. GitHub Appの登録
+## 1. GitHub Appの登録
 
 [GitHub Appのドキュメント](../authentication/githubapp/index.md)を参照し、パーソナルアカウントにGitHub Appを登録してください。
 
@@ -38,11 +29,11 @@ cd chocott-backstage
 - Client ID
 - Client Secret
 
-## 3. GitHub PATの取得
+## 2. GitHub PATの取得
 
 [GitHub PATのドキュメント](../authentication/githubpat/index.md)を参照し、Personal Access Token（PAT）を取得し環境変数として設定を行ってください。
 
-## 4. 環境変数の設定
+## 3. 環境変数の設定
 
 以下の環境変数を設定してください。
 
@@ -54,7 +45,7 @@ export GITHUB_TOKEN="<PATの文字列>"
 
 パーソナルアカウントで利用する場合、`GITHUB_ORG`の設定は不要です。
 
-## 5. docker composeによる起動
+## 4. docker composeによる起動
 
 ```shell
 cd chocott-contents/deploy/personal/docker-compose
@@ -63,7 +54,7 @@ docker compose up -d
 
 アプリケーションが起動します。起動後少し（10秒程度）お待ちください。
 
-## 6. 動作確認
+## 5. 動作確認
 
 http://localhost:7007/ にアクセスしてください。  
 無事Backstage Portalにアクセスできれば成功です！

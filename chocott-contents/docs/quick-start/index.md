@@ -1,10 +1,28 @@
 # Quick start
 
+chocott-backstageを利用するには、まず本リポジトリをご自身のGitHub環境にコピーしてください。
+
+## リポジトリのコピー
+
+[本リポジトリ](https://github.com/ap-communications/chocott-backstage)は [GitHubテンプレートリポジトリ](https://docs.github.com/ja/repositories/creating-and-managing-repositories/creating-a-repository-from-a-template) として設定されています。以下の手順で、ご自身のGitHub環境に新しいリポジトリとしてコピーすることができます。
+
+`Use this template` ボタンをクリックするとサブメニューが表示されますので、そこで `Create a new repository` を選択してください。
+コピーする先のリポジトリ情報を入力する画面が表示されますので、必要な項目を入力すれば完了です（Private repositoryにすることもできます）。
+
+リポジトリのコピーが完了したら、ローカル環境にcloneしてください。
+
+```shell
+git clone https://github.com/<あなたのアカウント>/chocott-backstage.git --depth 1
+cd chocott-backstage
+```
+
+## 利用形態の選択
+
 chocott-backstageを利用するには、GitHubアカウントにGitHub Appを登録する必要があります。
 
 GitHub AppはOrganization（組織）アカウントまたはパーソナルアカウント（個人のGitHubアカウント）のどちらにも登録できます。利用形態に応じて、以下のいずれかの手順を参照してください。
 
-## Organizationアカウントで利用する場合
+### Organizationアカウントで利用する場合
 
 OrganizationのメンバーでBackstageを共有利用する場合は、OrganizationアカウントにGitHub Appを登録します。
 
@@ -13,22 +31,15 @@ OrganizationのメンバーでBackstageを共有利用する場合は、Organiza
 
 → [Organizationアカウントで利用する場合の手順](./organization.md)
 
-## パーソナルアカウントで利用する場合
+### パーソナルアカウントで利用する場合
 
 個人で検証・学習目的で利用する場合は、パーソナルアカウントにGitHub Appを登録します。
 
-- 設定ファイルの編集が必要です
 - GitHubアカウントを持っているすべての方がサインイン可能となります（ローカル環境での利用を想定）
 
 → [パーソナルアカウントで利用する場合の手順](./personal.md)
 
-## ご自身でソースコードも修正してみたい方
-
-[本リポジトリ](https://github.com/ap-communications/chocott-backstage)は [GitHubテンプレートリポジトリ](https://docs.github.com/ja/repositories/creating-and-managing-repositories/creating-a-repository-from-a-template) として設定されています。以下の手順で、ご自身のGitHub環境に新しいリポジトリとしてコピーすることができます。
-
-`Use this template` ボタンをクリックするとサブメニューが表示されますので、そこで `Create a new repository` を選択してください。
-コピーする先のリポジトリ情報を入力する画面が表示されますので、必要な項目を入力すれば完了です（Private repositoryにすることもできます）。
-
+## 補足：ソースコードを修正してみたい方
 
 ### 事前準備
 
@@ -37,7 +48,6 @@ nodeやyarnなどいくつかのコマンドが必要です。詳しくは [Back
 なお、chocott-backstageではNode 24を利用して実装しています。
 
 また、TechDocsを表示するためにmkdocsというツールも必要になります。[TechDocsのドキュメント](../techdocs/index.md) をご確認いただき、インストールしてください。
-
 
 ### ローカル向けコンフィグレーションファイルの用意
 

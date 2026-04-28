@@ -7,27 +7,17 @@ Organization（組織）アカウントにGitHub Appを登録してchocott-backs
 - macOS、またはWindows（WSL2のUbuntu等）などのLinux環境で作業していること
 - GitHubのOrganizationアカウントのオーナー権限を持っていること
 - Dockerがインストールされていること
+- [Quick startのリポジトリのコピー手順](./index.md)に従い、ご自身のGitHubリポジトリとしてclone済みであること
 
 ## 手順概要
 
-1. コードのclone
-2. GitHub Appの登録
-3. GitHub Credentialファイルの作成
-4. 環境変数の設定
-5. docker composeによる起動
-6. 動作確認
-7. クリーンアップ
+1. GitHub Appの登録
+2. GitHub Credentialファイルの作成
+3. 環境変数の設定
+4. docker composeによる起動
+5. 動作確認
 
-## 1. コードのclone
-
-[本リポジトリ](https://github.com/ap-communications/chocott-backstage)をcloneしてください。
-
-```shell
-git clone https://github.com/ap-communications/chocott-backstage.git --depth 1
-cd chocott-backstage
-```
-
-## 2. GitHub Appの登録
+## 1. GitHub Appの登録
 
 [Authenticationのドキュメント](../authentication/githubapp/index.md)を参照し、OrganizationアカウントにGitHub Appを登録してください。
 
@@ -39,7 +29,7 @@ cd chocott-backstage
 - Client ID
 - Client Secret
 
-## 3. GitHub Credentialファイルの作成
+## 2. GitHub Credentialファイルの作成
 
 [Integrationのドキュメント](../integration/index.md)を参照し、GitHub Credentialファイルを作成してください。
 
@@ -54,7 +44,7 @@ cp github-credentials.yaml.sample github-credentials.yaml
 - webhookSecret（Webhookを使用しないため適当な文字列で可）
 - privateKey（GitHub Appで生成したPrivate Key）
 
-## 4. 環境変数の設定
+## 3. 環境変数の設定
 
 以下の環境変数を設定してください。
 
@@ -69,7 +59,7 @@ export GITHUB_ORG="<Organization名>"
 
 `GITHUB_ORG`には、GitHub Appを登録したOrganization名を指定してください。この設定により、Organizationのユーザー・チーム情報がBackstageに取り込まれます。
 
-## 5. docker composeによる起動
+## 4. docker composeによる起動
 
 ```shell
 cd chocott-contents/deploy/organization/docker-compose
@@ -78,7 +68,7 @@ docker compose up -d
 
 アプリケーションが起動します。GitHubからOrganizationのユーザー情報等を取得する時間が必要となるため、起動後少し（10秒程度）お待ちください。
 
-## 6. 動作確認
+## 5. 動作確認
 
 http://localhost:7007/ にアクセスしてください。GitHubアカウントでサインインできます。
 
