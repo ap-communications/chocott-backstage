@@ -29,4 +29,4 @@ backend:
 integrations:
   github:
     - host: github.com
-      token: ${GITHUB_TOKEN}
+      token: ${GITHUB_PERSONAL_TOKEN} 
