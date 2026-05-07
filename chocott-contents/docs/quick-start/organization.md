@@ -1,4 +1,4 @@
-# Organizationアカウントで利用する場合
+# Organizationアカウントでchocott-backstageを立ち上げる
 
 Organization（組織）アカウントにGitHub Appを登録してchocott-backstageを利用する場合の手順です。
 
@@ -18,30 +18,12 @@ Organization（組織）アカウントにGitHub Appを登録してchocott-backs
 5. 動作確認
 
 ## 1. GitHub Appの登録
+
 [Authenticationのドキュメント](../authentication/githubapp/index.md)を参照し、OrganizationアカウントにGitHub Appを登録してください。
-
-登録時の注意点：
-- App Install時は「All repositories」を選択することを推奨します
-
-登録後、以下の情報をメモしてください：
-- App ID
-- Client ID
-- Client Secret
 
 ## 2. GitHub Credentialファイルの作成
 
 [Integrationのドキュメント](../integration/index.md)を参照し、GitHub Credentialファイルを作成してください。
-
-```shell
-cp github-credentials.yaml.sample github-credentials.yaml
-```
-
-`github-credentials.yaml`に以下の情報を設定します：
-- appId
-- clientId
-- clientSecret
-- webhookSecret（Webhookを使用しないため適当な文字列で可）
-- privateKey（GitHub Appで生成したPrivate Key）
 
 ## 3. 環境変数の設定
 
@@ -98,3 +80,10 @@ docker compose down
 ```shell
 docker compose down --volumes
 ```
+
+## 次のステップ：ソフトウェアカタログの登録
+
+無事にBackstageが起動したら、続いてBackstage上で実際にソフトウェアカタログを登録してみましょう。  
+以下のページを参考に、既存のカタログを登録してみてください。
+
+- **[ソフトウェアカタログを登録する](../catalogs/index.md)**
