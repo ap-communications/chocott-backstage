@@ -17,16 +17,7 @@ Organization（組織）アカウントにGitHub Appを登録してchocott-backs
 4. docker composeによる起動
 5. 動作確認
 
-## 1. リポジトリのclone
-
-[本リポジトリ](https://github.com/ap-communications/chocott-backstage)をcloneしてください。
-
-```shell
-git clone https://github.com/ap-communications/chocott-backstage.git --depth 1
-cd chocott-backstage
-```
-
-## 2. GitHub Appの登録
+## 1. GitHub Appの登録
 [Authenticationのドキュメント](../authentication/githubapp/index.md)を参照し、OrganizationアカウントにGitHub Appを登録してください。
 
 登録時の注意点：

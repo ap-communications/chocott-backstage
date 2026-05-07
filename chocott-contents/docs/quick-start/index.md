@@ -6,7 +6,7 @@ chocott-backstageを利用するには、まず本リポジトリをご自身の
 
 [本リポジトリ](https://github.com/ap-communications/chocott-backstage)は [GitHubテンプレートリポジトリ](https://docs.github.com/ja/repositories/creating-and-managing-repositories/creating-a-repository-from-a-template) として設定されています。以下の手順で、ご自身のGitHub環境に新しいリポジトリとしてコピーすることができます。
 
-`Use this template` ボタンをクリックするとサブメニューが表示されますので、そこで `Create a new repository` を選択してください。
+`Use this template`ボタンをクリックするとサブメニューが表示されますので、そこで`Create a new repository`を選択してください。
 コピーする先のリポジトリ情報を入力する画面が表示されますので、必要な項目を入力すれば完了です（Private repositoryにすることもできます）。
 
 リポジトリのコピーが完了したら、ローカル環境にcloneしてください。
