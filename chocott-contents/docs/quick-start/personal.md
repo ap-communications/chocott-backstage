@@ -19,7 +19,7 @@
 
 ## 1. GitHub Appの登録
 
-[Authenticationのドキュメント](../authentication/githubapp/index.md)を参照し、パーソナルアカウントにGitHub Appを登録してください。
+[Authenticationのドキュメント](../authentication/githubapp/personal/index.md)
 
 登録時の注意点：
 - App Install時は「All repositories」を選択することを推奨します
