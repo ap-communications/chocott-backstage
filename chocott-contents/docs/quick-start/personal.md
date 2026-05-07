@@ -1,4 +1,4 @@
-# パーソナルアカウントで利用する場合
+# パーソナルアカウントでchocott-backstageを立ち上げる
 
 パーソナルアカウント（個人のGitHubアカウント）でchocott-backstageを利用する場合の手順です。
 
@@ -31,7 +31,7 @@
 
 ## 2. GitHub PATの取得
 
-[GitHub PATのドキュメント](../authentication/githubpat/index.md)を参照し、Personal Access Token（PAT）を取得してください。  
+[GitHub PATのドキュメント](../integration/githubpat/index.md)を参照し、Personal Access Token（PAT）を取得してください。  
 取得した値は[4. 環境変数の設定](#4-環境変数の設定)にて使用します。
 
 ## 3. 環境変数の設定
@@ -81,4 +81,4 @@ docker compose down --volumes
 無事にBackstageが起動したら、続いてBackstage上で実際にソフトウェアカタログを登録してみましょう。  
 以下のページを参考に、既存のカタログを登録してみてください。
 
-- **[ソフトウェアカタログ](../catalogs/index.md)**
+- **[ソフトウェアカタログを登録する](../catalogs/index.md)**
