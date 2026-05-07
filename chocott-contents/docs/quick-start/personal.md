@@ -11,15 +11,27 @@
 
 ## 手順概要
 
-1. GitHub Appの登録
-2. GitHub PATの取得
-3. 環境変数の設定
-4. docker composeによる起動
-5. 動作確認
+1. コードのclone
+2. GitHub Appの登録
+3. GitHub Credentialファイルの作成
+4. GitHub PATの取得
+5. 設定ファイルの編集
+6. 環境変数の設定
+7. docker composeによる起動
+8. 動作確認
 
-## 1. GitHub Appの登録
+## 1. リポジトリのclone
 
-[GitHub Appのドキュメント](../authentication/githubapp/index.md)を参照し、パーソナルアカウントにGitHub Appを登録してください。
+[本リポジトリ](https://github.com/ap-communications/chocott-backstage)をcloneしてください。
+
+```shell
+git clone https://github.com/ap-communications/chocott-backstage.git --depth 1
+cd chocott-backstage
+```
+
+## 2. GitHub Appの登録
+
+[Authenticationのドキュメント](../authentication/githubapp/index.md)を参照し、パーソナルアカウントにGitHub Appを登録してください。
 
 登録時の注意点：
 - App Install時は「All repositories」を選択することを推奨します
@@ -29,23 +41,85 @@
 - Client ID
 - Client Secret
 
-## 2. GitHub PATの取得
+## 3. GitHub Credentialファイルの作成
 
-[GitHub PATのドキュメント](../authentication/githubpat/index.md)を参照し、Personal Access Token（PAT）を取得し環境変数として設定を行ってください。
+```shell
+cp github-credentials.yaml.sample github-credentials.yaml
+```
 
-## 3. 環境変数の設定
+`github-credentials.yaml`に以下の情報を設定します：
+- appId
+- clientId
+- clientSecret
+- webhookSecret（Webhookを使用しないため適当な文字列で可）
+- privateKey（GitHub Appで生成したPrivate Key）
+
+## 4. GitHub PATの取得
+
+[GitHub PATのドキュメント](../authentication/githubpat/index.md)を参照し、Personal Access Token（PAT）を取得してください。
+
+## 5. 設定ファイルの編集
+
+パーソナルアカウントで利用する場合、設定ファイルの編集が必要です。
+
+[chocott-contents/deploy/app-config.chocott.yaml](../../deploy/app-config.chocott.yaml)を編集してください。
+
+### signIn resolversの設定
+
+パーソナルアカウントにGitHub Appを登録した場合、組織のユーザー情報をBackstageに取り込むことができません。そのため、`allMatchersAsGuest`を有効にする必要があります。
+
+```yaml
+auth:
+  environment: development
+  providers:
+    github:
+      development:
+        clientId: ${AUTH_GITHUB_CLIENT_ID}
+        clientSecret: ${AUTH_GITHUB_CLIENT_SECRET}
+        signIn:
+          resolvers:
+            - resolver: usernameMatchingUserEntityName
+            - resolver: allMatchersAsGuest  # この行のコメントを外す
+```
+
+### githubOrgプロバイダーの無効化
+
+組織のユーザー・チーム情報を取り込む機能は使用できないため、`githubOrg`の設定をコメントアウトしてください。
+
+```yaml
+catalog:
+  # 以下をコメントアウト
+  # providers:
+  #   githubOrg:
+  #     id: 'github-local'
+  #     githubUrl: 'https://github.com'
+  #     schedule:
+  #       frequency:
+  #         minutes: 60
+  #       timeout:
+  #         minutes: 5
+  #       initialDelay:
+  #         seconds: 10
+  #     orgs:
+  #     - ${GITHUB_ORG}
+```
+
+> **注意**: この設定により、GitHubアカウントを持っているすべての方がBackstageにサインイン可能となります。ローカル環境での利用を想定しています。
+
+## 6. 環境変数の設定
 
 以下の環境変数を設定してください。
 
 ```shell
 export AUTH_GITHUB_CLIENT_ID="<Client IDの文字列>"
 export AUTH_GITHUB_CLIENT_SECRET="<Client Secretの文字列>"
+export GITHUB_CREDENTIAL_FILE="$(pwd)/github-credentials.yaml"
 export GITHUB_TOKEN="<PATの文字列>"
 ```
 
 パーソナルアカウントで利用する場合、`GITHUB_ORG`の設定は不要です。
 
-## 4. docker composeによる起動
+## 7. docker composeによる起動
 
 ```shell
 cd chocott-contents/deploy/personal/docker-compose
@@ -54,7 +128,7 @@ docker compose up -d
 
 アプリケーションが起動します。起動後少し（10秒程度）お待ちください。
 
-## 5. 動作確認
+## 8. 動作確認
 
 http://localhost:7007/ にアクセスしてください。  
 無事Backstage Portalにアクセスできれば成功です！
