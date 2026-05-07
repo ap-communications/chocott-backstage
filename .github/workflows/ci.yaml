@@ -29,22 +29,12 @@ jobs:
             yarn-cache-folder-
 
       - name: Run install
-        uses: borales/actions-yarn@v5
-        with:
-          cmd: install # will run `yarn install` command
+        run: yarn install
       - name: Lint all
-        uses: borales/actions-yarn@v5
-        with:
-          cmd: lint:all
+        run: yarn lint:all
       - name: check for missing repo fixies
-        uses: borales/actions-yarn@v5
-        with:
-          cmd: fix --check
+        run: yarn fix --check
       - name: Compile the app
-        uses: borales/actions-yarn@v5
-        with:
-          cmd: tsc
+        run: yarn tsc
       - name: Test the app
-        uses: borales/actions-yarn@v5
-        with:
-          cmd: test:all
+        run: yarn test:all
