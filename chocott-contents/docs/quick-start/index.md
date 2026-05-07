@@ -29,7 +29,7 @@ OrganizationのメンバーでBackstageを共有利用する場合は、Organiza
 - Organizationのユーザー・チーム情報をBackstageに取り込むことができます
 - サインインできるのはOrganizationのメンバーのみとなります
 
-→ [Organizationアカウントで利用する場合の手順](./organization.md)
+→ [Organizationアカウントでchocott-backstageを立ち上げる](./organization.md)
 
 ### パーソナルアカウントで利用する場合
 
@@ -37,7 +37,7 @@ OrganizationのメンバーでBackstageを共有利用する場合は、Organiza
 
 - GitHubアカウントを持っているすべての方がサインイン可能となります（ローカル環境での利用を想定）
 
-→ [パーソナルアカウントで利用する場合の手順](./personal.md)
+→ [パーソナルアカウントでchocott-backstageを立ち上げる](./personal.md)
 
 ## 補足：ソースコードを修正してみたい方
 
