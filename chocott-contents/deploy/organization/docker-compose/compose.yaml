@@ -23,6 +23,7 @@ services:
       - backend
     depends_on:
       - db
+    restart: always
 
   db:
     image: postgres:14
