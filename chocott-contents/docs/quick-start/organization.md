@@ -19,7 +19,7 @@ Organization（組織）アカウントにGitHub Appを登録してchocott-backs
 
 ## 1. GitHub Appの登録
 
-[Authenticationのドキュメント](../authentication/githubapp/organization/index.md)
+[Authenticationのドキュメント](../authentication/githubapp/organization/index.md)を参照し、GitHub Appを作成してください。
 
 ## 2. GitHub Credentialファイルの作成
 
