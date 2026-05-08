@@ -34,7 +34,6 @@ GitHubにサインインし、[Fine-grained personal access tokens](https://gith
 | Contents | Read & write | |
 | Environments | Read & write | テンプレートでGitHub Environmentsを作成する場合 |
 | Issues | Read & write | |
-| Members |Read-only | |
 | Metadata |Read-only | |
 | Pull requests | Read & write | |
 | Secrets | Read & write | テンプレートでGitHub Action Repository Secretsを作成する場合 |
