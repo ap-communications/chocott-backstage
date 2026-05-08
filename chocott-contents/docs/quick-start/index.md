@@ -1,8 +1,18 @@
 # Quick start
 
-chocott-backstageを利用するには、まず本リポジトリをご自身のGitHub環境にコピーしてください。
+こちらのページでは、chocott-backstageを利用する手順についてまとめています。
 
-## リポジトリのコピー
+## アジェンダ
+
+1. [リポジトリのコピー](#リポジトリのコピー)
+2. [chocott-backstageを立ち上げる](#chocott-backstageを立ち上げる)
+   1. （GitHub Organization利用の方）[Organizationアカウントでchocott-backstageを立ち上げる](./organization.md)
+   2. （パーソナルアカウント利用の方）[パーソナルアカウントでchocott-backstageを立ち上げる](./personal.md)
+3. [ソフトウェアカタログを登録する](../catalogs/index.md)
+
+## 1. リポジトリのコピー
+
+chocott-backstageを利用するには、まず本リポジトリをご自身のGitHub環境にコピーしてください。
 
 [本リポジトリ](https://github.com/ap-communications/chocott-backstage)は [GitHubテンプレートリポジトリ](https://docs.github.com/ja/repositories/creating-and-managing-repositories/creating-a-repository-from-a-template) として設定されています。以下の手順で、ご自身のGitHub環境に新しいリポジトリとしてコピーすることができます。
 
@@ -16,58 +26,43 @@ git clone https://github.com/<あなたのアカウント>/chocott-backstage.git
 cd chocott-backstage
 ```
 
-## 利用形態の選択
+## 2. chocott-backstageを立ち上げる
 
 chocott-backstageを利用するには、GitHubアカウントにGitHub Appを登録する必要があります。
 
 GitHub AppはOrganization（組織）アカウントまたはパーソナルアカウント（個人のGitHubアカウント）のどちらにも登録できます。利用形態に応じて、以下のいずれかの手順を参照してください。
 
-### Organizationアカウントで利用する場合
+### 2.1 Organizationアカウントで利用する場合
 
-OrganizationのメンバーでBackstageを共有利用する場合は、OrganizationアカウントにGitHub Appを登録します。
+OrganizationのメンバーでBackstageを試してみたい場合は、OrganizationアカウントにGitHub Appを登録します。
 
 - Organizationのユーザー・チーム情報をBackstageに取り込むことができます
 - サインインできるのはOrganizationのメンバーのみとなります
 
+以下の手順を参考に、Backstageを起動してみてください。
+
 → [Organizationアカウントでchocott-backstageを立ち上げる](./organization.md)
 
-### パーソナルアカウントで利用する場合
+### 2.2 パーソナルアカウントで利用する場合
 
 個人で検証・学習目的で利用する場合は、パーソナルアカウントにGitHub Appを登録します。
 
 - GitHubアカウントを持っているすべての方がサインイン可能となります（ローカル環境での利用を想定）
+- ログイン認証はGitHub Appを利用しますが、GitHub PATを利用してバックエンド認証を行います。
+
+以下の手順を参考に、Backstageを起動してみてください。
 
 → [パーソナルアカウントでchocott-backstageを立ち上げる](./personal.md)
 
+## 3. ソフトウェアカタログを登録する
+
+chocott-backstageが無事起動できたら、以下の手順を参考にソフトウェアカタログを登録してみましょう。
+
+→ [ソフトウェアカタログを登録する](../catalogs/index.md)
+
 ## 補足：ソースコードを修正してみたい方
 
-### 事前準備
+こちらは番外編となります。  
+ソースコードから触れてみたい方はこちらを参照してください。
 
-nodeやyarnなどいくつかのコマンドが必要です。詳しくは [Backstage公式ドキュメントのGetting Started](https://backstage.io/docs/getting-started/#prerequisites)をご確認ください。
-
-なお、chocott-backstageではNode 24を利用して実装しています。
-
-また、TechDocsを表示するためにmkdocsというツールも必要になります。[TechDocsのドキュメント](../techdocs/index.md) をご確認いただき、インストールしてください。
-
-### ローカル向けコンフィグレーションファイルの用意
-
-リポジトリのトップフォルダにある、テンプレートファイルをもとにローカル向けコンフィグレーションを作成します。
-なお、初期状態ではデータベースにsqliteを利用するように設定しています。PostgreSQLを利用する場合は [Databaseのドキュメント](../database/index.md) を参考にしてapp-config.local.yamlの設定を書き換えてください。
-
-```shell
-cd <repository top>
-cp app-config.local.yaml.sample app-config.local.yaml
-
-```
-
-### ローカル環境で実行
-
-以下のコマンドでアプリケーションが起動します。起動後 http://localhost:3000/ にアクセスしてください。
-サインインは、連携したGitHubのユーザーアカウントで行うことができます。
-
-```sh
-yarn install
-yarn start
-```
-
-アクセスしましたら、[ソフトウェアカタログのページ](../catalogs/index.md) をご参考にしていただき、既存のソフトウェアカタログを登録したり新規に作成するなどして、実際に機能をお試しください。
+→ [補足：ソースコードを修正してみたい方](./manual-customize.md)
