@@ -2,13 +2,16 @@
 
 こちらのページでは、chocott-backstageを利用する手順についてまとめています。
 
-## アジェンダ
+## 目次
 
-1. [リポジトリのコピー](#リポジトリのコピー)
-2. [chocott-backstageを立ち上げる](#chocott-backstageを立ち上げる)
-   1. （GitHub Organization利用の方）[Organizationアカウントでchocott-backstageを立ち上げる](./organization.md)
-   2. （パーソナルアカウント利用の方）[パーソナルアカウントでchocott-backstageを立ち上げる](./personal.md)
-3. [ソフトウェアカタログを登録する](../catalogs/index.md)
+- [Quick start](#quick-start)
+  - [目次](#目次)
+  - [1. リポジトリのコピー](#1-リポジトリのコピー)
+  - [2. chocott-backstageを立ち上げる](#2-chocott-backstageを立ち上げる)
+    - [2.1 Organizationアカウントで利用する場合](#21-organizationアカウントで利用する場合)
+    - [2.2 パーソナルアカウントで利用する場合](#22-パーソナルアカウントで利用する場合)
+  - [3. ソフトウェアカタログを登録する](#3-ソフトウェアカタログを登録する)
+  - [補足：ソースコードを修正してみたい方](#補足ソースコードを修正してみたい方)
 
 ## 1. リポジトリのコピー
 
