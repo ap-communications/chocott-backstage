@@ -1,0 +1,48 @@
+auth:
+  environment: development
+  providers:
+    github:
+      development:
+        clientId: ${AUTH_GITHUB_CLIENT_ID}
+        clientSecret: ${AUTH_GITHUB_CLIENT_SECRET}
+        signIn:
+          resolvers:
+            - resolver: usernameMatchingUserEntityName
+
+backend:
+  database:
+    client: pg
+    connection:
+      host: ${POSTGRES_HOST}
+      port: ${POSTGRES_PORT}
+      user: ${POSTGRES_USER}
+      password: ${POSTGRES_PASSWORD}
+  auth:
+    externalAccess:
+      # In local development, there is no need to configure anything for this auth method. 
+      # But in production, you must configure at least one legacy type external access method:
+      - type: legacy
+        options:
+          secret: ${BACKSTAGE_BACKEND_SECRET}
+          subject: legacy-catalog
+
+integrations:
+  github:
+    - host: github.com
+      apps:
+        - $include: ${GITHUB_CREDENTIAL_FILE}
+
+catalog:
+  providers:
+    githubOrg:
+      id: 'github-local'
+      githubUrl: 'https://github.com'
+      schedule:
+        frequency:
+          minutes: 60
+        timeout:
+          minutes: 5
+        initialDelay:
+          seconds: 10
+      orgs:
+      - ${GITHUB_ORG}

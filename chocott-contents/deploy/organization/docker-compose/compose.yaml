@@ -1,0 +1,44 @@
+services:
+  backstage:
+    image: ghcr.io/ap-communications/chocott-backstage:1.29.3
+    volumes:
+      - "../app-config.chocott.yaml:/app/config/app-config.yaml"
+      - "${GITHUB_CREDENTIAL_FILE}:/app/config/github-credentials.yaml"
+    command: 
+      - "--config"
+      - "/app/config/app-config.yaml"
+    ports:
+      - 7007:7007
+    environment:
+      AUTH_GITHUB_CLIENT_ID: ${AUTH_GITHUB_CLIENT_ID}
+      AUTH_GITHUB_CLIENT_SECRET: ${AUTH_GITHUB_CLIENT_SECRET}
+      BACKSTAGE_BACKEND_SECRET: ${BACKSTAGE_BACKEND_SECRET:?BACKSTAGE_BACKEND_SECRET is required}
+      GITHUB_CREDENTIAL_FILE: /app/config/github-credentials.yaml
+      POSTGRES_HOST: db
+      POSTGRES_PORT: 5432
+      POSTGRES_USER: ${POSTGRES_USER:-postgres}
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD:-postgres}
+      GITHUB_ORG: ${GITHUB_ORG:-SpecifildYourOrganizationName}
+    networks:
+      - backend
+    depends_on:
+      - db
+    restart: always
+
+  db:
+    image: postgres:14
+    environment:
+      POSTGRES_USER: ${POSTGRES_USER:-postgres}
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD:-postgres}
+    restart: always
+    ports:
+      - 127.0.0.1:5432:5432
+    networks:
+      - backend
+    deploy:
+      resources:
+        limits:
+          memory: 250M
+
+networks:
+  backend:

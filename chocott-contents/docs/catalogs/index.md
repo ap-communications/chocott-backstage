@@ -1,4 +1,4 @@
-# ソフトウェアカタログ
+# ソフトウェアカタログを登録する
 
 [ソフトウェアカタログ](https://backstage.io/docs/features/software-catalog/) はBackstageの主要な機能の１つです。
 みなさんが開発するソフトウェア・サービスの情報をカタログ情報としてBackstage上で管理します。

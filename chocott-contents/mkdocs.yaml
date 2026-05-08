@@ -9,10 +9,12 @@ nav:
   - 機能詳細:
       - ユーザー認証:
           - 概要: authentication/index.md
-          - GitHub App: authentication/githubapp/index.md
-          - GitHub PAT: authentication/githubpat/index.md
+          - GitHub App (パーソナル): authentication/githubapp/personal/index.md
+          - GitHub App (Organization): authentication/githubapp/organization/index.md
       - アクセス承認: authorization/index.md
-      - Integration: integration/index.md
+      - Integration:
+          - 概要: integration/index.md
+          - GitHub PAT: integration/githubpat/index.md
       - TechDocs: techdocs/index.md
       - Plugin導入による機能拡張: plugins/index.md
       - Database: database/index.md
