@@ -51,8 +51,10 @@
   },
   "resolutions": {
     "@backstage/plugin-notifications": "0.5.15",
+    "@protobufjs/inquire": "1.1.0",
     "@types/react": "^18",
-    "@types/react-dom": "^18"
+    "@types/react-dom": "^18",
+    "protobufjs": "7.5.5"
   },
   "prettier": "@backstage/cli/config/prettier",
   "lint-staged": {
