@@ -35,6 +35,7 @@ https://github.com/ap-communications/chocott-backstage/blob/main/chocott-content
 サイドメニューから `Create...` を選択し、「Express API × TypeScriptのサンプルテンプレート」の「CHOOSE」ボタンをクリックします。
 
 
+
 「Repository Location」に、作成先のGitHub Organization名またはユーザーアカウント名とリポジトリ名を指定します。
 
 入力後、「REVIEW」→「CREATE」をクリックするとリポジトリの作成が始まります。
