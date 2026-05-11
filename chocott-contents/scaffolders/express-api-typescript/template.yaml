@@ -1,9 +1,9 @@
 apiVersion: scaffolder.backstage.io/v1beta3
 kind: Template
 metadata:
-  name: typescript-express-api
-  title: TypeScript Express APIのテンプレート
-  description: TypeScript + Node.js/Express の HTTP APIリポジトリを新規作成します。GitHub Actionsのビルドワークフローもセットで払い出されます。
+  name: express-api-typescript
+  title: Express API × TypeScriptのサンプルテンプレート
+  description: Node.js/Express × TypeScriptの HTTP APIリポジトリを新規作成します。GitHub Actionsのビルドワークフローもセットで払い出されます。
 spec:
   owner: group:guests
   type: service

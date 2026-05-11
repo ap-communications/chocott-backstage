@@ -25,6 +25,7 @@ chocott-backstageの利用方法は [Quick start](./quick-start/index.md) をご
 
 - [ソフトウェアカタログ](./catalogs/index.md)
 - [ソフトウェアテンプレート](./software-templates/index.md)
+- [Express API × TypeScriptテンプレート](./software-templates/express-api-typescript.md)
 
 ## 独自コンテンツ
 
