@@ -1,0 +1,56 @@
+apiVersion: scaffolder.backstage.io/v1beta3
+kind: Template
+metadata:
+  name: typescript-express-api
+  title: TypeScript Express APIのテンプレート
+  description: TypeScript + Node.js/Express の HTTP APIリポジトリを新規作成します。GitHub Actionsのビルドワークフローもセットで払い出されます。
+spec:
+  owner: group:guests
+  type: service
+
+  parameters:
+    - title: リポジトリの作成先
+      required:
+        - repoUrl
+      properties:
+        repoUrl:
+          title: Repository Location
+          description: 作成先のGitHub Organization名またはユーザーアカウント名とリポジトリ名を指定してください。対象ホストは github.com のみとなります。
+          type: string
+          ui:field: RepoUrlPicker
+          ui:options:
+            allowedHosts:
+              - github.com
+
+  steps:
+    - id: fetch-base
+      name: Fetch Base
+      action: fetch:template
+      input:
+        url: ./skeleton
+        values:
+          name: ${{ (parameters.repoUrl | parseRepoUrl).repo }}
+          repoOwner: ${{ (parameters.repoUrl | parseRepoUrl).owner }}
+
+    - id: publish
+      name: Publish
+      action: publish:github
+      input:
+        description: ${{ (parameters.repoUrl | parseRepoUrl).repo }} - TypeScript Express API
+        repoUrl: ${{ parameters.repoUrl }}
+        defaultBranch: main
+
+    - id: register
+      name: Register
+      action: catalog:register
+      input:
+        repoContentsUrl: ${{ steps['publish'].output.repoContentsUrl }}
+        catalogInfoPath: '/catalog-info.yaml'
+
+  output:
+    links:
+      - title: Repository
+        url: ${{ steps['publish'].output.remoteUrl }}
+      - title: Open in catalog
+        icon: catalog
+        entityRef: ${{ steps['register'].output.entityRef }}
