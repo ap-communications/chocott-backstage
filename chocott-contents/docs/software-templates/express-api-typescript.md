@@ -32,22 +32,53 @@ https://github.com/ap-communications/chocott-backstage/blob/main/chocott-content
 
 ## テンプレートの使い方
 
-サイドメニューから `Create...` を選択し、「Express API × TypeScriptのサンプルテンプレート」の「CHOOSE」ボタンをクリックします。
+左サイドバーの **Create...** からテンプレート一覧を開き、**Express API × TypeScript** テンプレートを選択して **Choose** をクリックします。
 
+![Choose the Express API × TypeScript template](./images/expressapi-template-choose.png)
 
+フォームに以下の情報を入力します。
 
-「Repository Location」に、作成先のGitHub Organization名またはユーザーアカウント名とリポジトリ名を指定します。
+| 項目 | 説明 |
+|---|---|
+|  |  |
+|  |  |
 
-入力後、「REVIEW」→「CREATE」をクリックするとリポジトリの作成が始まります。
+![Enter template information](./images/expressapi-template-info-input.png)
 
-### 作成完了後
+入力が完了したら **Review** を進めて確認画面で **Create** をクリックします。
 
-作成が完了すると、以下のリンクが表示されます。
+![Create from template](./images/expressapi-template-create.png)
 
-- **Repository** — 作成されたGitHubリポジトリへのリンク
-- **Open in catalog** — Backstageのソフトウェアカタログページへのリンク
+ソフトウェアカタログに登録されたコンポーネントを開きます。
 
-「Open in catalog」をクリックすると、作成したリポジトリのカタログページが開きます。
+![Open catalog page](./images/expressapi-open-catalog.png)
+
+カタログページの **Source** リンクからGitHubリポジトリにアクセスできます。
+
+![Open source repository from catalog](./images/expressapi-catalog-open-source.png)
+
+リポジトリ作成後、自動的にGitHub Actionsが起動します。生成されたリポジトリのActionsタブで初回ワークフローが正常に完了していることを確認してください。
+
+![Check initial GitHub Actions run](./images/expressapi-check-initial-actions.png)
+
+## 払い出し後の確認
+
+払い出されたリポジトリをローカルにクローンして、以下のコマンドで確認してみることもできます。
+
+```shell
+$ npm install
+$ npm run dev
+
+> expressapi-new-repository@1.0.0 dev
+> ts-node src/index.ts
+
+Server is running on port 3000
+```
+
+`http://localhost:3000/`でアクセスすると、サンプルアプリが起動しているのがわかります。
+
+![Access the application frontend](./images/expressapi-access-app-frontend.png)
+
 
 ## 生成物
 
