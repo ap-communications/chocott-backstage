@@ -1,10 +1,10 @@
 <mxfile host="65bd71144e">
     <diagram id="Tmw2SN12qg_djBHEEYbI" name="ページ1">
-        <mxGraphModel dx="2699" dy="881" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+        <mxGraphModel dx="1935" dy="608" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
             <root>
                 <mxCell id="0"/>
                 <mxCell id="1" parent="0"/>
-                <mxCell id="41" value="" style="rounded=0;whiteSpace=wrap;html=1;strokeColor=none;" vertex="1" parent="1">
+                <mxCell id="41" value="" style="rounded=0;whiteSpace=wrap;html=1;strokeColor=none;" parent="1" vertex="1">
                     <mxGeometry x="-850" y="500" width="790" height="630" as="geometry"/>
                 </mxCell>
                 <mxCell id="10" value="" style="rounded=1;whiteSpace=wrap;html=1;" parent="1" vertex="1">
@@ -75,6 +75,9 @@
                 </mxCell>
                 <mxCell id="40" value="" style="outlineConnect=0;dashed=0;verticalLabelPosition=bottom;verticalAlign=top;align=center;html=1;shape=mxgraph.aws3.human_intelligence_tasks_hit;fillColor=#ACACAC;gradientColor=none;" parent="1" vertex="1">
                     <mxGeometry x="-332.5" y="990" width="42.5" height="44.93" as="geometry"/>
+                </mxCell>
+                <mxCell id="42" value="⑥新リポジトリ用の&lt;div&gt;ソフトウェアカタログを&lt;/div&gt;&lt;div&gt;登録&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;fillColor=none;strokeColor=none;labelBackgroundColor=none;" vertex="1" parent="1">
+                    <mxGeometry x="-840" y="790" width="140" height="60" as="geometry"/>
                 </mxCell>
             </root>
         </mxGraphModel>
