@@ -2,6 +2,22 @@
 
 **※このテンプレートは、GitHub Organizationアカウント利用でのみ利用可能です**
 
+通常、ソフトウェアテンプレートで払い出す際に利用するテンプレートリポジトリはcatalog-info.yamlを配置しておき、テンプレートアクションのステップで登録するアクションを追加しておきます。  
+このようにすることで、払い出し時に新規リポジトリへのcatalog-info.yaml配置と、Backstageのソフトウェアカタログの登録を自動で行うことができますが、既存リポジトリはそうはいきません。
+
+このテンプレートは、catalog-info.yamlをOrganization内の既存リポジトリに対して追加するPull Requestを作成します。
+
+## テンプレートの登録
+
+登録手順は [【テンプレート共通】テンプレート登録手順](./register-software-template.md) を参照してください。
+登録するURLを入力する際には、以下のURLを使用してください。
+
+```
+https://github.com/ap-communications/chocott-backstage/tree/main/chocott-contents/scaffolders/catalog-info/create-pullreq-catalog-info.yaml
+```
+
+## テンプレートの解説
+
 ソフトウェアテンプレートを作成するためには以下の２つの情報が必要になります
 
 - テンプレート用カタログ情報
