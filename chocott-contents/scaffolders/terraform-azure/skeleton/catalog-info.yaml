@@ -5,6 +5,6 @@ metadata:
   annotations:
     github.com/project-slug: ${{ (values.repoUrl | parseRepoUrl).owner }}/${{ (values.repoUrl | parseRepoUrl).repo }}
 spec:
-  type: service
+  type: infrastructure
   owner: user:guest
   lifecycle: experimental
