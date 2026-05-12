@@ -18,9 +18,14 @@ nav:
       - TechDocs: techdocs/index.md
       - Plugin導入による機能拡張: plugins/index.md
       - Database: database/index.md
-  - カタログ情報:
+  - コア機能:
       - ソフトウェアカタログ: catalogs/index.md
-      - ソフトウェアテンプレート: software-templates/index.md
+      - ソフトウェアテンプレート:
+          - 概要: software-templates/index.md
+          - テンプレート登録手順: software-templates/register-software-template.md
+          - テンプレートの書き方: software-templates/writing-software-template.md
+  - ソフトウェアテンプレートのサンプル:
       - Express API × TypeScriptテンプレート: software-templates/template-express-api-typescript.md
+      - catalog-info追加PRテンプレート: software-templates/template-register-software-catalog.md
 plugins:
   - techdocs-core

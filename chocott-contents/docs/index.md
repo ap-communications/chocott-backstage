@@ -21,11 +21,15 @@ chocott-backstageの利用方法は [Quick start](./quick-start/index.md) をご
 - [Plugins](./plugins/index.md)
 - [Database](./database/index.md)
 
-## カタログ情報
+## コア機能
 
 - [ソフトウェアカタログ](./catalogs/index.md)
 - [ソフトウェアテンプレート](./software-templates/index.md)
+
+## ソフトウェアテンプレートのサンプル
+
 - [Express API × TypeScriptテンプレート](./software-templates/template-express-api-typescript.md)
+- [catalog-info.yamlを追加するPull Requestを作成するテンプレート](./software-templates/template-register-software-catalog.md)
 
 ## 独自コンテンツ
 
