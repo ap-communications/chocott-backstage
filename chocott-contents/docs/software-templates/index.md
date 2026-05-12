@@ -1,70 +1,44 @@
-# ソフトウェアテンプレート
+# ソフトウェアテンプレートを利用する
 
 ソフトウェアテンプレート機能はBackstageが持つ主要機能のうちの１つです。
-テンプレートとして登録された情報を元に、コードリポジトリ等に新たなリポジトリやファイルを追加することができます。
-
 こちらが [公式ドキュメント](https://backstage.io/docs/features/software-templates/) です。
 
-テンプレートは独自に追加することもできます。ここでは簡単な例として [ソフトウェアカタログ](../catalogs/index.md) を追加するテンプレートをご紹介します。
+テンプレートとして登録された情報を元に、ソフトウェアカタログの登録や通知などのBackstageの各種アクションを実行したり、プラグインをもとにGitHubやクラウドベンダー、各種OSSなどのプラグインによってバックエンド連携しているサービスへの操作を行うこともできます。
 
-## catalog-info作成のPull Requestを作成するテンプレート
+![Software template overview](./images/software-template-overview.svg)
 
-ソフトウェアテンプレートを作成するためには以下の２つの情報が必要になります
+ソフトウェアカタログ同様、ソフトウェアテンプレートのアクション自体もプラグインの実装によって拡張が可能です。  
+そのため、組織が利用しているInternal Developer Platformの構成要素に合ったプラグインを採用したり、拡張したりすることでより使いやすいテンプレートを作っていくこともできます。
 
-- テンプレート用カタログ情報
-- 作成するファイル内容（コンテンツ）
+## なぜソフトウェアテンプレートが必要なのか？
 
-サンプルのソフトウェアカタログは [こちら](https://github.com/ap-communications/chocott-backstage/tree/main/chocott-contents/scaffolders/catalog-info) で公開しています。
+ソフトウェアテンプレートは **開発者の自律性** と **組織全体の標準化** を両立させるために利用するものです。
 
-### テンプレート用カタログ情報
+### ①開発者がコア業務だけに注力できるようになる
 
-テンプレート情報も通常のソフトウェアコンポーネントのカタログと同様にカタログファイルでその内容を定義します。（[カタログファイル](https://github.com/ap-communications/chocott-backstage/tree/main/chocott-contents/scaffolders/catalog-info/create-pullreq-catalog-info.yaml)）
+開発チームが新たな検証やプロジェクトを始める際には、そのための環境構築が必要になります。環境構築は開発チーム自身が行う場合もあれば、インフラチームに依頼する場合もありますが、いずれにせよ依頼のたびに対応が発生することは大きな手間です。
 
-こちらのファイルで入力項目と、テンプレート作成時に実行する内容、テンプレート作成後Backstage側に反映する内容を記載します。
+また、作成にあたっては組織で定めた開発ルールやセキュリティ標準への適合が求められますが、都度人力でチェックするのは負担が大きく、オペレーションミスによるリスクも伴います。
 
-### 作成するファイル内容（コンテンツ）
+何より、開発チームが本来時間を割きたいのは環境構築ではなく、その後のアプリケーション開発や機能開発です。環境準備はなるべく少ない手間と短い時間で、確実かつ安全に完了させたいはずです。
 
-上記のカタログ情報のなかで作成するファイル内容のフォルダを指定します。以下の部分
+ソフトウェアテンプレートを本格的に活用するためには、事前にアプリケーションの実行環境となるInternal Developer Platform（IDP）の整備や、ソフトウェアテンプレートを継続的にメンテナンスするための体制を用意することが一般的です。
+**プラットフォームチーム** と呼ばれる専門チームがソフトウェアテンプレートを用意し、開発チームが利用することで、組織標準の開発環境をセルフサービスで払い出すことができます。
 
-```yaml
-    - id: fetch-base
-      name: Fetch Base
-      action: fetch:template
-      input:
-        url: ./contents   # コンテンツを格納したフォルダ
-        values:
-          name: ${{ parameters.name }}
-          owner: ${{ parameters.owner }}
-          hasDocs: ${{ parameters.hasDocs }}
+### ②Backstageを利用する追加の手間を意識する必要がなくなる
 
-```
+[ソフトウェアカタログを登録する](../catalogs/index.md)を見ていただいた方には、Backstageがカタログ機能を活用して複数のシステムをどのように効率的に管理するのかがお分かりいただけたと思います。
 
-ここで指定したフォルダの中身すべてが原則そのまま指定されたリポジトリにコピーされます。
+しかし、毎回手動で`catalog-info.yaml`を作成してBackstageに登録しなければならないのは手間がかかります。しかも、Backstageからシステムの情報が正しく表示されるよう、事前にリポジトリの状態や各種リソースをBackstageに合わせて構成しておく必要もあります。
 
-なお、一部の文字列は置換処理を行うことができます。置換する文字列は上記のvaluesのところで指定します。ここではname、owner、hasDocsという３つの項目を置換しようとしています。
-置換先はコンテンツファイルの中身に記載します。例えば以下のような内容です。
+認知負荷を下げるためにBackstageを導入しているのに、開発チームに「Backstageに配慮した開発」を強制するのは本末転倒です。本来の目的は、開発チームが開発に集中できるよう環境準備のステップを削減し、認知負荷を下げることで開発生産性を高めることのはずです。
 
-```yaml
-apiVersion: backstage.io/v1alpha1
-kind: Component
-metadata:
-  name: ${{ values.name | dump }}
-spec:
-  type: service
-  owner: ${{ values.owner | dump }}
-  lifecycle: production
-```
+ソフトウェアテンプレートを利用することで、リポジトリの作成からBackstageへのカタログ登録までを一連の流れとして自動化できます。開発チームはBackstage利用のための追加の手続きをほぼ意識することなく、必要な環境を手に入れることができます。
 
-`${{ values.name | dump }}` はnameで指定した文字列に置換されます。また簡単な条件分岐なども記述できます。
+## サンプルテンプレート
 
-このように一部の文字列を置換しながら、新しいリポジトリを作成したり、Pull Requestとして登録したりできるのがBackstageのソフトウェアテンプレートの特長になります。
+chocott-backstageで利用できるサンプルのテンプレートをいくつか用意しています。  
+Backstageにおけるソフトウェアテンプレートの利点を学ぶために、ぜひ利用してみてください。
 
-なお、ここで紹介したサンプルテンプレートは実際にご利用いただくことができます。
-
-[ソフトウェアカタログ](../catalogs/index.md) の「既存のカタログのインポート」の手順で以下のURLを指定していただければテンプレートとして取り込まれます。
-
-```
-https://github.com/ap-communications/chocott-backstage/tree/main/chocott-contents/scaffolders/catalog-info/create-pullreq-catalog-info.yaml
-```
-
-取り込まれたあとはサイドメニューから「Create...」を選択し、テンプレートが追加されていることをご確認ください。
+1. [Express API × TypeScriptテンプレート](./template-express-api-typescript.md)
+2. [catalog-info.yamlを追加するPull Requestを作成するテンプレート](./template-register-software-catalog.md)

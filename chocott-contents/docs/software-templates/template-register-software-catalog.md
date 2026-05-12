@@ -1,0 +1,69 @@
+# catalog-info.yamlを追加するPull Requestを作成するテンプレート
+
+**※このテンプレートは、Organization（組織）アカウント利用でのみ利用可能です**
+
+通常、ソフトウェアテンプレートで払い出す際に利用するテンプレートリポジトリはcatalog-info.yamlを配置しておき、テンプレートアクションのステップで登録するアクションを追加しておきます。  
+このようにすることで、払い出し時に新規リポジトリへのcatalog-info.yaml配置と、Backstageのソフトウェアカタログの登録を自動で行うことができますが、既存リポジトリはそうはいきません。
+
+このテンプレートは、catalog-info.yamlをOrganization内の既存リポジトリに対して追加するPull Requestを作成します。
+
+## テンプレートの登録
+
+登録手順は [【テンプレート共通】テンプレート登録手順](./register-software-template.md) を参照してください。
+登録するURLを入力する際には、以下のURLを使用してください。
+
+```
+https://github.com/ap-communications/chocott-backstage/tree/main/chocott-contents/scaffolders/catalog-info/create-pullreq-catalog-info.yaml
+```
+
+## テンプレートの解説
+
+ソフトウェアテンプレートを作成するためには以下の２つの情報が必要になります。
+
+- テンプレート用カタログ情報
+- 作成するファイル内容（コンテンツ）
+
+サンプルのソフトウェアカタログは [こちら](https://github.com/ap-communications/chocott-backstage/tree/main/chocott-contents/scaffolders/catalog-info) で公開しています。
+
+### テンプレート用カタログ情報
+
+テンプレート情報も通常のソフトウェアコンポーネントのカタログと同様にカタログファイルでその内容を定義します。（[カタログファイル](https://github.com/ap-communications/chocott-backstage/tree/main/chocott-contents/scaffolders/catalog-info/create-pullreq-catalog-info.yaml)）
+
+こちらのファイルで入力項目と、テンプレート作成時に実行する内容、テンプレート作成後Backstage側に反映する内容を記載します。
+
+### 作成するファイル内容（コンテンツ）
+
+上記のカタログ情報のなかで作成するファイル内容のフォルダを指定します。以下の部分
+
+```yaml
+    - id: fetch-base
+      name: Fetch Base
+      action: fetch:template
+      input:
+        url: ./contents   # コンテンツを格納したフォルダ
+        values:
+          name: ${{ parameters.name }}
+          owner: ${{ parameters.owner }}
+          hasDocs: ${{ parameters.hasDocs }}
+
+```
+
+ここで指定したフォルダの中身すべてが原則そのまま指定されたリポジトリにコピーされます。
+
+なお、一部の文字列は置換処理を行うことができます。置換する文字列は上記のvaluesのところで指定します。ここではname、owner、hasDocsという３つの項目を置換しようとしています。
+置換先はコンテンツファイルの中身に記載します。例えば以下のような内容です。
+
+```yaml
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: ${{ values.name | dump }}
+spec:
+  type: service
+  owner: ${{ values.owner | dump }}
+  lifecycle: production
+```
+
+`${{ values.name | dump }}` はnameで指定した文字列に置換されます。また簡単な条件分岐なども記述できます。
+
+このように一部の文字列を置換しながら、新しいリポジトリを作成したり、Pull Requestとして登録したりできるのがBackstageのソフトウェアテンプレートの特長になります。

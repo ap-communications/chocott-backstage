@@ -19,20 +19,13 @@
 
 ## 1. GitHub Appの登録
 
-[Authenticationのドキュメント](../authentication/githubapp/personal/index.md)
-
-登録時の注意点：
-- App Install時は「All repositories」を選択することを推奨します
-
-登録後、以下の情報をメモしてください：
-- App ID
-- Client ID
-- Client Secret
+[Authenticationのドキュメント](../authentication/githubapp/personal/index.md)を参照し、GitHub Appを作成してください。  
+取得した値は[3. 環境変数の設定](#3-環境変数の設定)にて使用します。
 
 ## 2. GitHub PATの取得
 
 [GitHub PATのドキュメント](../integration/githubpat/index.md)を参照し、Personal Access Token（PAT）を取得してください。  
-取得した値は[4. 環境変数の設定](#4-環境変数の設定)にて使用します。
+取得した値は[3. 環境変数の設定](#3-環境変数の設定)にて使用します。
 
 ## 3. 環境変数の設定
 
