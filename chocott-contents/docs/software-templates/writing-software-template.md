@@ -22,7 +22,7 @@ chocott-backstageでどのようなテンプレートアクションが利用で
 
 ![Check installed actions list](images/backstage-check-installed-actions-list.png)
 
-例として、GitHub リポジトリを作成する`publish:github`アクションをを見てみましょう。  
+例として、GitHubリポジトリを作成する`publish:github`アクションを見てみましょう。  
 
 **Input**
 
@@ -30,7 +30,7 @@ chocott-backstageでどのようなテンプレートアクションが利用で
 
 **Output**
 
-![publish:github output](images/backstage-templateaction-publishgithub-outtput.png)
+![publish:github output](images/backstage-templateaction-publishgithub-output.png)
 
 **Examples**
 

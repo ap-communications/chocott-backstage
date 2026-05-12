@@ -41,7 +41,7 @@ https://github.com/ap-communications/chocott-backstage/blob/main/chocott-content
 
 | 項目 | 入力する値 |
 |---|---|
-| Owner | <GitHub アカウント名> |
+| Owner | <GitHubアカウント名> |
 | Repository | <新しく払い出すリポジトリ名(既存のリポジトリと被らない名前を指定)> |
 
 **Organizationアカウント利用時**

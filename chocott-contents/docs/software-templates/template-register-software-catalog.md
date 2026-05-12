@@ -18,7 +18,7 @@ https://github.com/ap-communications/chocott-backstage/tree/main/chocott-content
 
 ## テンプレートの解説
 
-ソフトウェアテンプレートを作成するためには以下の２つの情報が必要になります
+ソフトウェアテンプレートを作成するためには以下の２つの情報が必要になります。
 
 - テンプレート用カタログ情報
 - 作成するファイル内容（コンテンツ）
