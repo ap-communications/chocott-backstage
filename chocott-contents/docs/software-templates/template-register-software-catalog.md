@@ -67,13 +67,3 @@ spec:
 `${{ values.name | dump }}` はnameで指定した文字列に置換されます。また簡単な条件分岐なども記述できます。
 
 このように一部の文字列を置換しながら、新しいリポジトリを作成したり、Pull Requestとして登録したりできるのがBackstageのソフトウェアテンプレートの特長になります。
-
-なお、ここで紹介したサンプルテンプレートは実際にご利用いただくことができます。
-
-[ソフトウェアカタログ](../catalogs/index.md) の「既存のカタログのインポート」の手順で以下のURLを指定していただければテンプレートとして取り込まれます。
-
-```
-https://github.com/ap-communications/chocott-backstage/tree/main/chocott-contents/scaffolders/catalog-info/create-pullreq-catalog-info.yaml
-```
-
-取り込まれたあとはサイドメニューから「Create...」を選択し、テンプレートが追加されていることをご確認ください。
