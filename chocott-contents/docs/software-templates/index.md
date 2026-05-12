@@ -42,4 +42,4 @@ chocott-backstageで利用できるサンプルのテンプレートをいくつ
 Backstageにおけるソフトウェアテンプレートの利点を学ぶために、ぜひ利用してみてください。
 
 1. [Express API × TypeScriptテンプレート](./template-express-api-typescript.md)
-2. ソフトウェアカタログを追加するテンプレート
+2. [catalog-info.yamlを追加するPull Requestを作成するテンプレート](./template-register-software-catalog.md)

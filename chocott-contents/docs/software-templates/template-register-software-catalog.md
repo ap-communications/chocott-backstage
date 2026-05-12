@@ -1,4 +1,4 @@
-# catalog-info作成のPull Requestを作成するテンプレート
+# catalog-info.yamlを追加するPull Requestを作成するテンプレート
 
 **※このテンプレートは、GitHub Organizationアカウント利用でのみ利用可能です**
 
