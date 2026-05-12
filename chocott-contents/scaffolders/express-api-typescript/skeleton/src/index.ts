@@ -1,7 +1,7 @@
 import express, { Request, Response } from 'express';
 
 const app = express();
-const PORT = process.env.PORT ?? 3000;
+const PORT = parseInt(process.env.PORT ?? '', 10) || 3000;
 const startedAt = new Date();
 
 app.get('/', (_req: Request, res: Response) => {

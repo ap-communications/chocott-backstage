@@ -3,7 +3,7 @@
 ソフトウェアテンプレート機能はBackstageが持つ主要機能のうちの１つです。
 こちらが [公式ドキュメント](https://backstage.io/docs/features/software-templates/) です。
 
-テンプレートとして登録された情報を元に、ソフトウェアカタログの登録や通知などのBackstageの各種アクションを事項したり、
+テンプレートとして登録された情報を元に、ソフトウェアカタログの登録や通知などのBackstageの各種アクションを実行したり、
 プラグインをもとにGitHubやクラウドベンダー、各種OSSなどのプラグインによってバックエンド連携しているサービスへの操作を行うこともできます。
 
 ![Software template overview](./images/software-template-overview.svg)
