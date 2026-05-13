@@ -17,9 +17,9 @@ spec:
         prefix:
           title: リソースプレフィックス
           type: string
-          description: Azureリソース名に使用するプレフィックスを入力してください（英小文字・数字のみ、3〜24文字）。
+          description: Azureリソース名に使用するプレフィックスを入力してください（英小文字・数字のみ、3〜22文字）。
           ui:autofocus: true
-          pattern: '^[a-z0-9]{3,24}$'
+          pattern: '^[a-z0-9]{3,22}$'
     - title: GitHubリポジトリの設定
       required:
         - repoUrl
