@@ -16,7 +16,7 @@ Terraform（Azure）構成のサンプルテンプレートです。Resource Gro
 3. コミットを検知し、GitHubワークフローの内容に基づいてGitHub Actionsを実行
 4. Backstageのソフトウェアカタログへ登録
 
-![Template flow image](./images/flow-terraform-azure.svg)
+![Template flow image](./images/flow-terraform-azure.drawio.svg)
 
 ## 前提条件
 
