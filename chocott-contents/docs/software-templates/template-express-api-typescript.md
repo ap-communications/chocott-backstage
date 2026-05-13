@@ -51,20 +51,20 @@ https://github.com/ap-communications/chocott-backstage/blob/main/chocott-content
 | Owner | <GitHub Organization名> |
 | Repository | <新しく払い出すリポジトリ名(Organizationにある既存のリポジトリと被らない名前を指定)> |
 
-入力が完了したら **Review** をクリックします。
+入力が完了したら **REVIEW** をクリックします。
 
 ![Enter template information](./images/expressapi-template-info-input.png)
 
-入力した内容を確認し、 **Create** をクリックして作成を行います。
+入力した内容を確認し、 **CREATE** をクリックして作成を行います。
 
 ![Create from template](./images/expressapi-template-create.png)
 
-無事に作成されたらソフトウェアカタログに登録されたコンポーネントを開きます。  
+無事に作成されたら**OPEN IN CATALOG**をクリックし、ソフトウェアカタログに登録されたコンポーネントを開きます。  
 エラーが発生した場合は、ログを確認してください。
 
 ![Open catalog page](./images/expressapi-open-catalog.png)
 
-カタログページの **Source** リンクからGitHubリポジトリにアクセスできます。
+カタログページの **VIEW SOURCE** リンクからGitHubリポジトリにアクセスできます。
 
 ![Open source repository from catalog](./images/expressapi-catalog-open-source.png)
 
