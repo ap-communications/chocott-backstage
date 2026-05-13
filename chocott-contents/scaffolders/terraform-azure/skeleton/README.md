@@ -1,6 +1,6 @@
 # ${{ values.name }}
 
-Terraform (Azure) ハンズオン用リポジトリです。Resource Group、Storage Account、CosmosDBを作成するTerraform構成ファイルが含まれています。
+Terraform(Azure)ハンズオン用リポジトリです。Resource Group、Storage Account、CosmosDBを作成するTerraform構成ファイルが含まれています。
 
 ## 作成されるAzureリソース
 
