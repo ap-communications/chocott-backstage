@@ -5,7 +5,7 @@ Organization（組織）アカウントにGitHub Appを登録してchocott-backs
 ## 前提条件
 
 - macOS、またはWindows（WSL2のUbuntu等）などのLinux環境で作業していること
-- GitHubのOrganizationアカウントのオーナー権限を持っていること
+- GitHubのOrganizationアカウントのオーナー権限もしくはGitHub Organization App Manager権限を持っていること
 - Dockerがインストールされていること
 - [Quick startのリポジトリのコピー手順](./index.md)に従い、ご自身のGitHubリポジトリとしてclone済みであること
 
