@@ -30,7 +30,7 @@ spec:
         url: ./skeleton
         values:
           name: ${{ (parameters.repoUrl | parseRepoUrl).repo }}
-          repoOwner: ${{ (parameters.repoUrl | parseRepoUrl).owner }}
+          repoUrl: ${{ parameters.repoUrl }}
 
     - id: publish
       name: Publish
