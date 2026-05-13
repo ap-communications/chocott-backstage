@@ -59,7 +59,7 @@ https://github.com/ap-communications/chocott-backstage/blob/main/chocott-content
 
 ![Create from template](./images/expressapi-template-create.png)
 
-無事に作成されたら**OPEN IN CATALOG**をクリックし、ソフトウェアカタログに登録されたコンポーネントを開きます。  
+無事に作成されたら **OPEN IN CATALOG** をクリックし、ソフトウェアカタログに登録されたコンポーネントを開きます。  
 エラーが発生した場合は、ログを確認してください。
 
 ![Open catalog page](./images/expressapi-open-catalog.png)
