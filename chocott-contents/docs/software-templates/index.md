@@ -5,7 +5,7 @@
 
 テンプレートとして登録された情報を元に、ソフトウェアカタログの登録や通知などのBackstageの各種アクションを実行したり、プラグインをもとにGitHubやクラウドベンダー、各種OSSなどのプラグインによってバックエンド連携しているサービスへの操作を行うこともできます。
 
-![Software template overview](./images/software-template-overview.svg)
+![Software template overview](./images/software-template-overview.drawio.svg)
 
 ソフトウェアカタログ同様、ソフトウェアテンプレートのアクション自体もプラグインの実装によって拡張が可能です。  
 そのため、組織が利用しているInternal Developer Platformの構成要素に合ったプラグインを採用したり、拡張したりすることでより使いやすいテンプレートを作っていくこともできます。

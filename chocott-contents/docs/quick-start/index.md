@@ -54,7 +54,9 @@ OrganizationのメンバーでBackstageを試してみたい場合は、Organiza
 - GitHubアカウントを持っているすべての方がサインイン可能となります（ローカル環境での利用を想定）
 - ログイン認証はGitHub Appを利用しますが、GitHub PATを利用してバックエンド認証を行います。
 
-**※【ご注意】BackstageのGitHubプラグインはGitHub Organizationを利用する前提に動作する仕様になっているため、GitHub PATを利用する場合はプラグインの一部が正常に動作しません。予めご了承ください。**
+> [!NOTE]
+> 【ご注意】BackstageのGitHubプラグインはGitHub Organizationを利用する前提に動作する仕様になっているため、  
+> GitHub PATを利用する場合はカタログ表示機能などのプラグインの一部機能が正常に動作しないことがあります。予めご了承ください。
 
 以下の手順を参考に、Backstageを起動してみてください。
 
