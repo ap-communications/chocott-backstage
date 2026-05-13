@@ -34,7 +34,7 @@ https://github.com/ap-communications/chocott-backstage/blob/main/chocott-content
 
 ## テンプレートの使い方
 
-左サイドバーの **Create...** からテンプレート一覧を開き、**Terraform Azureサンプル** テンプレートを選択して **Choose** をクリックします。
+左サイドバーの **Create...** からテンプレート一覧を開き、 **Terraform Azureサンプル** テンプレートを選択して **Choose** をクリックします。
 
 ![Choose the Terraform Azure template](./images/terraform-azure-template-choose.png)
 
