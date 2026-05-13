@@ -41,7 +41,8 @@ export BACKSTAGE_BACKEND_SECRET="$(openssl rand -hex 32)"
 
 `BACKSTAGE_BACKEND_SECRET` はBackstageのバックエンドが内部認証に使用する秘密鍵です。`openssl` コマンドでランダムな文字列を生成して設定してください。
 
-> **注意**: `GITHUB_CREDENTIAL_FILE`は絶対パスで指定する必要があります。
+> [!NOTE]
+> `GITHUB_CREDENTIAL_FILE`は絶対パスで指定する必要があります。
 
 `GITHUB_ORG`には、GitHub Appを登録したOrganization名を指定してください。この設定により、Organizationのユーザー・チーム情報がBackstageに取り込まれます。
 
