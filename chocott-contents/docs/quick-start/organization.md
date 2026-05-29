@@ -57,7 +57,7 @@ docker compose up -d
 
 ## 5. 動作確認
 
-http://localhost:7007/ にアクセスしてください。GitHubアカウントでサインインできます。
+[http://localhost:7007/](http://localhost:7007/) にアクセスしてください。GitHubアカウントでサインインできます。
 
 ※サインインできるのはあくまでもGitHub Organizationに所属するメンバーのアカウントのみです
 

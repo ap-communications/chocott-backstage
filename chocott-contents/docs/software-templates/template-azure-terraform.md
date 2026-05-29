@@ -28,7 +28,7 @@ Terraform（Azure）構成のサンプルテンプレートです。Resource Gro
 登録手順は [【テンプレート共通】テンプレート登録手順](./register-software-template.md) を参照してください。
 登録するURLを入力する際には、以下のURLを使用してください。
 
-```
+```text
 https://github.com/ap-communications/chocott-backstage/blob/main/chocott-contents/scaffolders/terraform-azure/terraform-azure-catalog-info.yaml
 ```
 
@@ -40,9 +40,8 @@ https://github.com/ap-communications/chocott-backstage/blob/main/chocott-content
 
 フォームに以下の情報を入力します。
 
-
 | 項目 | 入力する値 |
-|---|---|
+| --- | --- |
 | リソースプレフィックス | Azureリソース名に使用するプレフィックス（英小文字・数字のみ、3〜24文字） |
 
 ![Enter Terraform configuration](./images/terraform-azure-template-info-input.png)
@@ -52,14 +51,14 @@ https://github.com/ap-communications/chocott-backstage/blob/main/chocott-content
 **Personalアカウント利用時**
 
 | 項目 | 入力する値 |
-|---|---|
+| --- | --- |
 | Owner | <GitHubアカウント名> |
 | Repository | <新しく払い出すリポジトリ名（既存のリポジトリと被らない名前を指定）> |
 
 **Organization（組織）アカウント利用時**
 
 | 項目 | 入力する値 |
-|---|---|
+| --- | --- |
 | Owner | <GitHub Organization名> |
 | Repository | <新しく払い出すリポジトリ名（Organizationにある既存のリポジトリと被らない名前を指定）> |
 

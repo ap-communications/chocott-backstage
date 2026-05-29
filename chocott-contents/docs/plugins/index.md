@@ -103,4 +103,3 @@ Overviewには以下のような表示が追加されます。
 また 「Pull requests」 というタブにPull requestsの一覧が表示されます。
 
 ![Pull request tab](pr-plugin-tab.png)
-

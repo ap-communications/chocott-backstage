@@ -5,7 +5,7 @@ Terraform(Azure)ハンズオン用リポジトリです。Resource Group、Stora
 ## 作成されるAzureリソース
 
 | リソース | 名前 |
-|----------|------|
+| ---------- | ------ |
 | Resource Group | `rg-${{ values.prefix }}` |
 | Storage Account | `st${{ values.prefix }}` |
 | CosmosDB | `cosmos-${{ values.prefix }}` |
@@ -15,7 +15,7 @@ Terraform(Azure)ハンズオン用リポジトリです。Resource Group、Stora
 
 ## ファイル構成
 
-```
+```text
 .
 ├── main.tf         # リソース定義
 ├── variables.tf    # 入力変数

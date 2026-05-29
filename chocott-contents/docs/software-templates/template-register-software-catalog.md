@@ -12,7 +12,7 @@
 登録手順は [【テンプレート共通】テンプレート登録手順](./register-software-template.md) を参照してください。
 登録するURLを入力する際には、以下のURLを使用してください。
 
-```
+```text
 https://github.com/ap-communications/chocott-backstage/tree/main/chocott-contents/scaffolders/catalog-info/create-pullreq-catalog-info.yaml
 ```
 

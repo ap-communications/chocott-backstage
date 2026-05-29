@@ -17,7 +17,7 @@ chocott-backstageの初期状態ではBackstageが用意しているサンプル
 
 Select URLのところに、以下のURLを入力し、「ANALYZE」ボタンをクリックしてください。
 
-```
+```text
 https://github.com/ap-communications/chocott-backstage/blob/main/chocott-contents/catalog-info.yaml
 ```
 
