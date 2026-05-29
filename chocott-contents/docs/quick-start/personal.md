@@ -51,7 +51,7 @@ docker compose up -d
 
 ## 5. 動作確認
 
-http://localhost:7007/ にアクセスしてください。  
+[http://localhost:7007/](http://localhost:7007/) にアクセスしてください。  
 無事Backstage Portalにアクセスできれば成功です！
 
 ### 補足：クリーンアップ

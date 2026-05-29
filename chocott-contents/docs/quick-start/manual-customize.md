@@ -23,7 +23,7 @@ cp app-config.local.yaml.sample app-config.local.yaml
 
 ## ローカル環境で実行
 
-以下のコマンドでアプリケーションが起動します。起動後 http://localhost:3000/ にアクセスしてください。
+以下のコマンドでアプリケーションが起動します。起動後 [http://localhost:3000/](http://localhost:3000/) にアクセスしてください。
 サインインは、連携したGitHubのユーザーアカウントで行うことができます。
 
 ```sh

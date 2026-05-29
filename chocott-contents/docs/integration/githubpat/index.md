@@ -13,11 +13,11 @@ GitHubにサインインし、[Fine-grained personal access tokens](https://gith
 以下のように設定を行います。
 
 | 項目名 | 入力内容 |
-|-------|------|
-|Token name| <トークン名として任意の文字列> |
-|Description| <任意の文字列> |
-|Resource owner| <自身のアカウント> |
-|Expiration| <トークンの利用期限> |
+| ------- | ------ |
+| Token name | <トークン名として任意の文字列> |
+| Description | <任意の文字列> |
+| Resource owner | <自身のアカウント> |
+| Expiration | <トークンの利用期限> |
 
 ![GitHub PAT new token settings](./githubpat-new-token-settings.png)
 
@@ -28,13 +28,13 @@ GitHubにサインインし、[Fine-grained personal access tokens](https://gith
 **Permissions**では以下の項目のパーミッションを設定します。  
 
 | 項目名 | 指定内容 | 備考 |
-|-------|---------|-----|
+| ------- | --------- | ----- |
 | Administration | Read & write | リポジトリ作成のため |
 | Commit statuses | Read-only | |
 | Contents | Read & write | |
 | Environments | Read & write | テンプレートでGitHub Environmentsを作成する場合 |
 | Issues | Read & write | |
-| Metadata |Read-only | |
+| Metadata | Read-only | |
 | Pull requests | Read & write | |
 | Secrets | Read & write | テンプレートでGitHub Action Repository Secretsを作成する場合 |
 | Variables | Read & write | テンプレートでGitHub Action Repository Variablesを作成する場合 |
