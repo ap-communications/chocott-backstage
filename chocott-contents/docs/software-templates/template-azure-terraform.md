@@ -1,4 +1,4 @@
-# Terraform Azureサンプルテンプレート
+# Terraform Azureテンプレート
 
 このページでは、chocott-backstageで提供しているソフトウェアテンプレートの一つである **Terraform Azureサンプルテンプレート** について説明します。
 

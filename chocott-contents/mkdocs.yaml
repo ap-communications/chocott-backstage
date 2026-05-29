@@ -26,6 +26,7 @@ nav:
           - テンプレートの書き方: software-templates/writing-software-template.md
   - ソフトウェアテンプレートのサンプル:
       - Express API × TypeScriptテンプレート: software-templates/template-express-api-typescript.md
+      - Terraform Azureテンプレート: software-templates/template-azure-terraform.md
       - catalog-info追加PRテンプレート: software-templates/template-register-software-catalog.md
 plugins:
   - techdocs-core
