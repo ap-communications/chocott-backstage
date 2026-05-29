@@ -41,4 +41,11 @@ chocott-backstageで利用できるサンプルのテンプレートをいくつ
 Backstageにおけるソフトウェアテンプレートの利点を学ぶために、ぜひ利用してみてください。
 
 1. [Express API × TypeScriptテンプレート](./template-express-api-typescript.md)
-2. [catalog-info.yamlを追加するPull Requestを作成するテンプレート](./template-register-software-catalog.md)
+2. [Terraform Azureテンプレート](./template-azure-terraform.md)
+3. [catalog-info.yamlを追加するPull Requestを作成するテンプレート](./template-register-software-catalog.md)
+
+## ソフトウェアテンプレートを作るには？
+
+ソフトウェアテンプレートを自分で書いてみたい！という方向けの補足情報を以下にまとめていますので、こちらをご覧ください。
+
+- [【補足】テンプレートを作りたい方へ](./writing-software-template.md)
