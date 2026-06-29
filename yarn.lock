@@ -1806,9 +1806,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@backstage/backend-defaults@npm:^0.17.3":
-  version: 0.17.3
-  resolution: "@backstage/backend-defaults@npm:0.17.3"
+"@backstage/backend-defaults@npm:^0.17.3, @backstage/backend-defaults@npm:^0.17.4":
+  version: 0.17.4
+  resolution: "@backstage/backend-defaults@npm:0.17.4"
   dependencies:
     "@aws-sdk/abort-controller": "npm:^3.347.0"
     "@aws-sdk/client-codecommit": "npm:^3.350.0"
@@ -1891,7 +1891,7 @@ __metadata:
       optional: true
     better-sqlite3:
       optional: true
-  checksum: 10/d583d9fc37094eca00ec8e8bd71a8e596b3a4cd78ba3ea0ebafa9001217d3742288b57fe3d3ac4954edad58abf30eff475e82b6372c4e75b42582498c44d2996
+  checksum: 10/b86a23132bf41538f296dd0d217fc498c1b4716c7ecb10633e0a7dd26fe3da4af77e5f591a5779498732bf46991ed53e2f06b0d6211a8e88d898ae4bb9b4d3ba
   languageName: node
   linkType: hard
 
@@ -14166,7 +14166,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "backend@workspace:packages/backend"
   dependencies:
-    "@backstage/backend-defaults": "npm:^0.17.3"
+    "@backstage/backend-defaults": "npm:^0.17.4"
     "@backstage/backend-plugin-api": "npm:^1.9.2"
     "@backstage/catalog-client": "npm:^1.16.0"
     "@backstage/catalog-model": "npm:^1.9.0"
