@@ -82,6 +82,8 @@ backend.add(conditionalFeatureLoader);
 backend.add(import('@backstage/plugin-notifications-backend'));
 backend.add(import('@backstage/plugin-signals-backend'));
 
+// user settings plugin
+backend.add(import('@backstage/plugin-user-settings-backend'));
 // mcp actions plugin
 backend.add(import('@backstage/plugin-mcp-actions-backend'));
  
