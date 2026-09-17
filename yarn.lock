@@ -19784,7 +19784,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"iconv-lite@npm:^0.7.0, iconv-lite@npm:^0.7.2, iconv-lite@npm:~0.7.0":
+"iconv-lite@npm:^0.7.0, iconv-lite@npm:^0.7.2, iconv-lite@npm:^0.7.3, iconv-lite@npm:~0.7.0":
   version: 0.7.3
   resolution: "iconv-lite@npm:0.7.3"
   dependencies:
@@ -23763,20 +23763,19 @@ __metadata:
   linkType: hard
 
 "mysql2@npm:^3.0.0":
-  version: 3.22.6
-  resolution: "mysql2@npm:3.22.6"
+  version: 3.24.4
+  resolution: "mysql2@npm:3.24.4"
   dependencies:
     aws-ssl-profiles: "npm:^1.1.2"
-    denque: "npm:^2.1.0"
     generate-function: "npm:^2.3.1"
-    iconv-lite: "npm:^0.7.2"
+    iconv-lite: "npm:^0.7.3"
     long: "npm:^5.3.2"
     lru.min: "npm:^1.1.4"
     named-placeholders: "npm:^1.1.6"
-    sql-escaper: "npm:^1.4.0"
+    sql-escaper: "npm:^1.5.1"
   peerDependencies:
     "@types/node": ">= 8"
-  checksum: 10/4a2196c6ea7d4cdf38849807eb6278fd5a9aace84af15a764d7a0bacd14cdeafd60dce38e4a0c6779c705452e153ef96ffb0c9ebc2f1c45105a5582495357d87
+  checksum: 10/797245d1737e1f8ab41e841b957ed87290228dd018f45ec7b073774a4202693919fcc4ac2861719cae3f39fb82252cd6115391d055489d0f46f203f779f335b8
   languageName: node
   linkType: hard
 
@@ -28708,10 +28707,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"sql-escaper@npm:^1.4.0":
-  version: 1.4.0
-  resolution: "sql-escaper@npm:1.4.0"
-  checksum: 10/ae3ad93a87a7b5c0fd3b16cd0c71f8bb62e6d29c0d84680063fe4f6ae9b994d7b308e27ff25b888d8a5dcda24e7db8d17f38507ba7fa89720d800cd9d9419da6
+"sql-escaper@npm:^1.5.1":
+  version: 1.5.1
+  resolution: "sql-escaper@npm:1.5.1"
+  checksum: 10/787ff7b829152380ac996bdba29a631f2005b772c302426d4676b24246ee47787cbdf9b0e565060851e078e2d15f7a014d6c48e637ec9a0127f0cbb436743ef4
   languageName: node
   linkType: hard
 
