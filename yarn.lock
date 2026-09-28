@@ -4173,8 +4173,8 @@ __metadata:
   linkType: hard
 
 "@backstage/plugin-techdocs-node@npm:^2.0.0":
-  version: 2.0.0
-  resolution: "@backstage/plugin-techdocs-node@npm:2.0.0"
+  version: 2.0.1
+  resolution: "@backstage/plugin-techdocs-node@npm:2.0.1"
   dependencies:
     "@aws-sdk/client-s3": "npm:^3.350.0"
     "@aws-sdk/credential-providers": "npm:^3.350.0"
@@ -4205,7 +4205,7 @@ __metadata:
     p-limit: "npm:^3.1.0"
     recursive-readdir: "npm:^2.2.2"
     winston: "npm:^3.2.1"
-  checksum: 10/fbc8427de238a41cc50ce06670131f23e89ef21b9bf56e621ad354bc39e8ca5883221aa8777f7b3d67619a672e1fc3df40258913d6b55f976f04cf50d205f900
+  checksum: 10/9a075dc6fd04414acecc6e9f6e7ef0836df704942ccaabe3d0126945595ed749315f209cdf9c9e418a635ed41dec5566aaf1a66eaa5866285fcfec076cffbe27
   languageName: node
   linkType: hard
 
