@@ -23736,11 +23736,11 @@ __metadata:
   linkType: hard
 
 "nan@npm:^2.19.0, nan@npm:^2.23.0":
-  version: 2.28.0
-  resolution: "nan@npm:2.28.0"
+  version: 2.30.0
+  resolution: "nan@npm:2.30.0"
   dependencies:
     node-gyp: "npm:latest"
-  checksum: 10/299ffb18f43cc53b0728cb16ed15e868960168b84d4140b54c8e057c54e6714d0291eee63c02c3cae4bcf5d0d06b6a93fc8717d8d9ae72ad6d4e8eba5ddacc66
+  checksum: 10/15f9fd9521a6093eb0719928044f8e4a9b2bdccb8eff17dd8f8d2c372c87f3d5303f07d11f501f833653b436cfc6a8b91a6984c282a1209f46c728b91253566b
   languageName: node
   linkType: hard
 
