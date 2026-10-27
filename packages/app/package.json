@@ -50,7 +50,7 @@
     "@backstage/ui": "^0.19.0",
     "@material-ui/core": "^4.12.2",
     "@material-ui/icons": "^4.9.1",
-    "@roadiehq/backstage-plugin-github-pull-requests": "^3.7.0",
+    "@roadiehq/backstage-plugin-github-pull-requests": "^3.9.1",
     "react": "^18.0.2",
     "react-dom": "^18.0.2",
     "react-router": "^6.3.0",
