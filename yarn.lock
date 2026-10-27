@@ -1268,35 +1268,36 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@backstage-community/plugin-tech-radar-common@npm:^1.19.0":
-  version: 1.19.0
-  resolution: "@backstage-community/plugin-tech-radar-common@npm:1.19.0"
+"@backstage-community/plugin-tech-radar-common@npm:^1.22.0":
+  version: 1.22.0
+  resolution: "@backstage-community/plugin-tech-radar-common@npm:1.22.0"
   dependencies:
     zod: "npm:^3.20.0"
-  checksum: 10/d4d93e5316e47917f8b49976f7f3b3ace37b600685479d18f295e51ed6ede5081d4e34a89fb08cd9c7144afd5b09de8ff9abb790ec2a167556e0e81271b07739
+  checksum: 10/7ab0f861afb195d9e59e2f564b9c0ca187a512ccb65095b87c1c217d3015dfc8e871f6d32432833d66da23ceb2ea444ff7e71e66633d95f8d36a3ec789995ed1
   languageName: node
   linkType: hard
 
 "@backstage-community/plugin-tech-radar@npm:^1.18.0":
-  version: 1.20.0
-  resolution: "@backstage-community/plugin-tech-radar@npm:1.20.0"
+  version: 1.23.0
+  resolution: "@backstage-community/plugin-tech-radar@npm:1.23.0"
   dependencies:
-    "@backstage-community/plugin-tech-radar-common": "npm:^1.19.0"
-    "@backstage/core-compat-api": "npm:^0.5.12"
-    "@backstage/core-components": "npm:^0.18.11"
-    "@backstage/core-plugin-api": "npm:^1.12.7"
-    "@backstage/frontend-plugin-api": "npm:^0.17.2"
+    "@backstage-community/plugin-tech-radar-common": "npm:^1.22.0"
+    "@backstage/core-compat-api": "npm:^0.5.15"
+    "@backstage/core-components": "npm:^0.18.14"
+    "@backstage/core-plugin-api": "npm:^1.12.10"
+    "@backstage/frontend-plugin-api": "npm:^0.18.1"
     "@material-ui/core": "npm:^4.12.2"
     "@material-ui/icons": "npm:^4.9.1"
     "@types/react": "npm:^16.13.1 || ^17.0.0 || ^18.0.0"
     color: "npm:^4.0.1"
     d3-force: "npm:^3.0.0"
     react-use: "npm:^17.2.4"
+    zod: "npm:^4.0.0"
   peerDependencies:
     react: ^16.13.1 || ^17.0.0 || ^18.0.0
     react-dom: ^16.13.1 || ^17.0.0 || ^18.0.0
     react-router-dom: 6.0.0-beta.0 || ^6.3.0
-  checksum: 10/7c6b46362b003dcb671fa1127a6d3f36be8d24d3a9a997144fc4401945f0130efd9fecc6e172ffa441524822f19b6712843b1a875d1ca9fb5348a96a9e08462b
+  checksum: 10/95fad7eca4d8665ed35f62bf76ca486885c6ac058cb8f2a7c4d57e04474c152d539cc738a66f2a1c4a12a8d07735bc99e22dbaa52fde0b0ac0ade0b6fdfaf1cc
   languageName: node
   linkType: hard
 
@@ -2127,7 +2128,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@backstage/core-compat-api@npm:^0.5.12, @backstage/core-compat-api@npm:^0.5.16":
+"@backstage/core-compat-api@npm:^0.5.12, @backstage/core-compat-api@npm:^0.5.15, @backstage/core-compat-api@npm:^0.5.16":
   version: 0.5.16
   resolution: "@backstage/core-compat-api@npm:0.5.16"
   dependencies:
