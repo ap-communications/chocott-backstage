@@ -75,6 +75,7 @@ backend.add(import('@backstage/plugin-kubernetes-backend'));
 
 // techdocs plugin
 backend.add(import('@backstage/plugin-techdocs-backend'));
+backend.add(import('@backstage/plugin-techdocs-backend-module-zensical'));
 // conditional loading
 backend.add(conditionalFeatureLoader);
 
